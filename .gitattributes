@@ -1,0 +1,6 @@
+# Guncelleme manifesti imzalidir. Git satir sonlarina dokunursa imza
+# bozulur ve butun kurulumlar guncellemeyi reddeder. Bu dosyalar oldugu
+# gibi kalmali.
+surum.json      -text
+surum.json.sig  -text
+*.sha256        -text
