@@ -14,9 +14,9 @@ Program dosyası bu deponun **Releases** bölümündedir.
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File install.ps1 `
-  -Url "https://github.com/<kurum>/raimporter-dagitim/releases/download/v1.1.0/RAImporter.exe" `
+  -Url "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.2.0/RAImporter.exe" `
   -Sha256 "<RAImporter.exe.sha256 dosyasindaki deger>" `
-  -UpdateUrl "https://raw.githubusercontent.com/<kurum>/raimporter-dagitim/main/surum.json" `
+  -UpdateUrl "https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json" `
   -Service
 ```
 
