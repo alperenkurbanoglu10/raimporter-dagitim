@@ -1,0 +1,14 @@
+# Program dosyasi git gecmisine GIRMEZ: her surum kalici 19 MB demektir.
+# Releases ekine yuklenir:  gh release create v1.1.0 RAImporter.exe
+RAImporter.exe
+
+.venv/
+build/
+dist/
+__pycache__/
+*.pyc
+*.old.exe
+data/
+
+# Imzalama anahtari asla depoya girmez.
+*.key

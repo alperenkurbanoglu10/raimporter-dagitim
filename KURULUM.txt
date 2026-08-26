@@ -1,0 +1,65 @@
+PROTEL R&A IMPORTER - SUNUCUYA KURULUM
+======================================================================
+
+Dosya   : RAImporter.exe   (18.2 MB)
+SHA-256 : 258D203CB8B163913E9E6B795D3C438E5CF5B41ED67B4A7586D176C26C578571
+
+Baska hicbir sey gerekmez: Python, .NET, Oracle Instant Client,
+tnsnames.ora -- hicbiri kurulmaz.
+
+
+YOL 1 - Elle (tek sunucu icin)
+----------------------------------------------------------------------
+1. RAImporter.exe'yi sunucuda bir klasore kopyalayin
+   (or. D:\Protel\RAImporter\)
+2. Cift tiklayin. Tarayicida http://127.0.0.1:8787/ acilir.
+3. Veritabani -> Kaynak -> Eslesmeler -> Kaydet -> Deneme calistir
+4. Kalici calismasi icin arayuzden "Servis olarak kur"
+
+
+YOL 2 - Indirme linkinden (cok sunucu icin - ONERILEN)
+----------------------------------------------------------------------
+Dosyayi bir kere paylasima acin (Google Drive / dosya sunucusu /
+IIS / GitHub release), sonra HER sunucuda tek komut:
+
+  powershell -ExecutionPolicy Bypass -File install.ps1 ^
+      -Url "INDIRME_LINKI" ^
+      -Sha256 "258D203CB8B163913E9E6B795D3C438E5CF5B41ED67B4A7586D176C26C578571" ^
+      -Service
+
+Betik ne yapar:
+  * calisan surumu durdurur
+  * dosyayi indirir
+  * SHA-256 dogrular (tutmazsa kurulumu durdurur)
+  * D:\Protel\RAImporter altina kurar
+  * -Service verilirse Windows servisi olarak kurup baslatir
+  * masaustu kisayolu olusturur
+
+
+GOOGLE DRIVE LINKI NASIL DOGRUDAN INDIRME OLUR
+----------------------------------------------------------------------
+Drive'daki paylasim linki:
+  https://drive.google.com/file/d/DOSYA_ID/view?usp=sharing
+
+Kurulumda kullanilacak DOGRUDAN indirme linki:
+  https://drive.google.com/uc?export=download&id=DOSYA_ID
+
+Dosya "Baglantiya sahip olan herkes -> Goruntuleyen" olarak
+paylasilmali. Betik, gelen dosyanin gercekten bir Windows programi
+oldugunu kontrol eder; Drive bir uyari sayfasi dondururse kurulum
+durur ve size soyler.
+
+
+KURULUMU DOGRULAMA
+----------------------------------------------------------------------
+Gercek veritabanina karsi uctan uca test (kendi temizler):
+
+  RAImporter.exe selftest
+
+
+ANTIVIRUS
+----------------------------------------------------------------------
+Kurumsal antivirus imzasiz exe'lere takilabilir. Protel'in kod imzalama
+sertifikasi ile imzalanmasi bunu ortadan kaldirir:
+
+  signtool sign /fd SHA256 /a /tr http://timestamp.digicert.com /td SHA256 RAImporter.exe

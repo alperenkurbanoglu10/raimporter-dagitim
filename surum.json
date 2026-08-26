@@ -1,0 +1,6 @@
+{
+    "version":  "1.2.0",
+    "url":  "https://github.com/protel/raimporter-dagitim/releases/download/v1.2.0/RAImporter.exe",
+    "sha256":  "BCFE5DAC301387AA03699E377A745A37430C8D67F8B250870C204CD41B92F0FF",
+    "notes":  "Merkezi guncelleme: Ed25519 imza dogrulamasi ve HTTPS zorunlulugu"
+}
