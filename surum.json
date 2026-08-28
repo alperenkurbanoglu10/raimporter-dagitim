@@ -1,6 +1,6 @@
 {
-  "version": "1.4.1",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.4.1/RAImporter.exe",
-  "sha256": "D0DC58511322BF89A6DA466AE124BC1AD90D29D9FC55DACFBFC8C4ABBA177594",
-  "notes": "Kurum standardi: pg-kur.ps1 kurulumdan sonra protel kullanicisi/veritabani/semasini hazirlar (sifre protel); Tasima sekmesi ayni degerlerle onceden dolu gelir ve sifre kayitlidir - betikle kurulan sunucuda hicbir sey yazilmadan calisir. Bos hedef sema artik protel kabul edilir."
+  "version": "1.5.0",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.5.0/RAImporter.exe",
+  "sha256": "825189573B1543D9379ADF263FD932466F9A5BEB8A3BFF7234F606E26B63B2C9",
+  "notes": "Excel aktarimi artik PostgreSQL hedefiyle de calisir (PG 15 MERGE, savepoint'li toleransli yukleme, kucuk harfli ra_import_log). Tasima: kaynak performans indeksleri, kolon varsayilanlari, CHECK ve FK'lar tasinir; 5. adim View'lari tasi (NVL/DECODE/SYSDATE otomatik, ROWNUM/(+) elle isaretlenir, orijinal+ceviri SQL raporda)."
 }
