@@ -1,6 +1,6 @@
 {
-    "version":  "1.3.0",
-    "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.3.0/RAImporter.exe",
-    "sha256":  "DB29D79CC7659A9D9D2C0A37C892DBAB92B1C33366F7C07AF657C1AD620F533A",
-    "notes":  "Anahtari bos satirlar dosyanin tamamini geri aldirmiyor; Guncelleme paneli kenar cubugunun altina tasindi"
+  "version": "1.3.1",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.3.1/RAImporter.exe",
+  "sha256": "C51491CB1782F9B406EF8C98AC983F0F3C1C1C71AA3A57CAE7E03B9CD0022395",
+  "notes": "Mutabakat 3/3 ve durust raporlama (TEKRAR/ANAHTARSIZ/HEDEFTE); NULL-guvenli anahtar eslestirme (ARRANGE_UK / ORA-00001); staging temizligi; SQL konsolu; Oracle -> PostgreSQL tasima sekmesi (incele / sema kur / veri tasi / dogrula)"
 }
