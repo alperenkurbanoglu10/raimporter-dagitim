@@ -1,6 +1,6 @@
 {
-  "version": "1.5.2",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.5.2/RAImporter.exe",
-  "sha256": "ABA7B0F295F7FD88B028789F998AEF6B0965ABDB9E84D8B0513FB946E8A8A121",
-  "notes": "ONEMLI DUZELTME: 1.5.0/1.5.1'de Excel aktarimini MERGE oncesi dusuren ORA-00911 giderildi (alt sorgu takma adi). Yenilikler: Tasima sekmesinde TEK TIK PostgreSQL kurulumu (UAC onayli, protel standardi, girdi istemez); ROWNUM=1/<=N ve yalin ROWNUM view cevirileri otomatik; PL/SQL paketi cagiran view'lar tam gerekceyle isaretlenir; Incele raporu trigger + PL/SQL envanterini doker (tasinmazlar, karar 6.4)."
+  "version": "1.6.0",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.6.0/RAImporter.exe",
+  "sha256": "912EA3F93A25698C12B4A008D1D425D7986AB487C05C845164BF8FEE07D191CA",
+  "notes": "PL/SQL paket portu (10 paket PostgreSQL semalarina, dinamik akbs), 17/18 view otomatik kurulum, model indeks celiski otomatigi, Oracle uyum katmani"
 }
