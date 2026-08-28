@@ -1,6 +1,6 @@
 {
-  "version": "1.6.0",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.6.0/RAImporter.exe",
-  "sha256": "912EA3F93A25698C12B4A008D1D425D7986AB487C05C845164BF8FEE07D191CA",
-  "notes": "PL/SQL paket portu (10 paket PostgreSQL semalarina, dinamik akbs), 17/18 view otomatik kurulum, model indeks celiski otomatigi, Oracle uyum katmani"
+  "version": "1.7.0",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.7.0/RAImporter.exe",
+  "sha256": "7FB52D70C90C319FD8E056E7A75BB0B6B198F5870B8031D93FF52446E173270D",
+  "notes": "BUSINESSDATE tek-OPEN is kurali, NAME NOTES devam satiri birlestirme, guncelleme yeniden baslatma yarisi duzeltmesi, sade eslesme karti, uzman kurulum dokumanlari"
 }

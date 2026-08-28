@@ -1,8 +1,10 @@
 # Protel R&A Importer — dağıtım
 
-Oracle Cloud **Reports & Analytics** Excel export dosyalarını Oracle veritabanına
-aktarır. Tek dosya: `RAImporter.exe` — Python, .NET, Oracle Instant Client,
-ODP.NET veya `tnsnames.ora` gerekmez.
+Oracle Cloud **Reports & Analytics** Excel export dosyalarını Oracle **veya
+PostgreSQL** veritabanına aktarır ve mevcut bir Opera DWH Oracle şemasını
+**PostgreSQL'e taşır** (şema + veri + sequence + indeks/kısıt + view +
+PL/SQL paket portu). Tek dosya: `RAImporter.exe` — Python, .NET, Oracle
+Instant Client, ODP.NET veya `tnsnames.ora` gerekmez.
 
 Bu depo yalnızca **dağıtım** içindir. Kaynak kod ayrı ve özel bir depodadır.
 
@@ -10,11 +12,16 @@ Bu depo yalnızca **dağıtım** içindir. Kaynak kod ayrı ve özel bir depodad
 
 ## Kurulum
 
-Program dosyası bu deponun **Releases** bölümündedir.
+Program dosyası bu deponun **Releases** bölümündedir. En son sürümün değişmez
+indirme adresi:
+
+```
+https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/latest/download/RAImporter.exe
+```
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File install.ps1 `
-  -Url "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.2.0/RAImporter.exe" `
+  -Url "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/latest/download/RAImporter.exe" `
   -Sha256 "<RAImporter.exe.sha256 dosyasindaki deger>" `
   -UpdateUrl "https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json" `
   -Service
@@ -35,6 +42,29 @@ certutil -hashfile RAImporter.exe SHA256
 Çıkan değer [`RAImporter.exe.sha256`](RAImporter.exe.sha256) içindekiyle aynı
 olmalıdır. `install.ps1` bunu `-Sha256` verdiğinizde kendisi yapar ve tutmazsa
 kurulumu durdurur.
+
+---
+
+## Oracle → PostgreSQL taşıma (Taşıma sekmesi)
+
+Arayüzdeki **Taşıma** sekmesi tüm geçişi adım adım yürütür; uzmanın SQL
+yazması gerekmez:
+
+1. **PostgreSQL hazırlığı** — hedef sunucuda PostgreSQL yoksa "PostgreSQL kur"
+   düğmesi EDB kurulumunu indirir, sessiz kurar ve Protel standardını açar
+   (veritabanı `protel`, şema `protel`, kullanıcı/şifre `protel`). Yönetici
+   onayı (UAC) ister; başka bir şey gerekmez.
+2. **İncele** — kaynak Oracle envanteri (tablo/satır/view/indeks/trigger/PLSQL).
+3. **Şema kur** — referans Opera DWH modeline göre tablolar + PK + indeksler.
+4. **Veri taşı** — sayarak, tablo tablo mutabakatla; iş kuralları otomatik
+   (ör. BUSINESSDATE'te resort başına tek OPEN kalır, eskileri CLOSED yazılır).
+5. **Doğrula** — kaynak/hedef satır sayıları karşılaştırılır.
+6. **Paketleri kur** — Oracle PL/SQL paketlerinin PostgreSQL portu (paket =
+   aynı adlı şema; `akbs` otelin kendi yapılandırmasından üretilir).
+7. **View'ları taşı** — Oracle view'ları otomatik çevrilir ve kurulur;
+   çevrilemeyen olursa orijinal + çeviri SQL yan yana raporlanır.
+
+Her adım raporunu arayüzde gösterir; hiçbir adım Oracle tarafına yazmaz.
 
 ---
 

@@ -1,11 +1,14 @@
 PROTEL R&A IMPORTER - SUNUCUYA KURULUM
 ======================================================================
 
-Dosya   : RAImporter.exe   (18.2 MB)
-SHA-256 : 258D203CB8B163913E9E6B795D3C438E5CF5B41ED67B4A7586D176C26C578571
+Dosya   : RAImporter.exe   (23,0 MB)
+SHA-256 : RAImporter.exe.sha256 dosyasindaki guncel deger
+          (her surumde degisir; elle karsilastirmak icin:
+           certutil -hashfile RAImporter.exe SHA256)
 
 Baska hicbir sey gerekmez: Python, .NET, Oracle Instant Client,
-tnsnames.ora -- hicbiri kurulmaz.
+tnsnames.ora -- hicbiri kurulmaz. PostgreSQL hedefi icin gereksinimleri
+de programin kendisi kurar (asagida).
 
 
 YOL 1 - Elle (tek sunucu icin)
@@ -19,12 +22,16 @@ YOL 1 - Elle (tek sunucu icin)
 
 YOL 2 - Indirme linkinden (cok sunucu icin - ONERILEN)
 ----------------------------------------------------------------------
-Dosyayi bir kere paylasima acin (Google Drive / dosya sunucusu /
-IIS / GitHub release), sonra HER sunucuda tek komut:
+En son surumun degismez indirme adresi:
+
+  https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/latest/download/RAImporter.exe
+
+HER sunucuda tek komut:
 
   powershell -ExecutionPolicy Bypass -File install.ps1 ^
-      -Url "INDIRME_LINKI" ^
-      -Sha256 "258D203CB8B163913E9E6B795D3C438E5CF5B41ED67B4A7586D176C26C578571" ^
+      -Url "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/latest/download/RAImporter.exe" ^
+      -Sha256 "RAImporter.exe.sha256 icindeki deger" ^
+      -UpdateUrl "https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json" ^
       -Service
 
 Betik ne yapar:
@@ -34,20 +41,26 @@ Betik ne yapar:
   * D:\Protel\RAImporter altina kurar
   * -Service verilirse Windows servisi olarak kurup baslatir
   * masaustu kisayolu olusturur
+  * -UpdateUrl verilirse program yeni surumleri gece 02:00-05:00
+    arasinda kendisi alir (imza + SHA-256 + duman testi ile)
 
 
-GOOGLE DRIVE LINKI NASIL DOGRUDAN INDIRME OLUR
+ORACLE -> POSTGRESQL TASIMA
 ----------------------------------------------------------------------
-Drive'daki paylasim linki:
-  https://drive.google.com/file/d/DOSYA_ID/view?usp=sharing
+Arayuzde "Tasima" sekmesi. Uzmanin SQL yazmasi gerekmez:
 
-Kurulumda kullanilacak DOGRUDAN indirme linki:
-  https://drive.google.com/uc?export=download&id=DOSYA_ID
+  0. Hedef sunucuda PostgreSQL yoksa: "PostgreSQL kur" dugmesi
+     kurulumu indirir, sessiz kurar, protel/protel/protel standardini
+     acar (UAC onayi ister).
+  1. Incele        kaynak Oracle envanteri (salt-okuma)
+  2. Sema kur      referans Opera DWH modeline gore
+  3. Veri tasi     sayarak, tablo tablo mutabakatla
+  4. Dogrula       kaynak/hedef satir karsilastirmasi
+  5. Paketleri kur PL/SQL paketlerinin PostgreSQL portu
+  6. View'lari tasi otomatik ceviri; cevrilemeyen acikca raporlanir
 
-Dosya "Baglantiya sahip olan herkes -> Goruntuleyen" olarak
-paylasilmali. Betik, gelen dosyanin gercekten bir Windows programi
-oldugunu kontrol eder; Drive bir uyari sayfasi dondururse kurulum
-durur ve size soyler.
+Adim sirasi onemli: paketler view'lardan ONCE kurulmali.
+Hicbir adim Oracle tarafina yazmaz.
 
 
 KURULUMU DOGRULAMA
@@ -55,6 +68,12 @@ KURULUMU DOGRULAMA
 Gercek veritabanina karsi uctan uca test (kendi temizler):
 
   RAImporter.exe selftest
+
+Surum ve guncelleme:
+
+  RAImporter.exe version
+  RAImporter.exe check-update
+  RAImporter.exe update
 
 
 ANTIVIRUS
