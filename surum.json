@@ -1,6 +1,6 @@
 {
-  "version": "1.3.1",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.3.1/RAImporter.exe",
-  "sha256": "C51491CB1782F9B406EF8C98AC983F0F3C1C1C71AA3A57CAE7E03B9CD0022395",
-  "notes": "Mutabakat 3/3 ve durust raporlama (TEKRAR/ANAHTARSIZ/HEDEFTE); NULL-guvenli anahtar eslestirme (ARRANGE_UK / ORA-00001); staging temizligi; SQL konsolu; Oracle -> PostgreSQL tasima sekmesi (incele / sema kur / veri tasi / dogrula)"
+  "version": "1.4.0",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.4.0/RAImporter.exe",
+  "sha256": "B33F28A47B3DD18873FFBAA0DB8B160DE93B732B8AB66D9F3999C23F27D1B974",
+  "notes": "Referans Opera DWH modeli: hedef sema AKRA operadwh yapisiyla birebir ayni kurulur (kucuk harf, public, synced_at, aciklamalar); model disi tablolar istege bagli. Yenilenen arayuz: karsilama kartlari, adim rozetleri, kurulum kontrol listesi. PostgreSQL kurulum betigi (pg-kur.ps1) Tasima sekmesinden indirilir. NUMBER artik Decimal okunur (hassasiyet)."
 }
