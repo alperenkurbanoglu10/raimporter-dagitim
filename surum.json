@@ -1,6 +1,6 @@
 {
-  "version": "1.5.1",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.5.1/RAImporter.exe",
-  "sha256": "99884B29E3E7425D5F4B2E0B5A12F14C61C97F69A69C72F628567044EB9215CD",
-  "notes": "Canli otel turunun duzeltmeleri: veri tasima FK-topolojik sirada (ebeveyn truncate'i gerektiginde cascade); anahtari tamamen bos satirlar tasimada ayiklanip raporlanir, dogrulama ayni kuralla sayar; view cevirisine trunc(tarih)->date_trunc onarimi ve tek argumanli to_number->numeric cast eklendi; view kurulumu bagimliliklar icin cok gecisli."
+  "version": "1.5.2",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.5.2/RAImporter.exe",
+  "sha256": "ABA7B0F295F7FD88B028789F998AEF6B0965ABDB9E84D8B0513FB946E8A8A121",
+  "notes": "ONEMLI DUZELTME: 1.5.0/1.5.1'de Excel aktarimini MERGE oncesi dusuren ORA-00911 giderildi (alt sorgu takma adi). Yenilikler: Tasima sekmesinde TEK TIK PostgreSQL kurulumu (UAC onayli, protel standardi, girdi istemez); ROWNUM=1/<=N ve yalin ROWNUM view cevirileri otomatik; PL/SQL paketi cagiran view'lar tam gerekceyle isaretlenir; Incele raporu trigger + PL/SQL envanterini doker (tasinmazlar, karar 6.4)."
 }
