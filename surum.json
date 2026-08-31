@@ -1,6 +1,6 @@
 {
-  "version": "1.8.10",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.10/RAImporter.exe",
-  "sha256": "8FA66261DA3CA4712E826381C732E59AD44572D2A9B8458E7E4E41B1BEEA406D",
-  "notes": "Tarih araligiyla ANINDA export: R&A sekmesindeki yeni kart ile secilen raporlar verilen tarih penceresiyle hemen calisir ve cikti indirme klasorune duser (on yuzden tek tek export almaya gerek kalmaz). Dosya adina pencere yazilir, zamanlanmis islere dokunulmaz"
+  "version": "1.8.11",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.11/RAImporter.exe",
+  "sha256": "5FECE5EAEF1AFF2A9125C4075E88062D7EEE2942167EE24315A2EC32626ED559",
+  "notes": "R&A elle export duzeltmeleri: R&A ekranindan kopyalanan 'Shared Folders' onekli klasor yolu artik calisiyor; rapor klasoru is listesi alinamasa bile calisma gecmisinden bulunuyor; sunucunun ~2 dakikada kestigi kosumlar (Unknown fault) otomatik 3 kez deneniyor ve hata mesaji sebebi soyluyor"
 }
