@@ -30,9 +30,14 @@ HER sunucuda tek komut:
 
   powershell -ExecutionPolicy Bypass -File install.ps1 ^
       -Url "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/latest/download/RAImporter.exe" ^
-      -Sha256 "RAImporter.exe.sha256 icindeki deger" ^
       -UpdateUrl "https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json" ^
       -Service
+
+  -Sha256 vermek ZORUNLU DEGIL: betik beklenen ozeti indirme adresinin
+  yanindaki RAImporter.exe.sha256 dosyasindan kendisi alir ve dogrular.
+  Elle vermek isterseniz RAImporter.exe.sha256 dosyasindaki 64 haneli
+  GERCEK degeri yazin ("...icindeki deger" gibi sablon metni DEGIL;
+  betik sablon/bozuk ozeti kuruluma baslamadan reddeder).
 
 Betik ne yapar:
   * calisan surumu durdurur

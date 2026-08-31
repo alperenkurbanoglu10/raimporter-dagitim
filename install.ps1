@@ -12,7 +12,11 @@
 
   Parametreler:
       -Url        Zorunlu. RAImporter.exe'nin DOGRUDAN indirme adresi.
-      -Sha256     Onerilir. Dosyanin beklenen SHA-256 ozeti; tutmazsa kurulum durur.
+      -Sha256     Istege bagli. Beklenen SHA-256 ozeti; tutmazsa kurulum durur.
+                  VERILMEZSE betik ozeti "<Url>.sha256" adresinden kendisi
+                  almayi dener (GitHub release'te RAImporter.exe.sha256
+                  asset'i). Talimattaki sablon metnini ("<...deger...>")
+                  oldugu gibi yapistirmayin; betik bunu acikca reddeder.
       -Dir        Kurulum klasoru (varsayilan D:\Protel\RAImporter, D: yoksa C:).
       -UpdateUrl  surum.json adresi. Verilirse otel bir daha elle guncellenmez:
                   kurulum bu adresi yazar, program gece penceresinde kendi gecer.
@@ -40,10 +44,24 @@ $ErrorActionPreference = "Stop"
 function Say([string]$msg, [string]$color = "Gray") { Write-Host "  $msg" -ForegroundColor $color }
 function Ok ([string]$msg) { Write-Host "  [OK]   $msg" -ForegroundColor Green }
 function Bad([string]$msg) { Write-Host "  [HATA] $msg" -ForegroundColor Red }
+# PS saglayicisini atlayan silme: bazi makinelerde yol kisa-ad ('~' iceren)
+# gelir ve Remove-Item PSArgumentException verir (sahada goruldu, 31.08).
+function TmpSil([string]$p) { try { [IO.File]::Delete($p) } catch { } }
 
 Write-Host ""
 Write-Host "  Protel R&A Importer - kurulum" -ForegroundColor Cyan
 Write-Host "  ---------------------------------------------------------------"
+
+# --- parametre sagligi ------------------------------------------------------
+# Sahada goruldu (31.08): talimattaki "<RAImporter.exe.sha256 ... deger>"
+# sablonu OLDUGU GIBI yapistirilmis, karsilastirma sablon metniyle yapilmisti.
+if ($Sha256 -and $Sha256 -notmatch '^[0-9A-Fa-f]{64}$') {
+    Bad "Sha256 gecerli bir ozet degil: $Sha256"
+    Say "Gercek ozet, RAImporter.exe.sha256 dosyasinin ilk sozcugudur (64 hex)."
+    Say "En kolayi: -Sha256'yi HIC vermeyin - betik ozeti su adresten kendisi alir:"
+    Say "  $($Url).sha256"
+    exit 1
+}
 
 # --- hedef klasor -----------------------------------------------------------
 if (-not $Dir) {
@@ -70,7 +88,29 @@ Ok "Klasor hazir: $Dir"
 
 # --- indirme ----------------------------------------------------------------
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$tmp = Join-Path $env:TEMP ("RAImporter-" + [guid]::NewGuid().ToString("N") + ".tmp")
+
+# Ozet verilmediyse yayindaki kardes ".sha256" dosyasindan almayi dene.
+if (-not $Sha256) {
+    try {
+        $wcH = New-Object Net.WebClient
+        $wcH.Headers.Add("User-Agent", "RAImporter-Installer")
+        $aday = (($wcH.DownloadString($Url + ".sha256")) -split '\s+')[0]
+        if ($aday -match '^[0-9A-Fa-f]{64}$') {
+            $Sha256 = $aday
+            Ok "Beklenen ozet yayindan alindi: $($Url).sha256"
+        }
+    } catch {
+        Say "Ozet dosyasina erisilemedi ($($Url).sha256);"
+        Say "-Sha256 da verilmedigi icin dogrulama atlanacak."
+    }
+}
+
+# Gecici dosya TEMP'e DEGIL kurulum klasorune iner: bazi makinelerde TEMP
+# kisa-ad yoluyla gelir (orn. kullanici 'protel.user' -> C:\Users\PROTEL~1.USE)
+# ve PowerShell 5.1'in Move/Remove-Item komutlari '~' iceren yolda
+# PSArgumentException ile patlar (sahada goruldu, 31.08). Kurulum klasoru hep
+# duz addir ve ayni diskte kalindigi icin son tasima da kopyasiz olur.
+$tmp = Join-Path $Dir ("RAImporter-indirme-" + [guid]::NewGuid().ToString("N") + ".tmp")
 
 Say "Indiriliyor: $Url"
 try {
@@ -83,14 +123,14 @@ try {
     exit 1
 }
 
-$size = (Get-Item $tmp).Length
+$size = ([IO.FileInfo]$tmp).Length
 if ($size -lt 1MB) {
     Bad "Inen dosya cok kucuk ($([math]::Round($size/1KB,1)) KB)."
     Say "Link muhtemelen dosyayi degil bir HTML sayfasini donduruyor."
     Say "Google Drive kullaniyorsaniz DOGRUDAN indirme adresini verin:"
     Say "  https://drive.google.com/uc?export=download&id=DOSYA_ID"
     Say "ve dosyanin 'Baglantiya sahip olan herkes' ile paylasildigindan emin olun."
-    Remove-Item $tmp -Force
+    TmpSil $tmp
     exit 1
 }
 
@@ -100,19 +140,19 @@ if ($head[0] -ne 0x4D -or $head[1] -ne 0x5A) {
     Bad "Inen dosya bir Windows programi degil (MZ imzasi yok)."
     Say "Link bir onay/uyari sayfasi donduruyor olabilir. Dosyayi tarayicidan bir kere"
     Say "indirip dogrudan indirme adresini kontrol edin."
-    Remove-Item $tmp -Force
+    TmpSil $tmp
     exit 1
 }
 Ok "Indirildi: $([math]::Round($size/1MB,1)) MB"
 
 # --- dogrulama --------------------------------------------------------------
-$hash = (Get-FileHash -Path $tmp -Algorithm SHA256).Hash.ToUpper()
+$hash = (Get-FileHash -LiteralPath $tmp -Algorithm SHA256).Hash.ToUpper()
 if ($Sha256) {
     if ($hash -ne $Sha256.ToUpper()) {
         Bad "SHA-256 tutmuyor - dosya bozuk ya da beklenen surum degil."
         Say "beklenen : $($Sha256.ToUpper())"
         Say "inen     : $hash"
-        Remove-Item $tmp -Force
+        TmpSil $tmp
         exit 1
     }
     Ok "SHA-256 dogrulandi"
@@ -121,7 +161,16 @@ if ($Sha256) {
     Say "  $hash"
 }
 
-Move-Item -Path $tmp -Destination $exe -Force
+# PS saglayicisini atlayan .NET tasima (Move-Item '~' iceren yollarda patlar).
+try {
+    [IO.File]::Copy($tmp, $exe, $true)
+    TmpSil $tmp
+} catch {
+    Bad "Dosya yerine konamadi: $($_.Exception.Message)"
+    Say "Hedef: $exe - eski surum hala acik olabilir; kapatip tekrar deneyin."
+    TmpSil $tmp
+    exit 1
+}
 Ok "Kuruldu: $exe"
 
 # --- surum ------------------------------------------------------------------

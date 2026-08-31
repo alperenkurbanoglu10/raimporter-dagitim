@@ -22,10 +22,15 @@ https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/latest/downlo
 ```powershell
 powershell -ExecutionPolicy Bypass -File install.ps1 `
   -Url "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/latest/download/RAImporter.exe" `
-  -Sha256 "<RAImporter.exe.sha256 dosyasindaki deger>" `
   -UpdateUrl "https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json" `
   -Service
 ```
+
+`-Sha256` vermek zorunlu değil: betik beklenen özeti indirme adresinin
+yanındaki [`RAImporter.exe.sha256`](RAImporter.exe.sha256) dosyasından kendisi
+alır ve doğrular. Elle verecekseniz dosyadaki 64 haneli **gerçek** değeri yazın —
+şablon metnini olduğu gibi bırakmayın (betik şablon/bozuk özeti kuruluma
+başlamadan reddeder).
 
 `-UpdateUrl` verilirse sunucuya bir daha girmek gerekmez: program yeni sürümleri
 kendi alır. `-Service` Windows servisi olarak kurar.
@@ -40,8 +45,8 @@ certutil -hashfile RAImporter.exe SHA256
 ```
 
 Çıkan değer [`RAImporter.exe.sha256`](RAImporter.exe.sha256) içindekiyle aynı
-olmalıdır. `install.ps1` bunu `-Sha256` verdiğinizde kendisi yapar ve tutmazsa
-kurulumu durdurur.
+olmalıdır. `install.ps1` bu karşılaştırmayı zaten kendisi yapar (özeti yayından
+alır; `-Sha256` verilirse onu kullanır) ve tutmazsa kurulumu durdurur.
 
 ---
 
