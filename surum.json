@@ -1,6 +1,6 @@
 {
-  "version": "1.8.0",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.0/RAImporter.exe",
-  "sha256": "3B6F4D7363545905478A30998919F4BF248F693D772A8896EC132BF11CB96916",
-  "notes": "Zamanlanmis veritabani gorevleri (PSC sabit isleri), R&A dan dogrudan indirme kaynagi (Gmail/SFTP gerekmez, TLS zorunlu), form varsayilanlari"
+  "version": "1.8.1",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.1/RAImporter.exe",
+  "sha256": "F9C651D22D63DA682B5DFA10367E78AC4A30BFA1F91D2DB6E38329C1B7A20C0F",
+  "notes": "R&A is kurulumu duzeltmesi: CRON saatleri UTC yazilir (tenant CRON'u UTC okur, jobTZ=UTC), TRXCODES sabah kumesine alindi; arayuzden kurulan isler elle R&A kaydi gerekmeden ateslenir"
 }
