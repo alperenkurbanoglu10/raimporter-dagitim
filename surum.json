@@ -1,6 +1,6 @@
 {
-  "version": "1.8.6",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.6/RAImporter.exe",
-  "sha256": "B1251643F70B45A18E1D80C1177969E73D89CF08F9E63AD1F92F848D4B7EB09E",
-  "notes": "Kismi benzersiz indeks kurali artik VERITABANINDAN okunuyor: UK_NAME_PRIMARY_ADDRESS gibi 'bayrak=X olan satirlar arasinda K tekil' indeksleri kendiliginden taninir ve kapsam basina en guncel satir birincil birakilir. Otel basina elle yapilandirma gerekmez; Eslesmelerde yazili kural her zaman oncelikli"
+  "version": "1.8.7",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.7/RAImporter.exe",
+  "sha256": "7D8ED634060EC2E56C5E40C6B219FFAE90CF8DC3D7C2146E59796086AE684841",
+  "notes": "Guncelleme sonrasi 'Windows cannot access the specified device, path, or file' hatasi giderildi: yeni exe artik TEMP'te uretilip tasinmiyor (tasinan dosya ACL'ini koruyordu ve servis hesabinin izinleriyle kaliyordu), kurulum klasorunde uretiliyor ve degistirmeden sonra izinler klasorden devralinacak sekilde sifirlaniyor"
 }
