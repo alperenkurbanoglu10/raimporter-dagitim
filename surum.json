@@ -1,6 +1,6 @@
 {
-  "version": "1.8.1",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.1/RAImporter.exe",
-  "sha256": "F9C651D22D63DA682B5DFA10367E78AC4A30BFA1F91D2DB6E38329C1B7A20C0F",
-  "notes": "R&A is kurulumu duzeltmesi: CRON saatleri UTC yazilir (tenant CRON'u UTC okur, jobTZ=UTC), TRXCODES sabah kumesine alindi; arayuzden kurulan isler elle R&A kaydi gerekmeden ateslenir"
+  "version": "1.8.2",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.2/RAImporter.exe",
+  "sha256": "8032B06A4C4735530E3FEAA0CE0BCE50A6B9F8E95D9ECCF7E579EEA161736A6B",
+  "notes": "Zincir tenant'i icin otel kodu suzgeci: tek R&A kullanicisi altinda cok otel varken yalniz adinda otel kodu gecen islerin ciktilari indirilir (Kaynak sekmesi > Otel kodu; bos = tek otel, davranis degismez)"
 }
