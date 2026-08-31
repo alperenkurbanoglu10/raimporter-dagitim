@@ -1,6 +1,6 @@
 {
-  "version": "1.8.5",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.5/RAImporter.exe",
-  "sha256": "4C68A79E41DD2CF2082552B6BA6F26ECBA888201AF550FB7B125F3C6B6276AFA",
-  "notes": "NAME_ADDRESS/PRIMARY_YN cozumu: kapsam basina tek bayrak kurali. Kismi benzersiz indeksli tablolarda ayni kapsamda birden fazla 'Y' gelirse en guncel satir birincil kalir, digerleri 'N' yapilir; hedefteki eski birincil de kapatilir. Varsayilan KAPALI, eslesme kuralindan acilir"
+  "version": "1.8.6",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.6/RAImporter.exe",
+  "sha256": "B1251643F70B45A18E1D80C1177969E73D89CF08F9E63AD1F92F848D4B7EB09E",
+  "notes": "Kismi benzersiz indeks kurali artik VERITABANINDAN okunuyor: UK_NAME_PRIMARY_ADDRESS gibi 'bayrak=X olan satirlar arasinda K tekil' indeksleri kendiliginden taninir ve kapsam basina en guncel satir birincil birakilir. Otel basina elle yapilandirma gerekmez; Eslesmelerde yazili kural her zaman oncelikli"
 }
