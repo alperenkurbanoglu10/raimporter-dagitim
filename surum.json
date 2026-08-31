@@ -1,6 +1,6 @@
 {
-  "version": "1.8.9",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.9/RAImporter.exe",
-  "sha256": "4D4AED79E925B95C14918EF71E4DDD668EA1D5961A7E9A5FB70C6376D6403C6F",
-  "notes": "Acilista kendi kendine izin onarimi: onceki surumlerden devralinan bozuk ACL (exe cift tiklamada 'Windows cannot access...' veriyordu) program acilirken kendiliginden duzeltilir. Yalnizca devralma gercekten kopmussa calisir, ozel izinler ezilmez"
+  "version": "1.8.10",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.10/RAImporter.exe",
+  "sha256": "8FA66261DA3CA4712E826381C732E59AD44572D2A9B8458E7E4E41B1BEEA406D",
+  "notes": "Tarih araligiyla ANINDA export: R&A sekmesindeki yeni kart ile secilen raporlar verilen tarih penceresiyle hemen calisir ve cikti indirme klasorune duser (on yuzden tek tek export almaya gerek kalmaz). Dosya adina pencere yazilir, zamanlanmis islere dokunulmaz"
 }
