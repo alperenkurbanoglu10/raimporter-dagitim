@@ -1,6 +1,6 @@
 {
-  "version": "1.8.3",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.3/RAImporter.exe",
-  "sha256": "E0C1EB3979BADE57DF2EE703679E38EF66AA8C30DDCA5E3D69D537A2A310D8DD",
-  "notes": "MERGE hizlandirmasi: NULL-guvenli anahtar karsilastirmasi yalniz partide gercekten NULL iceren kolonlara uygulanir; PK'siz buyuk tablolarda (orn. FOLIO$_TAX) saatler suren count_matching/MERGE saniyelere iner"
+  "version": "1.8.4",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.4/RAImporter.exe",
+  "sha256": "03025375184DC47088444C06280720AC09E28EAAC06A2995E3043E1BACB3549D",
+  "notes": "Calisani durdur dugmesi: kosum surerken yurutulen SQL kesilir (ORA-01013), kesilen dosya rollback ile kaynakta birakilir, kosum CANCELLED ile kapanir; durdurulan kosum icin mail ve otomatik yeniden baslatma yok"
 }
