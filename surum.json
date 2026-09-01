@@ -1,6 +1,6 @@
 {
-  "version": "1.8.18",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.18/RAImporter.exe",
-  "sha256": "311A0899B260D9C511D6D89D2CB016F0D1C321242D367498B3E901939E13079D",
-  "notes": "Microsoft SQL Server hedefi: ucuncu veritabani lehcesi (pyodbc, SQL Server 2012+), uzak erisim tanilari ve install.ps1 -Odbc ile ODBC surucusu kurulumu"
+  "version": "1.8.19",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.19/RAImporter.exe",
+  "sha256": "3F90925014257E06CAD26B3955AD178CAFF0990F580DFCC13338630DA16B664B",
+  "notes": "MS SQL katalogu artik sys.* gorunumlerini ve acik harmanlamayi kullaniyor: harf duyarli ya da Turkce harmanlamali veritabanlarinda 'Invalid object name information_schema' hatasi giderildi"
 }
