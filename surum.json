@@ -1,6 +1,6 @@
 {
-  "version": "1.8.13",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.13/RAImporter.exe",
-  "sha256": "331C5693ECC3FAE680C0FE0D079B539863996393F27B63F6F2F1A84BFB505838",
-  "notes": "Export takvimi sertlestirmesi: rapor adlari tenant katalogundan cozuluyor (otel onekli adlar dahil), export'lar SIRAYLA cekiliyor, gecici sunucu hatasi artik 'rapor katalogda yok' diye raporlanmiyor. Gecmisten indirme ile export takvimi AYRI anahtarlarla aciliyor; rapor klasoru tek yerde (Kaynak sekmesi). R&A sekmesi sadelestirildi"
+  "version": "1.8.14",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.14/RAImporter.exe",
+  "sha256": "BA0B23FC81624CCB8F3CD0FC753525B0B4EDBB0981682B540EF3B505325502FF",
+  "notes": "Duzeltmeler: KAPALI is artik export kosmuyor; rapor klasoru 'en sik gecen' yerine RAPORU ICEREN klasor secilerek bulunuyor (yanlis klasor -> 'rapor tanimi alinamadi' vakasi); WSDL onbellegi, oturum belirteci tazeleme ve sirali kuyrukta tek istemci ile yavas/kararsiz tenant'a dayaniklilik"
 }
