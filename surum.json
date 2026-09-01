@@ -1,6 +1,6 @@
 {
-  "version": "1.8.15",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.15/RAImporter.exe",
-  "sha256": "F688A0BCD238EE0255186A42FD6BE00668AE713214CEAEF755E86B2CD9A667F8",
-  "notes": "R&A ulasilamasa bile klasordeki dosyalar aktarilir (aktarim artik kaynak adiminda olmuyor); acilista export tetiklenmez; ortak ayarlar (otel kodu, chain, rapor klasoru) tek yerde kaydedilir; export DURUM sutunu sayfa yenilemeden guncellenir; kod tablolari (TRXCODES/ARRANGEMENT) tam goruntu penceresiyle cekilir; olmayan rapor icin net mesaj ve gun boyu bosuna tekrar deneme yok; kapali iste acik uyari"
+  "version": "1.8.16",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.16/RAImporter.exe",
+  "sha256": "4D36F15D9EBCC541EA01FB0F15E6CFCE7B891B03C5C4A759B542A5DE4357C8E2",
+  "notes": "Bos export artik basarisizlik sayilmiyor: rapor o pencerede veri dondurmediginde Opera sablonunun urettigi TAMAMEN BOS satirlar dogru tanınıyor, dosya 'Export bos' olarak basariyla kapaniyor ve arsivleniyor (eskiden FAILED sayilip her turda yeniden deneniyordu). Verisi olup anahtari bos satirlar eskisi gibi hata olarak raporlanir"
 }
