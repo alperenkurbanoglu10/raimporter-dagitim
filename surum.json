@@ -1,6 +1,6 @@
 {
-  "version": "1.8.16",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.16/RAImporter.exe",
-  "sha256": "4D36F15D9EBCC541EA01FB0F15E6CFCE7B891B03C5C4A759B542A5DE4357C8E2",
-  "notes": "Bos export artik basarisizlik sayilmiyor: rapor o pencerede veri dondurmediginde Opera sablonunun urettigi TAMAMEN BOS satirlar dogru tanınıyor, dosya 'Export bos' olarak basariyla kapaniyor ve arsivleniyor (eskiden FAILED sayilip her turda yeniden deneniyordu). Verisi olup anahtari bos satirlar eskisi gibi hata olarak raporlanir"
+  "version": "1.8.17",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.17/RAImporter.exe",
+  "sha256": "3420CCFAB8685003340804467A18C6A0D3F7FE04F74DC0763B832F3D87E1DEA8",
+  "notes": "Servis calisirken exe acilinca ikinci zamanlayici baslamiyor (cift export/MERGE riski kalkti)"
 }
