@@ -1,6 +1,6 @@
 {
-  "version": "1.8.14",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.14/RAImporter.exe",
-  "sha256": "BA0B23FC81624CCB8F3CD0FC753525B0B4EDBB0981682B540EF3B505325502FF",
-  "notes": "Duzeltmeler: KAPALI is artik export kosmuyor; rapor klasoru 'en sik gecen' yerine RAPORU ICEREN klasor secilerek bulunuyor (yanlis klasor -> 'rapor tanimi alinamadi' vakasi); WSDL onbellegi, oturum belirteci tazeleme ve sirali kuyrukta tek istemci ile yavas/kararsiz tenant'a dayaniklilik"
+  "version": "1.8.15",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.15/RAImporter.exe",
+  "sha256": "F688A0BCD238EE0255186A42FD6BE00668AE713214CEAEF755E86B2CD9A667F8",
+  "notes": "R&A ulasilamasa bile klasordeki dosyalar aktarilir (aktarim artik kaynak adiminda olmuyor); acilista export tetiklenmez; ortak ayarlar (otel kodu, chain, rapor klasoru) tek yerde kaydedilir; export DURUM sutunu sayfa yenilemeden guncellenir; kod tablolari (TRXCODES/ARRANGEMENT) tam goruntu penceresiyle cekilir; olmayan rapor icin net mesaj ve gun boyu bosuna tekrar deneme yok; kapali iste acik uyari"
 }
