@@ -1,6 +1,6 @@
 {
-  "version": "1.8.17",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.17/RAImporter.exe",
-  "sha256": "3420CCFAB8685003340804467A18C6A0D3F7FE04F74DC0763B832F3D87E1DEA8",
-  "notes": "Servis calisirken exe acilinca ikinci zamanlayici baslamiyor (cift export/MERGE riski kalkti)"
+  "version": "1.8.18",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.18/RAImporter.exe",
+  "sha256": "311A0899B260D9C511D6D89D2CB016F0D1C321242D367498B3E901939E13079D",
+  "notes": "Microsoft SQL Server hedefi: ucuncu veritabani lehcesi (pyodbc, SQL Server 2012+), uzak erisim tanilari ve install.ps1 -Odbc ile ODBC surucusu kurulumu"
 }
