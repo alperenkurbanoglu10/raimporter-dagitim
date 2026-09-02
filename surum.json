@@ -1,6 +1,6 @@
 {
-  "version": "1.8.22",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.22/RAImporter.exe",
-  "sha256": "D7C0266B61757A2130E3056AC970CFA93569FBDC0A76B286A91861DCA2D062E4",
-  "notes": "E-fatura senkronu yanlis is uzerinde kuruldugunda ham surucu hatasi yerine ne yapilacagini soyleyen net mesaj: hedef, isin kendi veritabanidir (Oracle); PortalPlus yalnizca kaynaktir"
+  "version": "1.8.23",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.23/RAImporter.exe",
+  "sha256": "534932496FDF343907BB2A0B078BDCB558089C30B2F0279F7892B136E825C651",
+  "notes": "E-fatura senkronuna Dogrula modu: hedefte zaten numarasi olan folyolari referans alip bizim hesapladigimiz numarayla karsilastirir, boylece yazmadan once eslestirmenin dogru oldugu kanitlanir"
 }
