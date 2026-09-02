@@ -1,6 +1,6 @@
 {
-  "version": "1.8.28",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.28/RAImporter.exe",
-  "sha256": "40171B9EBB09DB5560CC8E914D90AFAA3EC89D3C1FC070DAD368F44F177A5BF5",
-  "notes": "Mizan kontrolu sahada calisir hale getirildi: rapor adi katalogdan cozuluyor, P2020'nin bekledigi GG.AA.YYYY tarih bicimi destekleniyor ve elle kosumda R&A hata mesaji artik ekranda goruluyor"
+  "version": "1.8.29",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.29/RAImporter.exe",
+  "sha256": "60B34D152014905CF08DB61537C533D3EDA4A6C77A7A64ACC94E89CEC2D03DEA",
+  "notes": "Kaynagi SFTP olan otellerde de mizan kontrolu: kontrolun kendi R&A baglantisi tanimlanabiliyor. Duzeltme, dosyanin isin okudugu yere birakilamadigi kaynak turlerinde sessizce degil acikca reddediliyor"
 }
