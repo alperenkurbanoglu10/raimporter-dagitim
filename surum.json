@@ -1,6 +1,6 @@
 {
-  "version": "1.8.27",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.27/RAImporter.exe",
-  "sha256": "04AC36AFDE4B8541A3B4FB47B6AC9BB9638CCE4C32C64FB66C0A90ECA5F3C0DA",
-  "notes": "Kontroller sekmesi: mizan ve folyo dengesi kontrollerinin ayarlari, elle calistirma ve sonuc tablolari arayuze eklendi"
+  "version": "1.8.28",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.28/RAImporter.exe",
+  "sha256": "40171B9EBB09DB5560CC8E914D90AFAA3EC89D3C1FC070DAD368F44F177A5BF5",
+  "notes": "Mizan kontrolu sahada calisir hale getirildi: rapor adi katalogdan cozuluyor, P2020'nin bekledigi GG.AA.YYYY tarih bicimi destekleniyor ve elle kosumda R&A hata mesaji artik ekranda goruluyor"
 }
