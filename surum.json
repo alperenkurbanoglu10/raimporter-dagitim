@@ -1,6 +1,6 @@
 {
-  "version": "1.8.32",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.32/RAImporter.exe",
-  "sha256": "B0FED5080BB3183BAE2F6250873D1F2AC90006D18C9CF6BBCE8D8052D82BB605",
-  "notes": "Rapor parametreleri artik raporun kendi metadata'sindan okunuyor: tarih bicimi her otelde ayni olmadigi icin varsayilan degerden cikariliyor, LOV'lu alanlarda raporun kendi varsayilani kullaniliyor. P2030 islem gunlugu ile fark bulunan islem kodunun HANGI ISLEMDEN kaynaklandigi tespit ediliyor"
+  "version": "1.8.33",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.33/RAImporter.exe",
+  "sha256": "CCAAD0C923F91B570457C1F87ADE5B9501E59B1212A1C2676B880BBCAA81D5D1",
+  "notes": "Artakalan kayit silme: islem gunluguyle kanitlanmis, veritabaninda kalmis kayitlar tek tek trx_no ile silinebiliyor (varsayilan kapali, kapaliyken yalnizca raporlanir). Folyo kontrolu artik kac folyoya bakildigini, hangi pencerede ve hangi esikle baktigini yaziyor"
 }
