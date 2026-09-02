@@ -1,6 +1,6 @@
 {
-  "version": "1.8.29",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.29/RAImporter.exe",
-  "sha256": "60B34D152014905CF08DB61537C533D3EDA4A6C77A7A64ACC94E89CEC2D03DEA",
-  "notes": "Kaynagi SFTP olan otellerde de mizan kontrolu: kontrolun kendi R&A baglantisi tanimlanabiliyor. Duzeltme, dosyanin isin okudugu yere birakilamadigi kaynak turlerinde sessizce degil acikca reddediliyor"
+  "version": "1.8.30",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.30/RAImporter.exe",
+  "sha256": "9A817D50ECD1D0050C0FCC202377284C4AA45BD229A2A27334F293D5841F363C",
+  "notes": "Kontrol bildirimleri artik aktarim raporlariyla ayni sablonda (durum renkli baslik, ozet kutulari, tablolar); tutan tesisler listelenmiyor. Yapisal farklar icin haric tutma onerisi. Hic denenmeden DUZELMEDI denmesi duzeltildi. Kaynagi SFTP olan otellerde kontrolun kendi R&A baglantisi tanimlanabiliyor"
 }
