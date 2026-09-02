@@ -1,6 +1,6 @@
 {
-  "version": "1.8.33",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.33/RAImporter.exe",
-  "sha256": "CCAAD0C923F91B570457C1F87ADE5B9501E59B1212A1C2676B880BBCAA81D5D1",
-  "notes": "Artakalan kayit silme: islem gunluguyle kanitlanmis, veritabaninda kalmis kayitlar tek tek trx_no ile silinebiliyor (varsayilan kapali, kapaliyken yalnizca raporlanir). Folyo kontrolu artik kac folyoya bakildigini, hangi pencerede ve hangi esikle baktigini yaziyor"
+  "version": "1.8.34",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.34/RAImporter.exe",
+  "sha256": "4653D8A545BB9A64EEFC88E04F4031C4AC2D9A7D9634243EDD9AFD76E4A0C021",
+  "notes": "Islem gunlugu artik kolonlari baslik satirindan okuyor (sabit indeks degil), boylece kolon duzeni farkli tenant'larda da dogru calisir; baslik taninamazsa veri uydurmak yerine uyari verir. Gunlugun tesis/gunu de dogrulaniyor. Artakalan kayit eslestirmesi fis numarasi + tutar ile yapiliyor. Elle kosumda ogle kisiti duzeltmeyi de engellemiyor"
 }
