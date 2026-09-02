@@ -1,6 +1,6 @@
 {
-  "version": "1.8.25",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.25/RAImporter.exe",
-  "sha256": "5D5B3F6D9E4E4848D29657081A2C54533F019EA5473487F4614BE7FC3013C4AE",
-  "notes": "E-fatura ayarlari kaydedildikten sonra forma geri yuklenmiyordu (kaydetmemis gibi gorunuyordu, bos formla ikinci kayit ayarlari siliyordu); duzeltildi"
+  "version": "1.8.26",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.26/RAImporter.exe",
+  "sha256": "F79ED944186E8C6C0290A8AF197AB77BA86C301257CAE400B72AE0164846FB1E",
+  "notes": "Periyodik saglik kontrolleri: mizan (Opera Cloud Trial Balance ile veritabani kod basina karsilastirilir) ve folyo dengesi (geliri odemesiyle tutmayan folyolar). Fark bulununca ilgili gun icin Financial Update yeniden gonderilir, 5 dakika sonra dogrulanir ve sonuc e-posta ile bildirilir"
 }
