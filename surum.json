@@ -1,6 +1,6 @@
 {
-  "version": "1.8.26",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.26/RAImporter.exe",
-  "sha256": "F79ED944186E8C6C0290A8AF197AB77BA86C301257CAE400B72AE0164846FB1E",
-  "notes": "Periyodik saglik kontrolleri: mizan (Opera Cloud Trial Balance ile veritabani kod basina karsilastirilir) ve folyo dengesi (geliri odemesiyle tutmayan folyolar). Fark bulununca ilgili gun icin Financial Update yeniden gonderilir, 5 dakika sonra dogrulanir ve sonuc e-posta ile bildirilir"
+  "version": "1.8.27",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.27/RAImporter.exe",
+  "sha256": "04AC36AFDE4B8541A3B4FB47B6AC9BB9638CCE4C32C64FB66C0A90ECA5F3C0DA",
+  "notes": "Kontroller sekmesi: mizan ve folyo dengesi kontrollerinin ayarlari, elle calistirma ve sonuc tablolari arayuze eklendi"
 }
