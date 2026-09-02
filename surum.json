@@ -1,6 +1,6 @@
 {
-  "version": "1.8.24",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.24/RAImporter.exe",
-  "sha256": "A2B85F7389DBD81DAE086475926E1AAC4D2DCF70B38A41D844B3392ED75166D3",
-  "notes": "Guncelleme kurulup da devreye girmediyse arayuzde gorunur uyari ve tek tikla servis yeniden baslatma; secim vurgusu ve tablo satirlari artik belirgin (CTRL+A ile secilen metin gorunuyor)"
+  "version": "1.8.25",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.25/RAImporter.exe",
+  "sha256": "5D5B3F6D9E4E4848D29657081A2C54533F019EA5473487F4614BE7FC3013C4AE",
+  "notes": "E-fatura ayarlari kaydedildikten sonra forma geri yuklenmiyordu (kaydetmemis gibi gorunuyordu, bos formla ikinci kayit ayarlari siliyordu); duzeltildi"
 }
