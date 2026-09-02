@@ -1,6 +1,6 @@
 {
-  "version": "1.8.19",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.19/RAImporter.exe",
-  "sha256": "3F90925014257E06CAD26B3955AD178CAFF0990F580DFCC13338630DA16B664B",
-  "notes": "MS SQL katalogu artik sys.* gorunumlerini ve acik harmanlamayi kullaniyor: harf duyarli ya da Turkce harmanlamali veritabanlarinda 'Invalid object name information_schema' hatasi giderildi"
+  "version": "1.8.20",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.20/RAImporter.exe",
+  "sha256": "DEA69A175624570AE0758C003F55113FC559F515F0C40BA3602D1A856E5469BD",
+  "notes": "Guncelleme sonrasi servis yeniden baslatma guvenilir; R&A kosumu sunucuda kesilirse tarih penceresi bolunuyor; kurumsal gorev sablonu (TRX_NO_SPLIT 08/12/16/20)"
 }

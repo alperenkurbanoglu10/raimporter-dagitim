@@ -76,11 +76,18 @@ if ($running) {
     $running | Stop-Process -Force
     Start-Sleep -Seconds 2
 }
+# Servisi durduruyoruz ki calisan exe'nin uzerine yazabilelim. DURUMU
+# HATIRLIYORUZ: kurulum bitince geri baslatilmazsa surum yukseltmesi
+# "guncelleme yapildi ama servis kapali kaldi" olarak geri doner. -Service
+# verilmeden yapilan yukseltmeler de bu yoldan gecer.
+$svcCalisiyordu = $false
 $svc = Get-Service -Name "ProtelRAImporter" -ErrorAction SilentlyContinue
 if ($svc -and $svc.Status -eq "Running") {
     Say "Servis calisiyor, durduruluyor..."
+    $svcCalisiyordu = $true
     Stop-Service -Name "ProtelRAImporter" -Force
-    Start-Sleep -Seconds 2
+    try { $svc.WaitForStatus("Stopped", [TimeSpan]::FromSeconds(60)) }
+    catch { Say "Servis 60 saniyede durmadi; yine de devam ediliyor." }
 }
 
 New-Item -ItemType Directory -Path $Dir -Force | Out-Null
@@ -224,8 +231,24 @@ if ($Service) {
     } else {
         Say "Windows servisi kuruluyor..."
         & $exe install-service
-        if ($LASTEXITCODE -eq 0) { Ok "Servis kuruldu ve baslatildi" }
+        if ($LASTEXITCODE -eq 0) { Ok "Servis kuruldu ve baslatildi"; $svcCalisiyordu = $false }
         else { Bad "Servis kurulumu basarisiz (cikis kodu $LASTEXITCODE)" }
+    }
+}
+
+# Kurulum icin durdurdugumuz servisi GERI baslat. Yoksa yeni exe yerinde
+# durur ama hicbir sey kosmaz; disaridan bakinca "guncelleme surumu
+# degistirmedi" gorunur.
+if ($svcCalisiyordu) {
+    Say "Servis yeni surumle yeniden baslatiliyor..."
+    try {
+        Start-Service -Name "ProtelRAImporter" -ErrorAction Stop
+        (Get-Service -Name "ProtelRAImporter").WaitForStatus(
+            "Running", [TimeSpan]::FromSeconds(60))
+        Ok "Servis calisiyor (yeni surum devrede)"
+    } catch {
+        Bad "Servis baslatilamadi: $($_.Exception.Message)"
+        Say "Elle baslatin:  sc start ProtelRAImporter"
     }
 }
 
