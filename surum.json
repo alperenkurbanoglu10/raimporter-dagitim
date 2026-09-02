@@ -1,6 +1,6 @@
 {
-  "version": "1.8.30",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.30/RAImporter.exe",
-  "sha256": "9A817D50ECD1D0050C0FCC202377284C4AA45BD229A2A27334F293D5841F363C",
-  "notes": "Kontrol bildirimleri artik aktarim raporlariyla ayni sablonda (durum renkli baslik, ozet kutulari, tablolar); tutan tesisler listelenmiyor. Yapisal farklar icin haric tutma onerisi. Hic denenmeden DUZELMEDI denmesi duzeltildi. Kaynagi SFTP olan otellerde kontrolun kendi R&A baglantisi tanimlanabiliyor"
+  "version": "1.8.31",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.31/RAImporter.exe",
+  "sha256": "312FDF6FA67D22A713FBECCEFA1EDAD2612EB98B89B1EA67FA30A4AC01F915EB",
+  "notes": "Kontrol bildiriminin konu satirinda artik hangi otelden kaynaklandigi yaziyor. Duzeltme gonderimi basarisiz olursa deneme sayilmiyor: hedefe ulasmamis bir duzeltme icin DUZELMEDI denmiyor, ogleden once yeniden deneniyor"
 }
