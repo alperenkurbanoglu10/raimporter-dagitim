@@ -1,6 +1,6 @@
 {
-  "version": "1.8.31",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.31/RAImporter.exe",
-  "sha256": "312FDF6FA67D22A713FBECCEFA1EDAD2612EB98B89B1EA67FA30A4AC01F915EB",
-  "notes": "Kontrol bildiriminin konu satirinda artik hangi otelden kaynaklandigi yaziyor. Duzeltme gonderimi basarisiz olursa deneme sayilmiyor: hedefe ulasmamis bir duzeltme icin DUZELMEDI denmiyor, ogleden once yeniden deneniyor"
+  "version": "1.8.32",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.32/RAImporter.exe",
+  "sha256": "B0FED5080BB3183BAE2F6250873D1F2AC90006D18C9CF6BBCE8D8052D82BB605",
+  "notes": "Rapor parametreleri artik raporun kendi metadata'sindan okunuyor: tarih bicimi her otelde ayni olmadigi icin varsayilan degerden cikariliyor, LOV'lu alanlarda raporun kendi varsayilani kullaniliyor. P2030 islem gunlugu ile fark bulunan islem kodunun HANGI ISLEMDEN kaynaklandigi tespit ediliyor"
 }
