@@ -1,6 +1,6 @@
 {
-  "version": "1.8.43",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.43/RAImporter.exe",
-  "sha256": "3C0F1AC49A7618C4C94DE5FCE693063A9896E6D575DD5D3E40E5D55877A702F4",
-  "notes": "Duzeltme export klasoru artik ayri bir ayar. Duzeltme, PORTAL export unu MIZAN raporunun klasorunde ariyordu ve SFTP kaynakli otelde \"rapor bu klasorde YOK\" hatasi veriyordu; ikisi ayni klasor degil. Yeni alan bos birakilirsa isin kendi R&A klasorune dusuluyor, yani R&A kaynakli islerde davranis degismiyor. Ayrica DbSettings.is_oracle eklendi: kayip rezervasyon kontrolu bu ozelligi kullaniyordu ama tanimli degildi ve AttributeError veriyordu."
+  "version": "1.8.44",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.44/RAImporter.exe",
+  "sha256": "B1B0D583D3AEBFC2DBFE6930450788D5B6A219B69CB74C8F1980743D9AE6185A",
+  "notes": "Yanlis alarm kapandi: 9504 in gercek aciklamasi \"Deposit Transfer at Check In\" (bizim varsayilanimiz \"Transferred\" diyordu), tek kelime farki elemeyi dusuruyor ve kod fark uretip P2030 detayinda 64 kaydi fazla gosteriyordu. Ikinci yazim varsayilana eklendi. Fark kapaninca kayittaki eski silme adaylari ve detay temizleniyor; bildirim de haric tutulan kodun adayini gostermiyor. Ayrica Trial Balance tutar kolonu eslestirmesi noktalama duyarsiz oldu ve rapor eksik okunmussa silme adayi uretilmiyor."
 }
