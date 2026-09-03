@@ -1,6 +1,6 @@
 {
-  "version": "1.8.41",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.41/RAImporter.exe",
-  "sha256": "3C453D2930B8431126DE986571D1792A54706B528B9CC4DEA050CCE3DF0E704B",
-  "notes": "Kayip rezervasyon kontrolu eklendi (3. kontrol). Faturasi olan ama rezervasyonu reservation_general_view de gorunmeyen kayitlari bulur; sorgunun soyledigi eksik halkaya gore raporu resv_name_id (NAME icin name_id) ile ceker, aktarir ve sorguyu YENIDEN kosup kac rezervasyonun gercekten duzeldigini sayar. Sira RESNAME - NAME - RDENAME - RDELEMENTS. Parametre adlari raporun kendi tanimindan okunur. Rapor klasoru ve adlari ayardir, her kurulumda ayni olmayabilir. Gunde bir kez kosar, duzeltme varsayilan olarak KAPALI gelir. Ayrica SFTP/IMAP kaynakli otellerde duzeltme artik yapiliyor: dosya yerel klasore inip isin bir kopyasi o klasorden kosturuluyor."
+  "version": "1.8.42",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.42/RAImporter.exe",
+  "sha256": "5890CDE90D6185B0F5BAD4FDC2B46D087888619A9EB7537ADC7C3612CB463CD1",
+  "notes": "v1.8.41 de kayip rezervasyon kontrolunun giris noktasi eksik kalmisti: arayuz \"module raimport.kontroller has no attribute kayip_tur\" hatasi veriyordu. Islevler eklendi. Ayrica her kontrol adi icin giris noktasinin VARLIGINI olcen testler eklendi; boyle bir eksik bir daha sessizce gecemez. Yalnizca kayip kontrolu etkilenmisti; mizan, folyo ve e-fatura calisiyordu."
 }
