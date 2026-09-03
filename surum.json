@@ -1,6 +1,6 @@
 {
-  "version": "1.8.35",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.35/RAImporter.exe",
-  "sha256": "1F643CBE8232CB3E32D99E0F489E411D43A3CE6900BB21DFD016C51C422DE0E0",
-  "notes": "Haric tutma islem koduyla degil ACIKLAMAYLA yapiliyor (Cash Shift Drop, Deposit Transferred at Check in) -- aciklamalar TRX$_CODES tablosundan okunuyor, artik hicbir otelde kod girmek gerekmiyor. Elle 'simdi kontrol et' her durumda is yapiyor: vazgecilmis, deneme kotasi dolmus ve sonuclanmis gunlerde de veritabani yeniden okunup duzeltme gonderiliyor. Artakalan kayit silme artik duzeltme anahtarina da bagli -- duzeltme kapaliyken yalnizca prova yapilir, hicbir sey silinmez."
+  "version": "1.8.36",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.36/RAImporter.exe",
+  "sha256": "56F0164DF47DAC1933E18F7B5633F3900E1669566F5764824A01653E7AEA3BA9",
+  "notes": "Guncelleme sonrasi acik kalan pencere de yeni surumle yeniden aciliyor; uyari artik dogru careyi soyluyor (servis mi, pencere mi) ve servis kendi surumunu bildiriyor. Mizan farkinin SEBEBI arayuzde gorunuyor: sapan kalemler ve P2030 islem gunlugunden tek tek kayitlar (fis, oda, trx_no, tutar). Islem gunlugu rapor/klasor alanlari arayuze eklendi. E-posta bildiriminin sonucu artik sessiz degil: gonderildi / kapali / hata sebebiyle birlikte yaziliyor."
 }
