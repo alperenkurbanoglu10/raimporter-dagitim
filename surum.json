@@ -1,6 +1,6 @@
 {
-  "version": "1.8.39",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.39/RAImporter.exe",
-  "sha256": "4DED6ECC9A7325F374822B55C91AFACB7FFBDD9272D5ACED10881B9546173FFE",
-  "notes": "Duzeltme penceresi artik istenen GUNDEN BUGUNE. PORTAL_FINANCIAL_UPDATE in tarih parametresi trx_date i degil kaydin degistirilme anini suzuyor; tek gunluk pencere, o gune ait ama SONRADAN girilen kayitlari hic getirmiyordu ve duzeltme sessizce etkisiz kaliyordu. Ust sinir 45 gun. Ayrica mizan duzeltme gonderdiginde e-posta bildirimi cokuyordu (gonderilen alani folyoda liste, mizanda sayi); duzeltildi ve butun rapor bicimleri sablonlardan gecirilerek supuruluyor."
+  "version": "1.8.41",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.41/RAImporter.exe",
+  "sha256": "3C453D2930B8431126DE986571D1792A54706B528B9CC4DEA050CCE3DF0E704B",
+  "notes": "Kayip rezervasyon kontrolu eklendi (3. kontrol). Faturasi olan ama rezervasyonu reservation_general_view de gorunmeyen kayitlari bulur; sorgunun soyledigi eksik halkaya gore raporu resv_name_id (NAME icin name_id) ile ceker, aktarir ve sorguyu YENIDEN kosup kac rezervasyonun gercekten duzeldigini sayar. Sira RESNAME - NAME - RDENAME - RDELEMENTS. Parametre adlari raporun kendi tanimindan okunur. Rapor klasoru ve adlari ayardir, her kurulumda ayni olmayabilir. Gunde bir kez kosar, duzeltme varsayilan olarak KAPALI gelir. Ayrica SFTP/IMAP kaynakli otellerde duzeltme artik yapiliyor: dosya yerel klasore inip isin bir kopyasi o klasorden kosturuluyor."
 }
