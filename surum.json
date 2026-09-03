@@ -1,6 +1,6 @@
 {
-  "version": "1.8.37",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.37/RAImporter.exe",
-  "sha256": "7430E77EBF19BBBF4BE19921D4437F57DCC20D2B5F2686D1EA61BC3554EF086C",
-  "notes": "E-fatura senkronu artik gorunur. Zamanlanmis kosumun sonucu E-fatura sekmesinde: son kosum, aralik, okunan / guncellenen / beklemede / atlanan / hata ve sirada ne var. Fatura BAZINDA kanit icin \"Iz tablosunu goster\" dugmesi eklendi (RA_EINVOICE_SYNC: tesis, fatura no, durum, guncellenen satir, deneme, hata) - tesis ve durum suzgecleriyle. E-fatura icin e-posta bildirimi eklendi: sorun yoksa sessiz, sorun varsa rapor; bildirimin sonucu her durumda yaziliyor."
+  "version": "1.8.38",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.38/RAImporter.exe",
+  "sha256": "1EF8E83DA706039DDA06CBC13DE37AE1A024E08539265003E4CA852F4D448D14",
+  "notes": "Acilis telafisi artik makine acilisinda BEKLEMIYOR. Bilgisayar sabah acildiginda kacan export telafisi 15 dakika bekletiliyordu; o bekleme \"uzman exe yi yapilandiriyor\" durumu icindi. Iki isaretle ayirt ediliyor: servis olarak baslamak ve makinenin 10 dakikadan kisa suredir acik olmasi - ikincisi sart, cunku servis kurulu degilse zamanlayici masaustu surecinde kosar. Bekleme kaldigi durumlarda da gorunur oldu: export rozetinde \"telafi 09:05 te denenecek\" yaziyor."
 }
