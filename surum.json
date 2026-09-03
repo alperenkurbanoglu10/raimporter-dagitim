@@ -1,6 +1,6 @@
 {
-  "version": "1.8.42",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.42/RAImporter.exe",
-  "sha256": "5890CDE90D6185B0F5BAD4FDC2B46D087888619A9EB7537ADC7C3612CB463CD1",
-  "notes": "v1.8.41 de kayip rezervasyon kontrolunun giris noktasi eksik kalmisti: arayuz \"module raimport.kontroller has no attribute kayip_tur\" hatasi veriyordu. Islevler eklendi. Ayrica her kontrol adi icin giris noktasinin VARLIGINI olcen testler eklendi; boyle bir eksik bir daha sessizce gecemez. Yalnizca kayip kontrolu etkilenmisti; mizan, folyo ve e-fatura calisiyordu."
+  "version": "1.8.43",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.43/RAImporter.exe",
+  "sha256": "3C0F1AC49A7618C4C94DE5FCE693063A9896E6D575DD5D3E40E5D55877A702F4",
+  "notes": "Duzeltme export klasoru artik ayri bir ayar. Duzeltme, PORTAL export unu MIZAN raporunun klasorunde ariyordu ve SFTP kaynakli otelde \"rapor bu klasorde YOK\" hatasi veriyordu; ikisi ayni klasor degil. Yeni alan bos birakilirsa isin kendi R&A klasorune dusuluyor, yani R&A kaynakli islerde davranis degismiyor. Ayrica DbSettings.is_oracle eklendi: kayip rezervasyon kontrolu bu ozelligi kullaniyordu ama tanimli degildi ve AttributeError veriyordu."
 }
