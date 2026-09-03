@@ -1,6 +1,6 @@
 {
-  "version": "1.8.38",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.38/RAImporter.exe",
-  "sha256": "1EF8E83DA706039DDA06CBC13DE37AE1A024E08539265003E4CA852F4D448D14",
-  "notes": "Acilis telafisi artik makine acilisinda BEKLEMIYOR. Bilgisayar sabah acildiginda kacan export telafisi 15 dakika bekletiliyordu; o bekleme \"uzman exe yi yapilandiriyor\" durumu icindi. Iki isaretle ayirt ediliyor: servis olarak baslamak ve makinenin 10 dakikadan kisa suredir acik olmasi - ikincisi sart, cunku servis kurulu degilse zamanlayici masaustu surecinde kosar. Bekleme kaldigi durumlarda da gorunur oldu: export rozetinde \"telafi 09:05 te denenecek\" yaziyor."
+  "version": "1.8.39",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.39/RAImporter.exe",
+  "sha256": "4DED6ECC9A7325F374822B55C91AFACB7FFBDD9272D5ACED10881B9546173FFE",
+  "notes": "Duzeltme penceresi artik istenen GUNDEN BUGUNE. PORTAL_FINANCIAL_UPDATE in tarih parametresi trx_date i degil kaydin degistirilme anini suzuyor; tek gunluk pencere, o gune ait ama SONRADAN girilen kayitlari hic getirmiyordu ve duzeltme sessizce etkisiz kaliyordu. Ust sinir 45 gun. Ayrica mizan duzeltme gonderdiginde e-posta bildirimi cokuyordu (gonderilen alani folyoda liste, mizanda sayi); duzeltildi ve butun rapor bicimleri sablonlardan gecirilerek supuruluyor."
 }
