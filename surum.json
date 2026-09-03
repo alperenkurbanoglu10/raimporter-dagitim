@@ -1,6 +1,6 @@
 {
-  "version": "1.8.36",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.36/RAImporter.exe",
-  "sha256": "56F0164DF47DAC1933E18F7B5633F3900E1669566F5764824A01653E7AEA3BA9",
-  "notes": "Guncelleme sonrasi acik kalan pencere de yeni surumle yeniden aciliyor; uyari artik dogru careyi soyluyor (servis mi, pencere mi) ve servis kendi surumunu bildiriyor. Mizan farkinin SEBEBI arayuzde gorunuyor: sapan kalemler ve P2030 islem gunlugunden tek tek kayitlar (fis, oda, trx_no, tutar). Islem gunlugu rapor/klasor alanlari arayuze eklendi. E-posta bildiriminin sonucu artik sessiz degil: gonderildi / kapali / hata sebebiyle birlikte yaziliyor."
+  "version": "1.8.37",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.37/RAImporter.exe",
+  "sha256": "7430E77EBF19BBBF4BE19921D4437F57DCC20D2B5F2686D1EA61BC3554EF086C",
+  "notes": "E-fatura senkronu artik gorunur. Zamanlanmis kosumun sonucu E-fatura sekmesinde: son kosum, aralik, okunan / guncellenen / beklemede / atlanan / hata ve sirada ne var. Fatura BAZINDA kanit icin \"Iz tablosunu goster\" dugmesi eklendi (RA_EINVOICE_SYNC: tesis, fatura no, durum, guncellenen satir, deneme, hata) - tesis ve durum suzgecleriyle. E-fatura icin e-posta bildirimi eklendi: sorun yoksa sessiz, sorun varsa rapor; bildirimin sonucu her durumda yaziliyor."
 }
