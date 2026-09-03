@@ -1,6 +1,6 @@
 {
-  "version": "1.8.44",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.44/RAImporter.exe",
-  "sha256": "B1B0D583D3AEBFC2DBFE6930450788D5B6A219B69CB74C8F1980743D9AE6185A",
-  "notes": "Yanlis alarm kapandi: 9504 in gercek aciklamasi \"Deposit Transfer at Check In\" (bizim varsayilanimiz \"Transferred\" diyordu), tek kelime farki elemeyi dusuruyor ve kod fark uretip P2030 detayinda 64 kaydi fazla gosteriyordu. Ikinci yazim varsayilana eklendi. Fark kapaninca kayittaki eski silme adaylari ve detay temizleniyor; bildirim de haric tutulan kodun adayini gostermiyor. Ayrica Trial Balance tutar kolonu eslestirmesi noktalama duyarsiz oldu ve rapor eksik okunmussa silme adayi uretilmiyor."
+  "version": "1.8.45",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.45/RAImporter.exe",
+  "sha256": "A3ACFF2EDE3173D155F47F400795CF290020016628ED84476244A6FACD71BE2F",
+  "notes": "Artakalan kayit silmesi icin UC AYAKLI kanit: kod bir odeme kodu (FT_SUBTYPE=FC), ayni islem gunlugu baska odeme kodlarinin satirlarini tasiyor, ve kod Trial Balance ta da yok. Ucu birden saglanmadan eski guard aynen duruyor; silme yine duzeltme VE artakalan silme anahtari birlikte acikken calisiyor. Ayrica guncelleme manifesti artik CDN onbellegine takilmiyor: manifest ve imza adreslerine tek kullanimlik parametre ekleniyor, yeni surum yayinlandigi anda gorunuyor."
 }
