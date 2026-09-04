@@ -1,6 +1,6 @@
 {
-  "version": "1.8.48",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.48/RAImporter.exe",
-  "sha256": "7A07B6342A0E10360E37DF59AC51B70C793EF40A6A720677CC3B3D07FE4C7A43",
-  "notes": "Katalogdaki rapor tipi artik UZANTIDAN cozuluyor. Eski BI Publisher surumlerinde getFolderContentsInSession cevabindaki type alani Report demiyor ve klasorde raporlar oldugu halde \"klasorde hic rapor yok\" hatasi aliniyordu (yeni otel kurulumunda 38 raporluk klasorde yasandi). Artik .xdo rapor, .xdm veri modeli olarak taniniyor. Ayrica rapor bulunamayinca hata ne geldigini yaziyor: bos klasor mu, tanimadigimiz bir tip mi ayirt edilebiliyor."
+  "version": "1.8.49",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.49/RAImporter.exe",
+  "sha256": "AE9CD82F2C2476C2499CBB37FD36CF88EC50209C1EF34AEBFAD4E37CEEBC8D50",
+  "notes": "Katalogdaki rapor ADI da artik yoldan cozuluyor. 1.8.48 tip alanini duzeltmisti; ayni tenant bu kez displayName alanini da bos donduruyordu ve arayuz \"Klasordeki raporlar: , , , ,\" yaziyordu -- raporlar goruluyor ama adlari bos oldugu icin arama eslesmiyordu. Ad bos gelirse absolutePath son bolumunden turetiliyor, uzanti atiliyor; displayName doluysa ona dokunulmuyor."
 }
