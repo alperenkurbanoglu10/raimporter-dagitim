@@ -1,6 +1,6 @@
 {
-  "version": "1.8.49",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.49/RAImporter.exe",
-  "sha256": "AE9CD82F2C2476C2499CBB37FD36CF88EC50209C1EF34AEBFAD4E37CEEBC8D50",
-  "notes": "Katalogdaki rapor ADI da artik yoldan cozuluyor. 1.8.48 tip alanini duzeltmisti; ayni tenant bu kez displayName alanini da bos donduruyordu ve arayuz \"Klasordeki raporlar: , , , ,\" yaziyordu -- raporlar goruluyor ama adlari bos oldugu icin arama eslesmiyordu. Ad bos gelirse absolutePath son bolumunden turetiliyor, uzanti atiliyor; displayName doluysa ona dokunulmuyor."
+  "version": "1.8.51",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.51/RAImporter.exe",
+  "sha256": "1272C0FC0A35319CA6ED9AE76895A1D77509E034246B8362CA5EA08870AFC025",
+  "notes": "Tarih bicimi yanlissa artik raporun KENDI varsayilanindan cikan bicimle bir kez daha deneniyor -- hem P2020 hem P2030 icin. Ayni yanlis ayar iki raporda iki ayri belirti veriyordu: P2020 bos rapor donduruyor, P2030 SOAP fault veriyordu (unknown fault occurred). Calisan bicim loga yaziliyor. Kalici cozum daha basit: Kontroller sekmesindeki Tarih bicimi alanini BOS birakmak; bicim raporun kendi varsayilanindan okunur. Ayni tenant icinde iki ayri bicim olabiliyor: PORTAL export lari %m-%d-%Y, P2020/P2030 ise %d.%m.%Y."
 }
