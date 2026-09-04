@@ -1,6 +1,6 @@
 {
-  "version": "1.8.55",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.55/RAImporter.exe",
-  "sha256": "6809EBDDC41D54704D4EF0088EB2932BA3B2A79877FF9C19981A64C99D9FD52A",
-  "notes": "Doviz bozdurma (Exchange) kayitlari artik silinmiyor: hicbir deftere islenmeyen kasa ici odeme satirlari mizan toplamina ve islem gunlugu karsilastirmasina girmiyor, silme adayi olmuyor."
+  "version": "1.8.56",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.56/RAImporter.exe",
+  "sha256": "9D2DFBBDC283FECA038FF0FA86D1EC61F0DB1BF721A11830C2CC015E38314DF6",
+  "notes": "Kasa ici satirlarin kaniti kasiyer raporu (P2001): hicbir deftere islenmeyen odeme satirlari her gun P2001 ile dogrulanir; raporda karsiligi olmayan satir tek tek trx_no ile artakalan adayi olur (silme yine duzelt + artakalan sil ister)."
 }
