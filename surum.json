@@ -1,6 +1,6 @@
 {
-  "version": "1.8.45",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.45/RAImporter.exe",
-  "sha256": "A3ACFF2EDE3173D155F47F400795CF290020016628ED84476244A6FACD71BE2F",
-  "notes": "Artakalan kayit silmesi icin UC AYAKLI kanit: kod bir odeme kodu (FT_SUBTYPE=FC), ayni islem gunlugu baska odeme kodlarinin satirlarini tasiyor, ve kod Trial Balance ta da yok. Ucu birden saglanmadan eski guard aynen duruyor; silme yine duzeltme VE artakalan silme anahtari birlikte acikken calisiyor. Ayrica guncelleme manifesti artik CDN onbellegine takilmiyor: manifest ve imza adreslerine tek kullanimlik parametre ekleniyor, yeni surum yayinlandigi anda gorunuyor."
+  "version": "1.8.46",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.46/RAImporter.exe",
+  "sha256": "404AF884E46B183B2CD8230FCD2FA6DB3A26A0D6403F7143B43A9BA7B5269382",
+  "notes": "SERVIS YENIDEN BASLATMA COZULDU. Servis icinden ayrik surec baslatmak Windows tarafindan sessizce engelleniyordu: Popen basariyla donuyor ama PowerShell hic calismiyordu, bu yuzden guncelleme diske iniyor ama servis eski surumde kaliyordu. Yeniden baslatma artik Gorev Zamanlayiciya devrediliyor ve schtasks /run ile aninda kosuluyor. Bu makinede gercek servisle uctan uca dogrulandi: pid degisti, toplam 5 saniye. Yardimcinin kendi ciktisi da artik guncelleme-yardimci-cikti.log dosyasina yaziliyor."
 }
