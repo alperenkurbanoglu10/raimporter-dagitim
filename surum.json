@@ -1,6 +1,6 @@
 {
-  "version": "1.8.51",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.51/RAImporter.exe",
-  "sha256": "1272C0FC0A35319CA6ED9AE76895A1D77509E034246B8362CA5EA08870AFC025",
-  "notes": "Tarih bicimi yanlissa artik raporun KENDI varsayilanindan cikan bicimle bir kez daha deneniyor -- hem P2020 hem P2030 icin. Ayni yanlis ayar iki raporda iki ayri belirti veriyordu: P2020 bos rapor donduruyor, P2030 SOAP fault veriyordu (unknown fault occurred). Calisan bicim loga yaziliyor. Kalici cozum daha basit: Kontroller sekmesindeki Tarih bicimi alanini BOS birakmak; bicim raporun kendi varsayilanindan okunur. Ayni tenant icinde iki ayri bicim olabiliyor: PORTAL export lari %m-%d-%Y, P2020/P2030 ise %d.%m.%Y."
+  "version": "1.8.53",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.53/RAImporter.exe",
+  "sha256": "C42147D29BEFB283DD126C43527857F9327B1396FB0E8EDFDF5F8D06163448CD",
+  "notes": "XLSX bicim adi sirayla deneniyor: eski BI Publisher surumleri attributeFormat=xlsx istegini tanimayip varsayilana (PDF) dusuyordu ve \"File is not a zip file\" hatasi aliniyordu. Artik xlsx, excel ve excel2000 sirayla deneniyor; hicbiri xlsx vermezse hata NE geldigini soyluyor (PDF/HTML/XML/eski xls) ve layout ta Excel ciktisinin acik olmasi gerektigini yaziyor. Ayrica manifest icin alternatif ref adresi de deneniyor: ayni dosyanin main/ ve refs/heads/main/ yollari farkli surum donduruyordu; imzasi dogrulananlarin en yenisi seciliyor."
 }
