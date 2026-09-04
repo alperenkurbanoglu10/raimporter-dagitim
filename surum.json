@@ -1,6 +1,6 @@
 {
-  "version": "1.8.46",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.46/RAImporter.exe",
-  "sha256": "404AF884E46B183B2CD8230FCD2FA6DB3A26A0D6403F7143B43A9BA7B5269382",
-  "notes": "SERVIS YENIDEN BASLATMA COZULDU. Servis icinden ayrik surec baslatmak Windows tarafindan sessizce engelleniyordu: Popen basariyla donuyor ama PowerShell hic calismiyordu, bu yuzden guncelleme diske iniyor ama servis eski surumde kaliyordu. Yeniden baslatma artik Gorev Zamanlayiciya devrediliyor ve schtasks /run ile aninda kosuluyor. Bu makinede gercek servisle uctan uca dogrulandi: pid degisti, toplam 5 saniye. Yardimcinin kendi ciktisi da artik guncelleme-yardimci-cikti.log dosyasina yaziliyor."
+  "version": "1.8.47",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.47/RAImporter.exe",
+  "sha256": "7D8B0C868A6842D0D1854DF27544F6DD16E7F24C88414F7ED1146A31B2C32FBA",
+  "notes": "Icerik degisikligi YOK; yalnizca surum numarasi. Amac 1.8.46 daki yeniden baslatma duzeltmesini sahada dogrulamak: servis kendi kendine guncelleyip yeniden basliyor mu? Beklenen: elle hicbir sey yapmadan servis 1.8.47 ye gecer ve servis-nabiz.json icindeki pid ile surum degisir."
 }
