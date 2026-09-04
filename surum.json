@@ -1,6 +1,6 @@
 {
-  "version": "1.8.53",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.53/RAImporter.exe",
-  "sha256": "C42147D29BEFB283DD126C43527857F9327B1396FB0E8EDFDF5F8D06163448CD",
-  "notes": "XLSX bicim adi sirayla deneniyor: eski BI Publisher surumleri attributeFormat=xlsx istegini tanimayip varsayilana (PDF) dusuyordu ve \"File is not a zip file\" hatasi aliniyordu. Artik xlsx, excel ve excel2000 sirayla deneniyor; hicbiri xlsx vermezse hata NE geldigini soyluyor (PDF/HTML/XML/eski xls) ve layout ta Excel ciktisinin acik olmasi gerektigini yaziyor. Ayrica manifest icin alternatif ref adresi de deneniyor: ayni dosyanin main/ ve refs/heads/main/ yollari farkli surum donduruyordu; imzasi dogrulananlarin en yenisi seciliyor."
+  "version": "1.8.54",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.54/RAImporter.exe",
+  "sha256": "BC7D14801F9AB26273A69C003A5AC7EE63E914E12F360B5B7E6C5BB98863BC4D",
+  "notes": "Calisma klasoru bakimi: work/ altindaki gecici dosyalar yaslarina gore temizleniyor (indirme kopyalari 2 gun, duzeltme/kayip export lari 14 gun, mizan durum kayitlari 400 gun)."
 }
