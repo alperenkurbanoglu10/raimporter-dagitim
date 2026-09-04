@@ -1,6 +1,6 @@
 {
-  "version": "1.8.54",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.54/RAImporter.exe",
-  "sha256": "BC7D14801F9AB26273A69C003A5AC7EE63E914E12F360B5B7E6C5BB98863BC4D",
-  "notes": "Calisma klasoru bakimi: work/ altindaki gecici dosyalar yaslarina gore temizleniyor (indirme kopyalari 2 gun, duzeltme/kayip export lari 14 gun, mizan durum kayitlari 400 gun)."
+  "version": "1.8.55",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.55/RAImporter.exe",
+  "sha256": "6809EBDDC41D54704D4EF0088EB2932BA3B2A79877FF9C19981A64C99D9FD52A",
+  "notes": "Doviz bozdurma (Exchange) kayitlari artik silinmiyor: hicbir deftere islenmeyen kasa ici odeme satirlari mizan toplamina ve islem gunlugu karsilastirmasina girmiyor, silme adayi olmuyor."
 }
