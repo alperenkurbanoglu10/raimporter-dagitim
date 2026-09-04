@@ -1,6 +1,6 @@
 {
-  "version": "1.8.47",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.47/RAImporter.exe",
-  "sha256": "7D8B0C868A6842D0D1854DF27544F6DD16E7F24C88414F7ED1146A31B2C32FBA",
-  "notes": "Icerik degisikligi YOK; yalnizca surum numarasi. Amac 1.8.46 daki yeniden baslatma duzeltmesini sahada dogrulamak: servis kendi kendine guncelleyip yeniden basliyor mu? Beklenen: elle hicbir sey yapmadan servis 1.8.47 ye gecer ve servis-nabiz.json icindeki pid ile surum degisir."
+  "version": "1.8.48",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.48/RAImporter.exe",
+  "sha256": "7A07B6342A0E10360E37DF59AC51B70C793EF40A6A720677CC3B3D07FE4C7A43",
+  "notes": "Katalogdaki rapor tipi artik UZANTIDAN cozuluyor. Eski BI Publisher surumlerinde getFolderContentsInSession cevabindaki type alani Report demiyor ve klasorde raporlar oldugu halde \"klasorde hic rapor yok\" hatasi aliniyordu (yeni otel kurulumunda 38 raporluk klasorde yasandi). Artik .xdo rapor, .xdm veri modeli olarak taniniyor. Ayrica rapor bulunamayinca hata ne geldigini yaziyor: bos klasor mu, tanimadigimiz bir tip mi ayirt edilebiliyor."
 }
