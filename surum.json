@@ -1,6 +1,6 @@
 {
-  "version": "1.8.57",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.57/RAImporter.exe",
-  "sha256": "3E4B269450EFF724B9E3EB0FE11DD03225318702877B66E0A02804F3D03918AD",
-  "notes": "Islem gunlugu (P2030) tanimi alinamayinca sebep ve rapor yolu ekranda ve logda"
+  "version": "1.8.58",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.58/RAImporter.exe",
+  "sha256": "8DA20987C315D6999DF4C45A87DD972AC76F99A5219D1AE50C39128C49CB7D31",
+  "notes": "Artakalan silinirken urettigi KDV satirlari (trx_no_added_by) da siliniyor; islem gunlugunde gecici hata bir kez daha deneniyor; hata metninde yol degil sebep"
 }
