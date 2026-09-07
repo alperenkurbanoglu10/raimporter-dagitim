@@ -1,6 +1,6 @@
 {
-  "version": "1.8.65",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.65/RAImporter.exe",
-  "sha256": "1653F1495178C3152AC4035D5035A58572CA167554628146CC582CF2051524CC",
-  "notes": "Islenen dosya uzanti degismeden islendi alt klasorune tasinir (.old yeniden adlandirma kalkti; guvenlik yazilimi tetiklemesi); alti isin ilk turdaki tablo olusturma yarisi kilit altinda"
+  "version": "1.8.66",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.66/RAImporter.exe",
+  "sha256": "05CAC6BC391963FAD80A33F2EBE381A52215D2469CD22541BC5157B5BF63E2AA",
+  "notes": "Tani: cikis izleyici -- surec neden kapandi (os._exit/sys.exit/atexit/olumcul hata) logs\\cikis-izi.log ve her 10 sn tum yiginlar logs\\yigin-izi-<pid>.log; davranis degisikligi yok"
 }
