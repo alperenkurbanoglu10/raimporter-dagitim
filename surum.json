@@ -1,6 +1,6 @@
 {
-  "version": "1.8.61",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.61/RAImporter.exe",
-  "sha256": "A6E08F77BB8689F83DB8AC5314218B5FB2BC0221847B414B456AF8B76468C05B",
-  "notes": "Mizan ve kayip kontrolleri isin otel koduna gore kosar (kod bos ise veritabanindaki tum tesisler)"
+  "version": "1.8.62",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.62/RAImporter.exe",
+  "sha256": "C54DC51A5421FF200AAE24D52717EE113B5434BCDB72BA63D51B93AA8800062D",
+  "notes": "Kurumsal eslesme kurallari: TRX$_CODE_ARRANGEMENT icin ARRANGE_UK anahtarli kural hazir gelir (ORA-00001 caresi); Eslesmeler sekmesinde Kurumsal kurallari yukle"
 }
