@@ -1,6 +1,6 @@
 {
-  "version": "1.8.63",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.63/RAImporter.exe",
-  "sha256": "98C43BE38EC5EDED67D9AB126D5A83FB4FFC9CA4A2A4DD228A2B606163FDF13C",
-  "notes": "Ayni veritabanina giden isler sirayla calisir (ORA-00054 ve eksi tekrar caresi); iste kural yoksa kurumsal ARRANGEMENT kurali kendiliginden; staging disaridan degisirse dosya basarisiz; ortak indirme klasoru uyarisi"
+  "version": "1.8.64",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.64/RAImporter.exe",
+  "sha256": "AD40C8725AB42DAA94A19AA6B1D01D3988F12F2902880B576A8E77BAC1A46AF9",
+  "notes": "Veritabani yazici kilidi yalnizca dosya varsa ve yazma aninda alinir; okuyacak dosyasi olmayan is beklemez; bekleyen is arayuzde sirada gorunur"
 }
