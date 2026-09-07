@@ -1,6 +1,6 @@
 {
-  "version": "1.8.62",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.62/RAImporter.exe",
-  "sha256": "C54DC51A5421FF200AAE24D52717EE113B5434BCDB72BA63D51B93AA8800062D",
-  "notes": "Kurumsal eslesme kurallari: TRX$_CODE_ARRANGEMENT icin ARRANGE_UK anahtarli kural hazir gelir (ORA-00001 caresi); Eslesmeler sekmesinde Kurumsal kurallari yukle"
+  "version": "1.8.63",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.63/RAImporter.exe",
+  "sha256": "98C43BE38EC5EDED67D9AB126D5A83FB4FFC9CA4A2A4DD228A2B606163FDF13C",
+  "notes": "Ayni veritabanina giden isler sirayla calisir (ORA-00054 ve eksi tekrar caresi); iste kural yoksa kurumsal ARRANGEMENT kurali kendiliginden; staging disaridan degisirse dosya basarisiz; ortak indirme klasoru uyarisi"
 }
