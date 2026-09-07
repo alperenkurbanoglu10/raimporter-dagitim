@@ -1,6 +1,6 @@
 {
-  "version": "1.8.56",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.56/RAImporter.exe",
-  "sha256": "9D2DFBBDC283FECA038FF0FA86D1EC61F0DB1BF721A11830C2CC015E38314DF6",
-  "notes": "Kasa ici satirlarin kaniti kasiyer raporu (P2001): hicbir deftere islenmeyen odeme satirlari her gun P2001 ile dogrulanir; raporda karsiligi olmayan satir tek tek trx_no ile artakalan adayi olur (silme yine duzelt + artakalan sil ister)."
+  "version": "1.8.57",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.57/RAImporter.exe",
+  "sha256": "3E4B269450EFF724B9E3EB0FE11DD03225318702877B66E0A02804F3D03918AD",
+  "notes": "Islem gunlugu (P2030) tanimi alinamayinca sebep ve rapor yolu ekranda ve logda"
 }
