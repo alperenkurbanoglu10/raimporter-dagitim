@@ -1,6 +1,6 @@
 {
-  "version": "1.8.64",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.64/RAImporter.exe",
-  "sha256": "AD40C8725AB42DAA94A19AA6B1D01D3988F12F2902880B576A8E77BAC1A46AF9",
-  "notes": "Veritabani yazici kilidi yalnizca dosya varsa ve yazma aninda alinir; okuyacak dosyasi olmayan is beklemez; bekleyen is arayuzde sirada gorunur"
+  "version": "1.8.65",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.65/RAImporter.exe",
+  "sha256": "1653F1495178C3152AC4035D5035A58572CA167554628146CC582CF2051524CC",
+  "notes": "Islenen dosya uzanti degismeden islendi alt klasorune tasinir (.old yeniden adlandirma kalkti; guvenlik yazilimi tetiklemesi); alti isin ilk turdaki tablo olusturma yarisi kilit altinda"
 }
