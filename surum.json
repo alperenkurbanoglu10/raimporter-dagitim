@@ -1,6 +1,6 @@
 {
-  "version": "1.8.60",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.60/RAImporter.exe",
-  "sha256": "FB9D4D9603825FECBB7FEC47A36C38A06185354E8F4C821CF6327F0FC60E8D7B",
-  "notes": "Indirilen dosya adinda otel kodu (PORTAL_X_HB8A6_...); cok otelli kurulumda telafi kontrolu otel duyarli"
+  "version": "1.8.61",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.61/RAImporter.exe",
+  "sha256": "A6E08F77BB8689F83DB8AC5314218B5FB2BC0221847B414B456AF8B76468C05B",
+  "notes": "Mizan ve kayip kontrolleri isin otel koduna gore kosar (kod bos ise veritabanindaki tum tesisler)"
 }
