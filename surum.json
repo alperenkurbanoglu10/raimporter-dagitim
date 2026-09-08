@@ -1,9 +1,9 @@
 {
-  "version": "1.8.71",
+  "version": "1.8.72",
   "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.69/RAImporter.exe",
   "sha256": "052CFCC3FAA56708343DAADE0BC2A8ACC0FEC5C6302326E5AE05387A33C76FA7",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.71/RAImporter-1.8.71-win64.zip",
-  "paket_sha256": "265B2FDD38256BEFCBFFF390A7E0AF160D2B97B74998120B4A363F0F57DF423F",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.72/RAImporter-1.8.72-win64.zip",
+  "paket_sha256": "0A730EA485B07D0F8380C1AC3407E4DB76C2D870E202570C817CCAF466CA0E1A",
   "bicim": "onedir",
-  "notes": "Basarili aktarim sonrasi arsivleme secimi korunuyor: R&A islerini zorla islendi klasorune ceviren gecis kaldirildi, varsayilan yine .old; islendi secmeli kaldi"
+  "notes": "Zincir turu: ayni R&A hesabi ve ayni veritabanini paylasan cok otelli islerde once butun otellerin dosyalari sirayla indirilir, sonra hepsi sirayla veritabanina yazilir; indirme yazma sirasini beklemez"
 }
