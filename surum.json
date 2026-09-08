@@ -1,6 +1,6 @@
 {
-  "version": "1.8.66",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.66/RAImporter.exe",
-  "sha256": "05CAC6BC391963FAD80A33F2EBE381A52215D2469CD22541BC5157B5BF63E2AA",
-  "notes": "Tani: cikis izleyici -- surec neden kapandi (os._exit/sys.exit/atexit/olumcul hata) logs\\cikis-izi.log ve her 10 sn tum yiginlar logs\\yigin-izi-<pid>.log; davranis degisikligi yok"
+  "version": "1.8.67",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.67/RAImporter.exe",
+  "sha256": "1B8C527AD9552A389B53E941AB2543086DF6A0E2761F2AB0B260024EF23BC1DF",
+  "notes": "PortalPlus karsilastirma: Portal'da var/hedefte folyosu yok, hedefte var/Portal'a dusmemis, numara farkli (salt-okuma, CSV, gunluk zamanli + e-posta); zamanlanmis e-fatura senkronu hic kosmuyordu (properties sarti) -- duzeltildi; SQL Server anahtarinda bill_no metne cevriliyor"
 }
