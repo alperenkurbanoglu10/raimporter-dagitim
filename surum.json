@@ -1,6 +1,9 @@
 {
-  "version": "1.8.69",
+  "version": "1.8.70",
   "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.69/RAImporter.exe",
   "sha256": "052CFCC3FAA56708343DAADE0BC2A8ACC0FEC5C6302326E5AE05387A33C76FA7",
-  "notes": "Kopru surum duzeltmesi: masaustu paket degisimi Gorev Zamanlayici ile ve kabuk uzerinden yeniden acma"
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.70/RAImporter-1.8.70-win64.zip",
+  "paket_sha256": "62D711418D89C6AE85B19B71E17B09ED1F35871BEF73795E3E4F19EF41075BF5",
+  "bicim": "onedir",
+  "notes": "Tek klasor (onedir) dagitim: uygulama artik C:\\Windows\\Temp altina acilmadan kurulum klasorunden calisir, tek surec; guvenlik yazilimi tetiklemesi azalir"
 }
