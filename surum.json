@@ -1,9 +1,9 @@
 {
-  "version": "1.8.75",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.69/RAImporter.exe",
-  "sha256": "052CFCC3FAA56708343DAADE0BC2A8ACC0FEC5C6302326E5AE05387A33C76FA7",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.75/RAImporter-1.8.75-win64.zip",
-  "paket_sha256": "505B8D16CFE57BD7DE877A2159E99EB40CFCA8E7093170386EDC5CE22A3D8286",
+  "version": "1.8.76",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
+  "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.76/RAImporter-1.8.76-win64.zip",
+  "paket_sha256": "553D87FFF6597FFF42692745A10471FC05F996042CB06212A43030CF24243C29",
   "bicim": "onedir",
-  "notes": "Folyo dengesi teshisi: dengesiz faturanin karsi kaydi ayni rezervasyonun baska penceresindeyse (Opera tarafi) bunu soyler, ne yapilacagini yazar ve bosuna export gondermez; elle kosum aynayi tazeler"
+  "notes": "Masaustu exe yalnizca servisin kumandasi: servisi kurar/baslatir, arayuzunu acar; kendisi zamanlayici kosturmaz (cift zamanlayici ayni dosyayi iki kez isliyordu). Yeni komutlar: start-service, stop-service, restart-service, standalone (test)."
 }
