@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.79",
+    "version":  "1.8.80",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.79/RAImporter-1.8.79-win64.zip",
-    "paket_sha256":  "68B444C208DC3AC938A0735CC7F7A84860AE902A0364C7A128D34CA2B79902ED",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.80/RAImporter-1.8.80-win64.zip",
+    "paket_sha256":  "B28ADF6464C9A0E6CB3CFB91E6111C4C52A86FB488A2582267C78B6B76AD7A00",
     "bicim":  "onedir",
-    "notes":  "Ayni is icin ayni kontrol iki kez ayni anda kosmaz (guncelleme sonrasi otomatik + elle tur ust uste biniyordu); kayip postasi ve arayuz duzeltmeden sonra kalani gosterir, mesajda aktarim sonucu."
+    "notes":  "kayip kontrolu: belgesiz misafirin durumu artik ID TYPE ve ID NUMBER bos (posta, arayuz, mesaj)"
 }
