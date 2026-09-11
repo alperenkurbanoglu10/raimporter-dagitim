@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.78",
+    "version":  "1.8.79",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.78/RAImporter-1.8.78-win64.zip",
-    "paket_sha256":  "F7E1AC047697D9471C67CD69D0D2FDF239572F5EACA7437007BEA00664D0C261",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.79/RAImporter-1.8.79-win64.zip",
+    "paket_sha256":  "68B444C208DC3AC938A0735CC7F7A84860AE902A0364C7A128D34CA2B79902ED",
     "bicim":  "onedir",
-    "notes":  "Kimlik kontrolu: sanal odalar (posting master, MICROS CREDIT CARD vb.) sayilmiyor; duzeltme hakki misafir basina; R\u0026A\u0027da belgesi cikmayan misafir 7 gun bekletilir; dogrulama rezervasyon/misafir ayri; Toplam kayip yalnizca kayip rezervasyonlar, kimligi eksik misafir tablosu."
+    "notes":  "Ayni is icin ayni kontrol iki kez ayni anda kosmaz (guncelleme sonrasi otomatik + elle tur ust uste biniyordu); kayip postasi ve arayuz duzeltmeden sonra kalani gosterir, mesajda aktarim sonucu."
 }
