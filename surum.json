@@ -1,9 +1,9 @@
 {
-  "version": "1.8.76",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
-  "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.76/RAImporter-1.8.76-win64.zip",
-  "paket_sha256": "553D87FFF6597FFF42692745A10471FC05F996042CB06212A43030CF24243C29",
-  "bicim": "onedir",
-  "notes": "Masaustu exe yalnizca servisin kumandasi: servisi kurar/baslatir, arayuzunu acar; kendisi zamanlayici kosturmaz (cift zamanlayici ayni dosyayi iki kez isliyordu). Yeni komutlar: start-service, stop-service, restart-service, standalone (test)."
+    "version":  "1.8.77",
+    "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
+    "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.77/RAImporter-1.8.77-win64.zip",
+    "paket_sha256":  "3524532AE8138DED21FC7F31AF66A8975B1A2B687C986C4E08B3DED92B03A867",
+    "bicim":  "onedir",
+    "notes":  "Kayip rezervasyon kontrolu: faturadaki iki rezervasyon kimligi (resv + original) ayri kontrol; NAME_ENCRYPTED ID_NUMBER eksikse NAME_ENCRYPTED_bynameid name_id ile cekilir (PortalPlus VKN/TCKN can not be null); tek-kayit export dosya adi cakismasi giderildi; id parametresi olmayan rapor calistirilmaz."
 }
