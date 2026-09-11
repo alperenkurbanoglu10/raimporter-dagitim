@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.77",
+    "version":  "1.8.78",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.77/RAImporter-1.8.77-win64.zip",
-    "paket_sha256":  "3524532AE8138DED21FC7F31AF66A8975B1A2B687C986C4E08B3DED92B03A867",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.78/RAImporter-1.8.78-win64.zip",
+    "paket_sha256":  "F7E1AC047697D9471C67CD69D0D2FDF239572F5EACA7437007BEA00664D0C261",
     "bicim":  "onedir",
-    "notes":  "Kayip rezervasyon kontrolu: faturadaki iki rezervasyon kimligi (resv + original) ayri kontrol; NAME_ENCRYPTED ID_NUMBER eksikse NAME_ENCRYPTED_bynameid name_id ile cekilir (PortalPlus VKN/TCKN can not be null); tek-kayit export dosya adi cakismasi giderildi; id parametresi olmayan rapor calistirilmaz."
+    "notes":  "Kimlik kontrolu: sanal odalar (posting master, MICROS CREDIT CARD vb.) sayilmiyor; duzeltme hakki misafir basina; R\u0026A\u0027da belgesi cikmayan misafir 7 gun bekletilir; dogrulama rezervasyon/misafir ayri; Toplam kayip yalnizca kayip rezervasyonlar, kimligi eksik misafir tablosu."
 }
