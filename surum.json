@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.84",
+    "version":  "1.8.85",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.84/RAImporter-1.8.84-win64.zip",
-    "paket_sha256":  "AA19A67D30DFC2B5C589CAA38CD5D0B439BD4E0B93E227CA86695B3B1FD13D38",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.85/RAImporter-1.8.85-win64.zip",
+    "paket_sha256":  "D5CA7091F569C0BC1660C95D74F031FBFA3144AF554B44EF6BADC57BF6A8D728",
     "bicim":  "onedir",
-    "notes":  "R\u0026A girisi: kontrol turu boyunca tek oturum kullaniliyor; asilan giris 30 sn sonra kesilip en fazla 3 kez yeniden deneniyor (sunucu yaniti: Weblogic Bridge No backend server available); zaten calisiyor denen kontrol bitince sonucu ekranda gorunuyor."
+    "notes":  "R\u0026A girisi: kurulan oturum surec boyunca saklanip kontrol turlari, export kuyrugu ve kaynak indirmesi arasinda paylasiliyor (her turda yeni giris yok; kullanilmadan once ucuz katalog cagrisiyla dogrulanir, sunucu reddederse bir kez yeniden giris). Asilan giris 30 sn sonra kesilip sunucu penceresi (125 sn) dolunca BIR kez daha deneniyor (2 sn arayla 3 deneme 3/3 asiliyordu). Mizan: atlanan tesisin mesaji girisin hangi tesiste dustugunu soyluyor, onbellekten alinan rapor kosum loguna yaziliyor, giris hatasi deneme sayisini soyluyor."
 }
