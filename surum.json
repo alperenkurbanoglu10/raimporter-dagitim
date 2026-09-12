@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.83",
+    "version":  "1.8.84",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.83/RAImporter-1.8.83-win64.zip",
-    "paket_sha256":  "38030D3460D074E34435D977F3C4A28C46D3A9FB9DCC36004AE921E00E4254EF",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.84/RAImporter-1.8.84-win64.zip",
+    "paket_sha256":  "AA19A67D30DFC2B5C589CAA38CD5D0B439BD4E0B93E227CA86695B3B1FD13D38",
     "bicim":  "onedir",
-    "notes":  "Kontroller saatinde gunde BIR kez kosuyor; mizan ayni gun yalnizca gonderdigi duzeltmeyi 5 dk sonra dogrulamak ya da alinamayan raporu 15 dk arayla ogleye kadar yeniden denemek icin geri geliyor (eskiden her 5 sn); bugun kostu bilgisi diske yaziliyor, guncelleme sonrasi ayni gun yeniden kosmuyor."
+    "notes":  "R\u0026A girisi: kontrol turu boyunca tek oturum kullaniliyor; asilan giris 30 sn sonra kesilip en fazla 3 kez yeniden deneniyor (sunucu yaniti: Weblogic Bridge No backend server available); zaten calisiyor denen kontrol bitince sonucu ekranda gorunuyor."
 }
