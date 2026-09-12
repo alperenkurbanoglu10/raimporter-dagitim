@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.81",
+    "version":  "1.8.82",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.81/RAImporter-1.8.81-win64.zip",
-    "paket_sha256":  "C1B987A3C42F0F05F0BB39EED26C00D94B4E6F06FC078FCB87B083C0457934E5",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.82/RAImporter-1.8.82-win64.zip",
+    "paket_sha256":  "B471EEB07BFAED0714A914812784468B49289F8EF635E0A5313624CB1C296785",
     "bicim":  "onedir",
-    "notes":  "Mizan kontrolu: R\u0026A girisi ayri adim; hata mesaji raporu (Trial Balance P2020 / P2030 / P2001) ve adimi (giris, klasor, tanim, kosum) soyluyor; giris duserse ayni turda oteki tesislerde tekrar denenmiyor; tesis basina sonuc kosum logunda, ozette rapor alinamayan tesis sayisi."
+    "notes":  "R\u0026A hata metinleri: rapor katalogda yoksa sunucunun kendi hatasi (rapor bu klasorde YOK) gosteriliyor ve yeniden girisle ezilmiyor; export kuyrugunun oturumu korunuyor; Unknown fault mesajina sunucunun gercek yaniti ekleniyor; 1.8.81 surumundeki hesap degistirin onerisi kaldirildi."
 }
