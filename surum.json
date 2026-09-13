@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.86",
-    "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
-    "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.86/RAImporter-1.8.86-win64.zip",
-    "paket_sha256":  "3D70612520238C5E40CBC71D52DC3D13CE86DCFE5BEEB258733DA8A2193BAF59",
-    "bicim":  "onedir",
-    "notes":  "Ayni R\u0026A hesabi birden cok sunucuda: kontrol baslangici (0-5 dk), export vadesi (0-5 dk) ve asilan girisin tekrari (+0-45 sn) rastgele dagitim payiyla erteleniyor, sunucular ayni saniyede giris yapmiyor; ayni surecte hesap basina giris kilidi (mizan + folyo ayni anda baslasa da tek giris, ikincisi kasadan devralir); oturum tazeleme once kasadaki oturumu dogruluyor."
+  "version": "1.8.87",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
+  "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.87/RAImporter-1.8.87-win64.zip",
+  "paket_sha256": "9C376F64B6F0B845ACC0D33C597F01AE7C6227CABB516F8099841395C0611A29",
+  "bicim": "onedir",
+  "notes": "Mizan: R&A ambari gunun gelirini yuklemeden yalnizca odemeler dustuyse Trial Balance raporu artik onbelleklenmez -- ALINAMADI sayilip yeniden denenir. Boylece yarim rapor diske kilitlenip butun gelir 'raporda YOK' gorunmez ve bosuna Financial Update gonderilmez; ambar dolunca kontrol kendiliginden tutar."
 }
