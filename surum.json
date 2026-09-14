@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.88",
+    "version":  "1.8.89",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.88/RAImporter-1.8.88-win64.zip",
-    "paket_sha256":  "C3989CD45BBDC420E927CE85B59E288274DFB204B3F6A358781D1B947899A7E1",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.89/RAImporter-1.8.89-win64.zip",
+    "paket_sha256":  "14ED1ABC62422063BC52B5FD581B42727963B12818CC96C183C0AF500D450FFA",
     "bicim":  "onedir",
-    "notes":  "Opera DWH senkronu: yerel aktarimdan sonra ayni export DWH Data API ile Opera DWH tarafina da gonderilir (kuyruk + yeniden deneme, DWH sekmesi, varsayilan KAPALI)"
+    "notes":  "DWH sekmesi: Baglantiyi test et chain secilmeden calisir (listeyi getirir, yazili kodu listeden bulur); chain sarti yalnizca gonderimde. Ozellik varsayilan KAPALI."
 }
