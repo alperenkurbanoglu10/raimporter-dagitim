@@ -1,27 +1,32 @@
 <#
   Protel R&A Importer - tek satirlik sunucu kurulumu.
 
-  Dosyayi her sunucuya elle kopyalamak yerine bir kere bir yere koyup
-  (Google Drive / dosya sunucusu / IIS / GitHub release) her sunucuda:
+  Onerilen kullanim (surumden bagimsiz; guncel paketi surum.json'dan bulur):
+
+      iwr -UseBasicParsing "https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/install.ps1" -OutFile install.ps1
+      powershell -ExecutionPolicy Bypass -File install.ps1 -UpdateUrl "<SURUM_JSON_ADRESI>" -Service
+
+  Dosyayi kendi yerinizden (Google Drive / dosya sunucusu / IIS) dagitiyorsaniz:
 
       powershell -ExecutionPolicy Bypass -File install.ps1 -Url "<INDIRME_LINKI>"
 
-  ya da betigi de ayni yere koyduysaniz tek satir:
-
-      powershell -ExecutionPolicy Bypass -Command "& { iwr -UseBasicParsing '<BETIK_LINKI>' | iex }"
-
   Parametreler:
-      -Url        Zorunlu. RAImporter.exe'nin DOGRUDAN indirme adresi.
+      -Url        Istege bagli. Paketin (RAImporter-<surum>-win64.zip) ya da tek
+                  dosya exe'nin DOGRUDAN indirme adresi. VERILMEZSE guncel paket
+                  surum.json'dan bulunur (paket_url + paket_sha256): -UpdateUrl
+                  verildiyse o adresten, yoksa dagitim deposundan.
+                  DIKKAT: 08.09'dan beri release'te RAImporter.exe YOK; eski
+                  ".../releases/latest/download/RAImporter.exe" adresi 404 doner.
       -Sha256     Istege bagli. Beklenen SHA-256 ozeti; tutmazsa kurulum durur.
-                  VERILMEZSE betik ozeti "<Url>.sha256" adresinden kendisi
-                  almayi dener (GitHub release'te RAImporter.exe.sha256
-                  asset'i). Talimattaki sablon metnini ("<...deger...>")
+                  VERILMEZSE: -Url yoksa surum.json'daki ozet, -Url varsa
+                  "<Url>.sha256" adresi (GitHub release'teki kardes asset)
+                  kullanilir. Talimattaki sablon metnini ("<...deger...>")
                   oldugu gibi yapistirmayin; betik bunu acikca reddeder.
       -Dir        Kurulum klasoru (varsayilan D:\Protel\RAImporter, D: yoksa C:).
-      -UpdateUrl  surum.json adresi. Verilirse otel bir daha elle guncellenmez:
-                  kurulum bu adresi yazar, program gece penceresinde kendi gecer.
-      -Service    Indirdikten sonra Windows servisi olarak kur ve baslat.
-      -Open       Kurulumdan sonra yonetim arayuzunu tarayicida ac.
+      -UpdateUrl  surum.json adresi. Verilirse config'e yazilir: otel bir daha
+                  elle guncellenmez, program gece penceresinde kendi gecer.
+      -Service    Kurduktan sonra Windows servisi olarak kur ve baslat.
+      -Open       Kurulumdan sonra programi ac (servisi kurar/baslatir, arayuzu acar).
 
   Google Drive linki nasil dogrudan indirme olur:
       Paylasim linki : https://drive.google.com/file/d/DOSYA_ID/view?usp=sharing
@@ -31,7 +36,7 @@
 
 [CmdletBinding()]
 param(
-    [Parameter(Mandatory = $true)][string]$Url,
+    [string]$Url = "",
     [string]$Sha256 = "",
     [string]$Dir = "",
     [string]$UpdateUrl = "",
@@ -40,6 +45,7 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+$VarsayilanManifest = "https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json"
 
 function Say([string]$msg, [string]$color = "Gray") { Write-Host "  $msg" -ForegroundColor $color }
 function Ok ([string]$msg) { Write-Host "  [OK]   $msg" -ForegroundColor Green }
@@ -47,6 +53,40 @@ function Bad([string]$msg) { Write-Host "  [HATA] $msg" -ForegroundColor Red }
 # PS saglayicisini atlayan silme: bazi makinelerde yol kisa-ad ('~' iceren)
 # gelir ve Remove-Item PSArgumentException verir (sahada goruldu, 31.08).
 function TmpSil([string]$p) { try { [IO.File]::Delete($p) } catch { } }
+
+# Indirme yardimcisi ($dosya bos ise metni dondurur). GitHub 404'ten sonra
+# baglantiyi kapatiyor; .NET Framework WebClient o baglantiyi yeniden
+# kullaninca gercek hata yerine "The request was aborted: The connection was
+# closed unexpectedly" gorunuyor (14.09 sahada: adres eskiydi, ileti ag sorunu
+# sandirdi). Baglanti koptuysa havuzu bosaltip BIR kez daha deneriz; ikinci
+# deneme gercek HTTP durumunu verir.
+function WebAl([string]$adres, [string]$dosya = "") {
+    for ($deneme = 1; ; $deneme++) {
+        try {
+            $w = New-Object Net.WebClient
+            $w.Headers.Add("User-Agent", "RAImporter-Installer")
+            if ($dosya) { $w.DownloadFile($adres, $dosya); return }
+            return $w.DownloadString($adres)
+        } catch {
+            $we = $_.Exception
+            while ($we -and -not ($we -is [Net.WebException])) { $we = $we.InnerException }
+            if (-not $we) { throw }
+            if ($we.Status -eq [Net.WebExceptionStatus]::ProtocolError -and $we.Response) {
+                throw ("HTTP {0} ({1}): {2}" -f [int]$we.Response.StatusCode,
+                       $we.Response.StatusDescription, $adres)
+            }
+            $kopma = @([Net.WebExceptionStatus]::ConnectionClosed,
+                       [Net.WebExceptionStatus]::KeepAliveFailure,
+                       [Net.WebExceptionStatus]::ReceiveFailure,
+                       [Net.WebExceptionStatus]::RequestCanceled)
+            if ($deneme -lt 2 -and $kopma -contains $we.Status) {
+                try { [Net.ServicePointManager]::FindServicePoint([uri]$adres).CloseConnectionGroup("") | Out-Null } catch { }
+                continue
+            }
+            throw ("{0} [{1}]: {2}" -f $we.Message, $we.Status, $adres)
+        }
+    }
+}
 
 Write-Host ""
 Write-Host "  Protel R&A Importer - kurulum" -ForegroundColor Cyan
@@ -57,9 +97,8 @@ Write-Host "  ---------------------------------------------------------------"
 # sablonu OLDUGU GIBI yapistirilmis, karsilastirma sablon metniyle yapilmisti.
 if ($Sha256 -and $Sha256 -notmatch '^[0-9A-Fa-f]{64}$') {
     Bad "Sha256 gecerli bir ozet degil: $Sha256"
-    Say "Gercek ozet, RAImporter.exe.sha256 dosyasinin ilk sozcugudur (64 hex)."
-    Say "En kolayi: -Sha256'yi HIC vermeyin - betik ozeti su adresten kendisi alir:"
-    Say "  $($Url).sha256"
+    Say "Gercek ozet, .sha256 dosyasinin ilk sozcugudur (64 hex)."
+    Say "En kolayi: -Sha256'yi HIC vermeyin - betik ozeti yayindan kendisi alir."
     exit 1
 }
 
@@ -68,50 +107,48 @@ if (-not $Dir) {
     $Dir = if (Test-Path "D:\") { "D:\Protel\RAImporter" } else { "C:\Protel\RAImporter" }
 }
 $exe = Join-Path $Dir "RAImporter.exe"
-
-# Eski surum calisiyorsa once durdur
-$running = Get-Process -Name "RAImporter" -ErrorAction SilentlyContinue
-if ($running) {
-    Say "Calisan RAImporter bulundu, durduruluyor..."
-    $running | Stop-Process -Force
-    Start-Sleep -Seconds 2
-}
-# Servisi durduruyoruz ki calisan exe'nin uzerine yazabilelim. DURUMU
-# HATIRLIYORUZ: kurulum bitince geri baslatilmazsa surum yukseltmesi
-# "guncelleme yapildi ama servis kapali kaldi" olarak geri doner. -Service
-# verilmeden yapilan yukseltmeler de bu yoldan gecer.
-$svcCalisiyordu = $false
-$svc = Get-Service -Name "ProtelRAImporter" -ErrorAction SilentlyContinue
-if ($svc -and $svc.Status -eq "Running") {
-    Say "Servis calisiyor, durduruluyor..."
-    $svcCalisiyordu = $true
-    Stop-Service -Name "ProtelRAImporter" -Force
-    try { $svc.WaitForStatus("Stopped", [TimeSpan]::FromSeconds(60)) }
-    catch { Say "Servis 60 saniyede durmadi; yine de devam ediliyor." }
-}
-
 New-Item -ItemType Directory -Path $Dir -Force | Out-Null
 Ok "Klasor hazir: $Dir"
 
-# --- indirme ----------------------------------------------------------------
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-# Ozet verilmediyse yayindaki kardes ".sha256" dosyasindan almayi dene.
+# --- ne kurulacak -----------------------------------------------------------
+# -Url verilmediyse guncel paket surum.json'dan bulunur; surumden bagimsiz tek
+# komut budur. 08.09'dan beri release'te RAImporter.exe yok (tek klasor zip
+# paketi); talimatlardaki eski ".../releases/latest/download/RAImporter.exe"
+# adresi 404 donuyordu (14.09 sahada goruldu).
+if (-not $Url) {
+    $mAdres = if ($UpdateUrl) { $UpdateUrl } else { $VarsayilanManifest }
+    try {
+        $m = (WebAl $mAdres) | ConvertFrom-Json
+    } catch {
+        Bad "Surum bilgisi okunamadi: $($_.Exception.Message)"
+        Say "Sunucudan bu adrese erisilebildiginden emin olun (proxy / guvenlik duvari)"
+        Say "ya da -Url ile paketin indirme adresini verin."
+        exit 1
+    }
+    if ($m.paket_url) { $Url = [string]$m.paket_url; $mOzet = [string]$m.paket_sha256 }
+    else              { $Url = [string]$m.url;       $mOzet = [string]$m.sha256 }
+    if (-not $Url) { Bad "surum.json'da indirme adresi yok: $mAdres"; exit 1 }
+    if (-not $Sha256 -and $mOzet -match '^[0-9A-Fa-f]{64}$') { $Sha256 = $mOzet }
+    Ok "Guncel surum: $($m.version) (surum.json)"
+}
+
+# Ozet hala yoksa yayindaki kardes ".sha256" dosyasindan almayi dene.
 if (-not $Sha256) {
     try {
-        $wcH = New-Object Net.WebClient
-        $wcH.Headers.Add("User-Agent", "RAImporter-Installer")
-        $aday = (($wcH.DownloadString($Url + ".sha256")) -split '\s+')[0]
+        $aday = ((WebAl ($Url + ".sha256")) -split '\s+')[0]
         if ($aday -match '^[0-9A-Fa-f]{64}$') {
             $Sha256 = $aday
             Ok "Beklenen ozet yayindan alindi: $($Url).sha256"
         }
     } catch {
-        Say "Ozet dosyasina erisilemedi ($($Url).sha256);"
+        Say "Ozet dosyasina erisilemedi ($($_.Exception.Message));"
         Say "-Sha256 da verilmedigi icin dogrulama atlanacak."
     }
 }
 
+# --- indirme ----------------------------------------------------------------
 # Gecici dosya TEMP'e DEGIL kurulum klasorune iner: bazi makinelerde TEMP
 # kisa-ad yoluyla gelir (orn. kullanici 'protel.user' -> C:\Users\PROTEL~1.USE)
 # ve PowerShell 5.1'in Move/Remove-Item komutlari '~' iceren yolda
@@ -121,12 +158,17 @@ $tmp = Join-Path $Dir ("RAImporter-indirme-" + [guid]::NewGuid().ToString("N") +
 
 Say "Indiriliyor: $Url"
 try {
-    $wc = New-Object Net.WebClient
-    $wc.Headers.Add("User-Agent", "RAImporter-Installer")
-    $wc.DownloadFile($Url, $tmp)
+    WebAl $Url $tmp
 } catch {
+    TmpSil $tmp
     Bad "Indirme basarisiz: $($_.Exception.Message)"
-    Say "Sunucudan bu adrese erisilebildiginden emin olun (proxy / guvenlik duvari)."
+    if ($_.Exception.Message -like "HTTP 404*") {
+        Say "Bu adreste dosya yok. Adres eski olabilir: 08.09'dan beri yayin"
+        Say "RAImporter-<surum>-win64.zip paketidir, RAImporter.exe degil."
+        Say "En kolayi: -Url vermeyin; betik guncel paketi surum.json'dan bulur."
+    } else {
+        Say "Sunucudan bu adrese erisilebildiginden emin olun (proxy / guvenlik duvari)."
+    }
     exit 1
 }
 
@@ -141,16 +183,19 @@ if ($size -lt 1MB) {
     exit 1
 }
 
-# Gercekten bir Windows programi mi? (Drive'in uyari sayfasi HTML doner)
+# Gercekten bir Windows programi ya da zip paketi mi? (Drive'in uyari
+# sayfasi HTML doner). 08.09'dan itibaren dagitim TEK KLASOR zip paketidir
+# (RAImporter.exe + _internal\); tek dosya exe de kurulabilir (eski surumler).
 $head = [IO.File]::ReadAllBytes($tmp)[0..1]
-if ($head[0] -ne 0x4D -or $head[1] -ne 0x5A) {
-    Bad "Inen dosya bir Windows programi degil (MZ imzasi yok)."
+$paketMi = ($head[0] -eq 0x50 -and $head[1] -eq 0x4B)       # "PK" = zip
+if (-not $paketMi -and ($head[0] -ne 0x4D -or $head[1] -ne 0x5A)) {
+    Bad "Inen dosya ne Windows programi (MZ) ne zip paketi (PK)."
     Say "Link bir onay/uyari sayfasi donduruyor olabilir. Dosyayi tarayicidan bir kere"
     Say "indirip dogrudan indirme adresini kontrol edin."
     TmpSil $tmp
     exit 1
 }
-Ok "Indirildi: $([math]::Round($size/1MB,1)) MB"
+Ok ("Indirildi: $([math]::Round($size/1MB,1)) MB" + $(if ($paketMi) { " (tek klasor paketi)" } else { "" }))
 
 # --- dogrulama --------------------------------------------------------------
 $hash = (Get-FileHash -LiteralPath $tmp -Algorithm SHA256).Hash.ToUpper()
@@ -168,17 +213,78 @@ if ($Sha256) {
     Say "  $hash"
 }
 
-# PS saglayicisini atlayan .NET tasima (Move-Item '~' iceren yollarda patlar).
-try {
-    [IO.File]::Copy($tmp, $exe, $true)
-    TmpSil $tmp
-} catch {
-    Bad "Dosya yerine konamadi: $($_.Exception.Message)"
-    Say "Hedef: $exe - eski surum hala acik olabilir; kapatip tekrar deneyin."
-    TmpSil $tmp
-    exit 1
+# --- calisan surumu durdur --------------------------------------------------
+# Indirme ve dogrulama BITTIKTEN sonra: indirme yarida kalirsa calisan kurulum
+# hic durdurulmamis olur. Once servis (duzgun kapanis), sonra kalan surecler.
+# DURUMU HATIRLIYORUZ: kurulum bitince geri baslatilmazsa surum yukseltmesi
+# "guncelleme yapildi ama servis kapali kaldi" olarak geri doner. -Service
+# verilmeden yapilan yukseltmeler de bu yoldan gecer.
+$svcCalisiyordu = $false
+$svc = Get-Service -Name "ProtelRAImporter" -ErrorAction SilentlyContinue
+if ($svc -and $svc.Status -eq "Running") {
+    Say "Servis calisiyor, durduruluyor..."
+    $svcCalisiyordu = $true
+    Stop-Service -Name "ProtelRAImporter" -Force
+    try { $svc.WaitForStatus("Stopped", [TimeSpan]::FromSeconds(60)) }
+    catch { Say "Servis 60 saniyede durmadi; yine de devam ediliyor." }
 }
-Ok "Kuruldu: $exe"
+$running = Get-Process -Name "RAImporter" -ErrorAction SilentlyContinue
+if ($running) {
+    Say "Calisan RAImporter bulundu, durduruluyor..."
+    $running | Stop-Process -Force
+    Start-Sleep -Seconds 2
+}
+
+# --- yerine koyma -----------------------------------------------------------
+if ($paketMi) {
+    # Zip paketi: gecici klasore ac, exe + _internal'i yerine koy. Eski
+    # _internal (varsa) once kenara alinir; kopyalama bittikten sonra silinir.
+    $acilan = Join-Path $Dir ("RAImporter-paket-" + [guid]::NewGuid().ToString("N"))
+    try {
+        Add-Type -AssemblyName System.IO.Compression.FileSystem
+        [IO.Compression.ZipFile]::ExtractToDirectory($tmp, $acilan)
+        $kaynakExe = Join-Path $acilan "RAImporter.exe"
+        if (-not (Test-Path $kaynakExe)) {
+            # Paket kok klasorlu olabilir (RAImporter\RAImporter.exe)
+            $alt = Get-ChildItem $acilan -Directory | Select-Object -First 1
+            if ($alt -and (Test-Path (Join-Path $alt.FullName "RAImporter.exe"))) { $acilan = $alt.FullName; $kaynakExe = Join-Path $acilan "RAImporter.exe" }
+        }
+        if (-not (Test-Path $kaynakExe) -or -not (Test-Path (Join-Path $acilan "_internal"))) {
+            Bad "Paket beklenen yapida degil (RAImporter.exe ve _internal\ bulunmali)."
+            TmpSil $tmp; Remove-Item $acilan -Recurse -Force -ErrorAction SilentlyContinue
+            exit 1
+        }
+        $eskiIc = Join-Path $Dir "_internal"
+        if (Test-Path $eskiIc) {
+            if (Test-Path "$eskiIc.old") { Remove-Item "$eskiIc.old" -Recurse -Force -ErrorAction SilentlyContinue }
+            Move-Item $eskiIc "$eskiIc.old" -Force
+        }
+        [IO.File]::Copy($kaynakExe, $exe, $true)
+        Move-Item (Join-Path $acilan "_internal") $eskiIc -Force
+        Remove-Item "$eskiIc.old" -Recurse -Force -ErrorAction SilentlyContinue
+        Remove-Item $acilan -Recurse -Force -ErrorAction SilentlyContinue
+        TmpSil $tmp
+    } catch {
+        Bad "Paket yerine konamadi: $($_.Exception.Message)"
+        Say "Hedef: $Dir - eski surum hala acik olabilir; kapatip tekrar deneyin."
+        TmpSil $tmp; Remove-Item $acilan -Recurse -Force -ErrorAction SilentlyContinue
+        exit 1
+    }
+    Ok "Kuruldu: $exe (+ _internal\)"
+} else {
+    # Tek dosya exe (eski surumler). PS saglayicisini atlayan .NET tasima
+    # (Move-Item '~' iceren yollarda patlar).
+    try {
+        [IO.File]::Copy($tmp, $exe, $true)
+        TmpSil $tmp
+    } catch {
+        Bad "Dosya yerine konamadi: $($_.Exception.Message)"
+        Say "Hedef: $exe - eski surum hala acik olabilir; kapatip tekrar deneyin."
+        TmpSil $tmp
+        exit 1
+    }
+    Ok "Kuruldu: $exe"
+}
 
 # --- surum ------------------------------------------------------------------
 try {
@@ -271,17 +377,16 @@ Write-Host "  ---------------------------------------------------------------"
 Write-Host "  Kurulum tamam." -ForegroundColor Green
 Write-Host ""
 Say "Simdi ne yapmali:"
-Say "  1. $exe dosyasini calistirin"
+Say "  1. $exe dosyasini calistirin (servis yoksa yonetici onayi ister,"
+Say "     servisi kurup baslatir; arayuzu servis sunar)"
 Say "  2. Tarayicida acilan arayuzde: Veritabani -> Kaynak -> Eslesmeler -> Kaydet"
 Say "  3. 'Deneme calistir' ile dogrulayin"
-Say "  4. Kalici calismasi icin: $exe install-service   (yonetici)"
 Say ""
 Say "Kurulumu dogrulamak icin (gercek DB'ye karsi uctan uca test):"
 Say "  $exe selftest"
 Write-Host ""
 
 if ($Open) {
+    # exe servisi kurar/baslatir ve arayuzu kendisi acar (v1.8.76+).
     Start-Process $exe
-    Start-Sleep -Seconds 6
-    Start-Process "http://127.0.0.1:8787/"
 }

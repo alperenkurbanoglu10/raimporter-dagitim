@@ -1,10 +1,11 @@
 PROTEL R&A IMPORTER - SUNUCUYA KURULUM
 ======================================================================
 
-Dosya   : RAImporter.exe   (23,0 MB)
-SHA-256 : RAImporter.exe.sha256 dosyasindaki guncel deger
+Dosya   : RAImporter-<surum>-win64.zip   (~30 MB, tek klasor paketi:
+          RAImporter.exe + _internal\ -- ikisi yan yana kalmali)
+SHA-256 : ayni adli .sha256 dosyasi ve surum.json'daki paket_sha256
           (her surumde degisir; elle karsilastirmak icin:
-           certutil -hashfile RAImporter.exe SHA256)
+           certutil -hashfile RAImporter-<surum>-win64.zip SHA256)
 
 Baska hicbir sey gerekmez: Python, .NET, Oracle Instant Client,
 tnsnames.ora -- hicbiri kurulmaz. PostgreSQL hedefi icin gereksinimleri
@@ -13,38 +14,39 @@ de programin kendisi kurar (asagida).
 
 YOL 1 - Elle (tek sunucu icin)
 ----------------------------------------------------------------------
-1. RAImporter.exe'yi sunucuda bir klasore kopyalayin
-   (or. D:\Protel\RAImporter\)
-2. Cift tiklayin. Tarayicida http://127.0.0.1:8787/ acilir.
+1. Releases'taki zip'i sunucuda bir klasore acin
+   (or. D:\Protel\RAImporter\ -- RAImporter.exe ile _internal\ yan yana)
+2. RAImporter.exe'ye cift tiklayin. Tarayicida http://127.0.0.1:8787/ acilir.
 3. Veritabani -> Kaynak -> Eslesmeler -> Kaydet -> Deneme calistir
 4. Kalici calismasi icin arayuzden "Servis olarak kur"
 
 
-YOL 2 - Indirme linkinden (cok sunucu icin - ONERILEN)
+YOL 2 - Tek komutla (cok sunucu icin - ONERILEN)
 ----------------------------------------------------------------------
-En son surumun degismez indirme adresi:
+Yonetici olarak acilmis PowerShell'de, HER sunucuda:
 
-  https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/latest/download/RAImporter.exe
+  iwr -UseBasicParsing "https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/install.ps1" -OutFile install.ps1
+  powershell -ExecutionPolicy Bypass -File install.ps1 -UpdateUrl "https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json" -Service
 
-HER sunucuda tek komut:
+  -Url VERMEYIN: betik guncel paketi surum.json'dan (paket_url) bulur ve
+  SHA-256'yi yine oradan (paket_sha256) dogrular. Komut surumden bagimsizdir.
 
-  powershell -ExecutionPolicy Bypass -File install.ps1 ^
-      -Url "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/latest/download/RAImporter.exe" ^
-      -UpdateUrl "https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json" ^
-      -Service
+  ESKI KOMUT CALISMAZ: 08.09'dan (1.8.70) beri release'te RAImporter.exe
+  yok; ".../releases/latest/download/RAImporter.exe" 404 doner. Eski betik
+  bunu "The connection was closed unexpectedly" diye gosterebilir -- ag
+  sorunu DEGILDIR.
 
-  -Sha256 vermek ZORUNLU DEGIL: betik beklenen ozeti indirme adresinin
-  yanindaki RAImporter.exe.sha256 dosyasindan kendisi alir ve dogrular.
-  Elle vermek isterseniz RAImporter.exe.sha256 dosyasindaki 64 haneli
-  GERCEK degeri yazin ("...icindeki deger" gibi sablon metni DEGIL;
-  betik sablon/bozuk ozeti kuruluma baslamadan reddeder).
+  -Sha256 vermek ZORUNLU DEGIL. Elle vermek isterseniz 64 haneli GERCEK
+  degeri yazin ("...icindeki deger" gibi sablon metni DEGIL; betik
+  sablon/bozuk ozeti kuruluma baslamadan reddeder).
 
 Betik ne yapar:
-  * calisan surumu durdurur
-  * dosyayi indirir
+  * guncel paketi bulur ve indirir
   * SHA-256 dogrular (tutmazsa kurulumu durdurur)
-  * D:\Protel\RAImporter altina kurar
-  * -Service verilirse Windows servisi olarak kurup baslatir
+  * calisan surumu ANCAK indirme + dogrulama bittikten sonra durdurur
+  * D:\Protel\RAImporter altina kurar (D: yoksa C:)
+  * -Service verilirse Windows servisi olarak kurup baslatir; verilmezse
+    kurulum icin durdurdugu servisi yeni surumle geri baslatir
   * masaustu kisayolu olusturur
   * -UpdateUrl verilirse program yeni surumleri gece 02:00-05:00
     arasinda kendisi alir (imza + SHA-256 + duman testi ile)

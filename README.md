@@ -3,8 +3,8 @@
 Oracle Cloud **Reports & Analytics** Excel export dosyalarını Oracle **veya
 PostgreSQL** veritabanına aktarır ve mevcut bir Opera DWH Oracle şemasını
 **PostgreSQL'e taşır** (şema + veri + sequence + indeks/kısıt + view +
-PL/SQL paket portu). Tek dosya: `RAImporter.exe` — Python, .NET, Oracle
-Instant Client, ODP.NET veya `tnsnames.ora` gerekmez.
+PL/SQL paket portu). Tek klasör paketi: `RAImporter.exe` + `_internal\` —
+Python, .NET, Oracle Instant Client, ODP.NET veya `tnsnames.ora` gerekmez.
 
 Bu depo yalnızca **dağıtım** içindir. Kaynak kod ayrı ve özel bir depodadır.
 
@@ -12,41 +12,48 @@ Bu depo yalnızca **dağıtım** içindir. Kaynak kod ayrı ve özel bir depodad
 
 ## Kurulum
 
-Program dosyası bu deponun **Releases** bölümündedir. En son sürümün değişmez
-indirme adresi:
-
-```
-https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/latest/download/RAImporter.exe
-```
+Program paketi bu deponun **Releases** bölümündedir
+(`RAImporter-<sürüm>-win64.zip` + `.sha256`). Yönetici olarak açılmış
+PowerShell'de, sürümden bağımsız tek komut:
 
 ```powershell
+iwr -UseBasicParsing "https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/install.ps1" -OutFile install.ps1
 powershell -ExecutionPolicy Bypass -File install.ps1 `
-  -Url "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/latest/download/RAImporter.exe" `
   -UpdateUrl "https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json" `
   -Service
 ```
 
-`-Sha256` vermek zorunlu değil: betik beklenen özeti indirme adresinin
-yanındaki [`RAImporter.exe.sha256`](RAImporter.exe.sha256) dosyasından kendisi
-alır ve doğrular. Elle verecekseniz dosyadaki 64 haneli **gerçek** değeri yazın —
-şablon metnini olduğu gibi bırakmayın (betik şablon/bozuk özeti kuruluma
-başlamadan reddeder).
+`-Url` vermek gerekmez: betik güncel paketi `surum.json`'daki `paket_url`
+adresinden indirir, SHA-256'yı yine oradaki `paket_sha256` ile doğrular ve
+`D:\Protel\RAImporter` altına açar (D: yoksa C:).
+
+> **Eski komut çalışmaz:** 08.09'dan (1.8.70) beri release'lerde `RAImporter.exe`
+> yok; `.../releases/latest/download/RAImporter.exe` adresi 404 döner. Eski
+> betik bunu "The connection was closed unexpectedly" diye gösterebilir — ağ
+> sorunu değildir.
+
+Paketi kendi yerinizden (dosya sunucusu / Drive) dağıtacaksanız `-Url` ile
+zip'in doğrudan indirme adresini verin; `-Sha256` verilmezse betik özeti
+`<Url>.sha256` adresinden almayı dener. Elle verecekseniz 64 haneli **gerçek**
+değeri yazın — şablon/bozuk özet kuruluma başlamadan reddedilir.
 
 `-UpdateUrl` verilirse sunucuya bir daha girmek gerekmez: program yeni sürümleri
 kendi alır. `-Service` Windows servisi olarak kurar.
 
-Elle kurmak isterseniz exe'yi indirip çalıştırmanız yeterli; yönetim arayüzü
-`http://127.0.0.1:8787/` adresinde açılır. Saha notları: [KURULUM.txt](KURULUM.txt)
+Elle kurmak isterseniz zip'i bir klasöre açın (`RAImporter.exe` ile
+`_internal\` yan yana kalmalı) ve `RAImporter.exe`'yi çalıştırın; yönetim
+arayüzü `http://127.0.0.1:8787/` adresinde açılır. Saha notları:
+[KURULUM.txt](KURULUM.txt)
 
 ### İndirdiğinizi doğrulayın
 
 ```powershell
-certutil -hashfile RAImporter.exe SHA256
+certutil -hashfile RAImporter-<sürüm>-win64.zip SHA256
 ```
 
-Çıkan değer [`RAImporter.exe.sha256`](RAImporter.exe.sha256) içindekiyle aynı
-olmalıdır. `install.ps1` bu karşılaştırmayı zaten kendisi yapar (özeti yayından
-alır; `-Sha256` verilirse onu kullanır) ve tutmazsa kurulumu durdurur.
+Çıkan değer release'teki `RAImporter-<sürüm>-win64.zip.sha256` (ve
+`surum.json`'daki `paket_sha256`) ile aynı olmalıdır. `install.ps1` bu
+karşılaştırmayı zaten kendisi yapar ve tutmazsa kurulumu durdurur.
 
 ---
 
