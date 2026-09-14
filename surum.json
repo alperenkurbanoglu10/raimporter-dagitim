@@ -1,9 +1,9 @@
 {
-  "version": "1.8.87",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
-  "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.87/RAImporter-1.8.87-win64.zip",
-  "paket_sha256": "9C376F64B6F0B845ACC0D33C597F01AE7C6227CABB516F8099841395C0611A29",
-  "bicim": "onedir",
-  "notes": "Mizan: R&A ambari gunun gelirini yuklemeden yalnizca odemeler dustuyse Trial Balance raporu artik onbelleklenmez -- ALINAMADI sayilip yeniden denenir. Boylece yarim rapor diske kilitlenip butun gelir 'raporda YOK' gorunmez ve bosuna Financial Update gonderilmez; ambar dolunca kontrol kendiliginden tutar."
+    "version":  "1.8.88",
+    "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
+    "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.88/RAImporter-1.8.88-win64.zip",
+    "paket_sha256":  "C3989CD45BBDC420E927CE85B59E288274DFB204B3F6A358781D1B947899A7E1",
+    "bicim":  "onedir",
+    "notes":  "Opera DWH senkronu: yerel aktarimdan sonra ayni export DWH Data API ile Opera DWH tarafina da gonderilir (kuyruk + yeniden deneme, DWH sekmesi, varsayilan KAPALI)"
 }
