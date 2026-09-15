@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.89",
+    "version":  "1.8.90",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.89/RAImporter-1.8.89-win64.zip",
-    "paket_sha256":  "14ED1ABC62422063BC52B5FD581B42727963B12818CC96C183C0AF500D450FFA",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.90/RAImporter-1.8.90-win64.zip",
+    "paket_sha256":  "AB04AF6D202EDCFAA3932B7FE62124C238B5821752E7A882AF54B35270A85790",
     "bicim":  "onedir",
-    "notes":  "DWH sekmesi: Baglantiyi test et chain secilmeden calisir (listeyi getirir, yazili kodu listeden bulur); chain sarti yalnizca gonderimde. Ozellik varsayilan KAPALI."
+    "notes":  "Kaynak sekmesi: Ortak ayarlar (otel kodu, chain, rapor klasoru) artik HER kaynak turunde (SFTP/e-posta/yerel) girilebiliyor; kontroller ve mizan duzeltmesi bunlari kullanir."
 }
