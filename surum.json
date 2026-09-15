@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.91",
+    "version":  "1.8.92",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.91/RAImporter-1.8.91-win64.zip",
-    "paket_sha256":  "DB3A16493984A5E21287716C621CD6B1C68420E4A84802EB3185FF97EB2B21C2",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.92/RAImporter-1.8.92-win64.zip",
+    "paket_sha256":  "D46AA831DBE552D53D0E8566D2655410C520A6E9AE7359D749422A23528E704E",
     "bicim":  "onedir",
-    "notes":  "Kayip kontrolu: once kayip rezervasyonlar (kimlik sonra), NAME eksikse RDENAME/RDELEMENTS de ayni partide; parti parti ilerler, her partiden sonra yeniden kontrol eder. Mizan: VOID folyodan kalan AR (City Ledger) satiri gibi folyo hareketi olan AR satirlari artik silme adayi (fis+oda, fis+tutar eslesmesi, gunlukte baska AR satiri); AR modulu tahsilatlari korunur."
+    "notes":  "Mizan: fazla cikan AR satirinin fisi folio$_tax icinde VOID ise satir silme adayi (odasiz AR odemesi olsa bile); tablo yoksa ya da sorgu hata verirse AR satiri korunur. Etiket: (AR defteri, VOID folyo)."
 }
