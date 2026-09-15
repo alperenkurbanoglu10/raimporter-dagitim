@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.90",
+    "version":  "1.8.91",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.90/RAImporter-1.8.90-win64.zip",
-    "paket_sha256":  "AB04AF6D202EDCFAA3932B7FE62124C238B5821752E7A882AF54B35270A85790",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.91/RAImporter-1.8.91-win64.zip",
+    "paket_sha256":  "DB3A16493984A5E21287716C621CD6B1C68420E4A84802EB3185FF97EB2B21C2",
     "bicim":  "onedir",
-    "notes":  "Kaynak sekmesi: Ortak ayarlar (otel kodu, chain, rapor klasoru) artik HER kaynak turunde (SFTP/e-posta/yerel) girilebiliyor; kontroller ve mizan duzeltmesi bunlari kullanir."
+    "notes":  "Kayip kontrolu: once kayip rezervasyonlar (kimlik sonra), NAME eksikse RDENAME/RDELEMENTS de ayni partide; parti parti ilerler, her partiden sonra yeniden kontrol eder. Mizan: VOID folyodan kalan AR (City Ledger) satiri gibi folyo hareketi olan AR satirlari artik silme adayi (fis+oda, fis+tutar eslesmesi, gunlukte baska AR satiri); AR modulu tahsilatlari korunur."
 }
