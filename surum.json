@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.92",
+    "version":  "1.8.93",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.92/RAImporter-1.8.92-win64.zip",
-    "paket_sha256":  "D46AA831DBE552D53D0E8566D2655410C520A6E9AE7359D749422A23528E704E",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.93/RAImporter-1.8.93-win64.zip",
+    "paket_sha256":  "1095332DA8244ECA04596DF6472A47D3D6F1129557102592368C49CC4E5A1446",
     "bicim":  "onedir",
-    "notes":  "Mizan: fazla cikan AR satirinin fisi folio$_tax icinde VOID ise satir silme adayi (odasiz AR odemesi olsa bile); tablo yoksa ya da sorgu hata verirse AR satiri korunur. Etiket: (AR defteri, VOID folyo)."
+    "notes":  "Kayip ve mizan duzeltmesi: programin kendi indirme klasorundeki butun .xlsx dosyalari tek aktarimda islenir; isin \"bir turda en fazla dosya\" (20) siniri bu klasore uygulanmaz (15.09: 41 dosyanin 21 tanesi islenmeden klasorde kaliyordu)."
 }
