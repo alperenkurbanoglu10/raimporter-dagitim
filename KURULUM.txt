@@ -85,6 +85,13 @@ Surum ve guncelleme:
 
 ANTIVIRUS
 ----------------------------------------------------------------------
+Kurulum "Paket yerine konamadi: Access to the path ... _internal ... is
+denied" derse: antivirus paketten yeni acilan ~1500 dosyayi tararken
+klasoru kisa sure kilitliyor (16.09 sahada goruldu). Betik tasimayi 2 sn
+arayla 5 kez dener, olmazsa dosya dosya kopyalar; yine olmazsa ESKI SURUMU
+GERI ALIR ve kurulum calisir kalir. Komutu tekrar calistirin; surerse
+kurulum klasoru icin antivirus istisnasi isteyin.
+
 Kurumsal antivirus imzasiz exe'lere takilabilir. Protel'in kod imzalama
 sertifikasi ile imzalanmasi bunu ortadan kaldirir:
 
