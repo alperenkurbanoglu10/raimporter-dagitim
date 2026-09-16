@@ -2,6 +2,10 @@
 # Releases ekine yuklenir:  gh release create v1.1.0 RAImporter.exe
 RAImporter.exe
 
+# onedir paketleri de ayni sebeple: ~31 MB/surum. Releases'a asset olarak
+# yuklenir; depoya YALNIZCA .sha256 dosyasi ve imzali surum.json girer.
+RAImporter-*-win64.zip
+
 .venv/
 build/
 dist/
