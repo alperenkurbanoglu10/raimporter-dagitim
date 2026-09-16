@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.95",
+    "version":  "1.8.96",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.95/RAImporter-1.8.95-win64.zip",
-    "paket_sha256":  "A035A77D675FCA22F1568C8175973886241C91B9FBE218BA694DE3E8AFAEA372",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.96/RAImporter-1.8.96-win64.zip",
+    "paket_sha256":  "38942B8704D3EC5EA585F5F53E6C2D97D9DE4015277AD20FD55E183B01D58B0B",
     "bicim":  "onedir",
-    "notes":  "Export: Ortak ayarlardaki chain kodu artik zamanlanmis takvimde, elle cekimde, INIT kosumunda ve destek raporlarinda da gonderilir (p_chain bos kalmiyor). Rapor adi cozumleme ayiractan bagimsiz: tenant katalogunda \"Portal Name By Chain And Update\" gibi bosluklu/baslik bicimli adlar kurumsal adlarla eslesir, \"Kurumsal takvimi yukle\" satirlari artik PASIF gelmez."
+    "notes":  "Arayuz: genis ekranda sayfa 1800 piksele kadar acilir (eskiden 1520 ile sinirliydi, sagda bos alan kaliyordu); export takvimi tablosu sik hucrelerle gelir ve pencere alanlari tek satirda kalir -- satir yuksekligi 145 pikselden 62 piksele indi, 18 satirlik takvim yarı yukseklige dustu."
 }
