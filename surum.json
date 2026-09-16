@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.97",
+    "version":  "1.8.98",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.97/RAImporter-1.8.97-win64.zip",
-    "paket_sha256":  "804C7FA04A94A5FA379C0DFE5E721296E4E5BD09443AFC5CDF1C8DF0AC285071",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.98/RAImporter-1.8.98-win64.zip",
+    "paket_sha256":  "E08666BF466903B08B2534F0391E9FB5FC536D313DB80A841DB3B757E6A2EDB0",
     "bicim":  "onedir",
-    "notes":  "Rapor tarih bicimi raporun kendi varsayilanindan cozuluyor: GUN-AY bekleyen raporlar (PORTAL_NAME_BY_RESORT_AND_BILL / _AND_UPDATE / PORTAL_NAME_RESORT_AND_UPDATE, P2001/P2020/P2030) artik dolu geliyor; AY-GUN raporlari aynen kaldi."
+    "notes":  "Olu R\u0026A oturumu artik tesis-gun kaybina donusmuyor: sunucu belirteci reddettiginde (invalid BIPSessionToken) kasaya sorulmadan gercekten yeniden giris yapilip ayni gun bir kez daha isteniyor. Gecici hatalarda davranis aynen kaldi."
 }
