@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.94",
+    "version":  "1.8.95",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.94/RAImporter-1.8.94-win64.zip",
-    "paket_sha256":  "32288A5AC940BEBAA5900731B66D761A5FFD1E88EB4BCA5FBED40D61FCB43261",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.95/RAImporter-1.8.95-win64.zip",
+    "paket_sha256":  "A035A77D675FCA22F1568C8175973886241C91B9FBE218BA694DE3E8AFAEA372",
     "bicim":  "onedir",
-    "notes":  "Mizan geriye donuk bakis: son 7 gun her sabah yeniden karsilastirilir; sonradan bozulan ya da cozulmemis gun taze raporla yeniden acilir. DWH API hiz siniri (429): Retry-After, uyarlanan tempo, kaldigi satirdan devam."
+    "notes":  "Export: Ortak ayarlardaki chain kodu artik zamanlanmis takvimde, elle cekimde, INIT kosumunda ve destek raporlarinda da gonderilir (p_chain bos kalmiyor). Rapor adi cozumleme ayiractan bagimsiz: tenant katalogunda \"Portal Name By Chain And Update\" gibi bosluklu/baslik bicimli adlar kurumsal adlarla eslesir, \"Kurumsal takvimi yukle\" satirlari artik PASIF gelmez."
 }
