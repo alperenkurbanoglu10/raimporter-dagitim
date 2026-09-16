@@ -1,9 +1,9 @@
 {
-  "version": "1.8.99",
+  "version": "1.8.100",
   "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
   "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.99/RAImporter-1.8.99-win64.zip",
-  "paket_sha256": "8CECE20234BA99D370E8E56CEF9E7AA295FC0EA4E0A16DB32017277A067DA5BD",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.100/RAImporter-1.8.100-win64.zip",
+  "paket_sha256": "7AEDCF3EFA0E4B3C95557F9EE453A0AAB4BF6E040D007444542E036CD6DAB6AD",
   "bicim": "onedir",
-  "notes": "Parametresiz kosum bos dosyayi TAMAM saymiyor; xlsx'e gelen 0 bayt gecici sayilip yeniden deneniyor (Trial Balance/P2020 hatasi)"
+  "notes": "Bos sonuc artik basari sayilmiyor (ayni pencere yeniden denenir). Gecmis yukleme dugmesi: INIT + takvimdeki raporlar sirayla + aktarim. Veri tavanina takilan pencere kendiliginden bolunur. Hata metinleri asil sebebi gosteriyor. Trial Balance (P2020) kararsizligi giderildi."
 }
