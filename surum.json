@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.98",
-    "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
-    "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.98/RAImporter-1.8.98-win64.zip",
-    "paket_sha256":  "E08666BF466903B08B2534F0391E9FB5FC536D313DB80A841DB3B757E6A2EDB0",
-    "bicim":  "onedir",
-    "notes":  "Olu R\u0026A oturumu artik tesis-gun kaybina donusmuyor: sunucu belirteci reddettiginde (invalid BIPSessionToken) kasaya sorulmadan gercekten yeniden giris yapilip ayni gun bir kez daha isteniyor. Gecici hatalarda davranis aynen kaldi."
+  "version": "1.8.99",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
+  "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.99/RAImporter-1.8.99-win64.zip",
+  "paket_sha256": "8CECE20234BA99D370E8E56CEF9E7AA295FC0EA4E0A16DB32017277A067DA5BD",
+  "bicim": "onedir",
+  "notes": "Parametresiz kosum bos dosyayi TAMAM saymiyor; xlsx'e gelen 0 bayt gecici sayilip yeniden deneniyor (Trial Balance/P2020 hatasi)"
 }
