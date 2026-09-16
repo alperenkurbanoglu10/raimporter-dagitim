@@ -54,6 +54,29 @@ function Bad([string]$msg) { Write-Host "  [HATA] $msg" -ForegroundColor Red }
 # gelir ve Remove-Item PSArgumentException verir (sahada goruldu, 31.08).
 function TmpSil([string]$p) { try { [IO.File]::Delete($p) } catch { } }
 
+# Tasima/kopyalama ilk denemede olmayabilir: yeni acilmis dosyalari antivirus
+# tariyorsa (Trend Micro vb.) klasor kisa sure kilitli kalir ve "Access to the
+# path ... is denied" gelir (16.09 sahada goruldu: acilan paket klasorunun
+# _internal'i). Birkac kez denenir, olmazsa dosya dosya kopyalanir.
+function KlasorTasi([string]$kaynak, [string]$hedef) {
+    for ($i = 1; $i -le 5; $i++) {
+        try { Move-Item -LiteralPath $kaynak -Destination $hedef -Force -ErrorAction Stop; return $true }
+        catch { if ($i -lt 5) { Start-Sleep -Seconds 2 } }
+    }
+    try {
+        New-Item -ItemType Directory -Path $hedef -Force -ErrorAction Stop | Out-Null
+        Copy-Item -LiteralPath (Join-Path $kaynak "*") -Destination $hedef -Recurse -Force -ErrorAction Stop
+        return $true
+    } catch { return $false }
+}
+function DosyaKopyala([string]$kaynak, [string]$hedef) {
+    for ($i = 1; $i -le 5; $i++) {
+        try { [IO.File]::Copy($kaynak, $hedef, $true); return $true }
+        catch { if ($i -lt 5) { Start-Sleep -Seconds 2 } }
+    }
+    return $false
+}
+
 # Indirme yardimcisi ($dosya bos ise metni dondurur). GitHub 404'ten sonra
 # baglantiyi kapatiyor; .NET Framework WebClient o baglantiyi yeniden
 # kullaninca gercek hata yerine "The request was aborted: The connection was
@@ -254,14 +277,55 @@ if ($paketMi) {
             TmpSil $tmp; Remove-Item $acilan -Recurse -Force -ErrorAction SilentlyContinue
             exit 1
         }
+        # SIRA ONEMLI (16.09 saha): once yeni exe YEDEK ADLA kopyalanir, sonra
+        # _internal yerine konur, en son exe degistirilir. Eskiden exe once
+        # kopyalaniyordu; _internal tasinamayinca kurulum "yeni exe + _internal
+        # YOK" halinde kaliyordu ve program hic acilmiyordu. Artik bir adim
+        # duserse eski surum geri alinir, kurulum CALISIR kalir.
         $eskiIc = Join-Path $Dir "_internal"
-        if (Test-Path $eskiIc) {
-            if (Test-Path "$eskiIc.old") { Remove-Item "$eskiIc.old" -Recurse -Force -ErrorAction SilentlyContinue }
-            Move-Item $eskiIc "$eskiIc.old" -Force
+        $yedekIc = "$eskiIc.old"
+        $yeniExe = "$exe.yeni"
+        if (-not (DosyaKopyala $kaynakExe $yeniExe)) {
+            Bad "Yeni RAImporter.exe kurulum klasorune kopyalanamadi."
+            Say "Hedef: $Dir - klasor yazilabilir mi, antivirus engelliyor mu?"
+            TmpSil $tmp; Remove-Item $acilan -Recurse -Force -ErrorAction SilentlyContinue
+            exit 1
         }
-        [IO.File]::Copy($kaynakExe, $exe, $true)
-        Move-Item (Join-Path $acilan "_internal") $eskiIc -Force
-        Remove-Item "$eskiIc.old" -Recurse -Force -ErrorAction SilentlyContinue
+        if (Test-Path $eskiIc) {
+            if (Test-Path $yedekIc) { Remove-Item $yedekIc -Recurse -Force -ErrorAction SilentlyContinue }
+            if (-not (KlasorTasi $eskiIc $yedekIc)) {
+                Bad "Eski _internal klasoru kenara alinamadi (kullanimda olabilir)."
+                Say "Servisi durdurup tekrar deneyin:  sc stop ProtelRAImporter"
+                TmpSil $tmp; TmpSil $yeniExe
+                Remove-Item $acilan -Recurse -Force -ErrorAction SilentlyContinue
+                exit 1
+            }
+        }
+        if (-not (KlasorTasi (Join-Path $acilan "_internal") $eskiIc)) {
+            Bad "Yeni _internal klasoru yerine konamadi (antivirus taramasi ya da acik dosya)."
+            Remove-Item $eskiIc -Recurse -Force -ErrorAction SilentlyContinue
+            if (Test-Path $yedekIc) {
+                if (KlasorTasi $yedekIc $eskiIc) { Say "Eski surum geri alindi; kurulum calisir durumda kaldi." }
+                else { Say "Eski _internal geri alinamadi: $yedekIc klasorunun adini _internal yapin." }
+            }
+            Say "Antivirus bu klasoru tariyorsa istisna tanimlayip tekrar deneyin."
+            TmpSil $tmp; TmpSil $yeniExe
+            Remove-Item $acilan -Recurse -Force -ErrorAction SilentlyContinue
+            exit 1
+        }
+        if (-not (DosyaKopyala $yeniExe $exe)) {
+            Bad "RAImporter.exe yerine konamadi (calisiyor olabilir)."
+            if (Test-Path $yedekIc) {
+                Remove-Item $eskiIc -Recurse -Force -ErrorAction SilentlyContinue
+                if (KlasorTasi $yedekIc $eskiIc) { Say "Eski surum geri alindi; kurulum calisir durumda kaldi." }
+            }
+            Say "Programi kapatip kurulumu tekrar calistirin."
+            TmpSil $tmp; TmpSil $yeniExe
+            Remove-Item $acilan -Recurse -Force -ErrorAction SilentlyContinue
+            exit 1
+        }
+        TmpSil $yeniExe
+        Remove-Item $yedekIc -Recurse -Force -ErrorAction SilentlyContinue
         Remove-Item $acilan -Recurse -Force -ErrorAction SilentlyContinue
         TmpSil $tmp
     } catch {
@@ -275,7 +339,7 @@ if ($paketMi) {
     # Tek dosya exe (eski surumler). PS saglayicisini atlayan .NET tasima
     # (Move-Item '~' iceren yollarda patlar).
     try {
-        [IO.File]::Copy($tmp, $exe, $true)
+        if (-not (DosyaKopyala $tmp $exe)) { throw "dosya kullanimda olabilir" }
         TmpSil $tmp
     } catch {
         Bad "Dosya yerine konamadi: $($_.Exception.Message)"
