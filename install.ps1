@@ -22,8 +22,12 @@
                   "<Url>.sha256" adresi (GitHub release'teki kardes asset)
                   kullanilir. Talimattaki sablon metnini ("<...deger...>")
                   oldugu gibi yapistirmayin; betik bunu acikca reddeder.
-      -Dir        Kurulum klasoru. Verilmezse D:\Protel\RAImporter (D: sabit bir
-                  veri diskiyse ve yazilabiliyorsa), yoksa C:\Protel\RAImporter.
+      -Dir        Kurulum klasoru. VERILMEZSE betik dogru yeri KENDISI bulur:
+                  once VAR OLAN kurulum (servis kaydi / calisan program / bilinen
+                  klasorler) -- yukseltme hep oraya gider; yoksa sistem diski
+                  disindaki ilk yazilabilir sabit veri diski (gelenek D:, sonra
+                  en cok bos alanli); o da yoksa sistem diski. Takili DVD, USB ve
+                  ag surucusu listeye hic girmez.
       -UpdateUrl  surum.json adresi. Verilirse config'e yazilir: otel bir daha
                   elle guncellenmez, program gece penceresinde kendi gecer.
       -Service    Kurduktan sonra Windows servisi olarak kur ve baslat.
@@ -55,15 +59,98 @@ function Bad([string]$msg) { Write-Host "  [HATA] $msg" -ForegroundColor Red }
 # gelir ve Remove-Item PSArgumentException verir (sahada goruldu, 31.08).
 function TmpSil([string]$p) { try { [IO.File]::Delete($p) } catch { } }
 
-# Surucu gercekten yazilabilir bir veri diski mi? Test-Path "D:\" takili DVD
-# icin de, salt-okunur ag surucusu icin de True doner -- kurulum klasoru oraya
-# acilamaz (17.09 sahada: D: VAR ama "Access to the path 'Protel' is denied").
-# WMI/CIM kapali sunucularda da calissin diye IO.DriveInfo ile bakiyoruz.
-function VeriDiskiMi([string]$harf) {
+# Kurulum icin disk sirasi: once sistem diski DISINDAKI sabit veri diskleri
+# (gelenek D:, sonra en cok bos alani olan), en sonda sistem diski. Takili DVD
+# (17.09 sahada D: = CDRom/UDF, "Access to the path 'Protel' is denied"), USB
+# ve ag surucusu listeye hic girmez; NTFS/ReFS disi bicimler (FAT32 USB, bulut
+# senkron surucusu) de elenir. WMI/CIM kapali sunucularda da calissin diye
+# IO.DriveInfo ile bakilir.
+function SurucuSirasi {
+    $sistem = "$env:SystemDrive"
+    if (-not $sistem) { $sistem = "C:" }
+    $veri = @()
+    foreach ($d in [IO.DriveInfo]::GetDrives()) {
+        try {
+            if (-not $d.IsReady) { continue }
+            if ($d.DriveType -ne [IO.DriveType]::Fixed) { continue }
+            if (@("NTFS", "ReFS") -notcontains $d.DriveFormat) { continue }
+            $harf = $d.Name.Substring(0, 2)
+            if ($harf -eq $sistem) { continue }
+            if ($d.AvailableFreeSpace -lt 1GB) { continue }
+            $veri += New-Object psobject -Property @{ Harf = $harf; Bos = [double]$d.AvailableFreeSpace }
+        } catch { }
+    }
+    $sirali = $veri | Sort-Object @{ Expression = { if ($_.Harf -eq "D:") { 0 } else { 1 } } },
+                                  @{ Expression = { $_.Bos }; Descending = $true }
+    return @(@($sirali | ForEach-Object { $_.Harf }) + @($sistem))
+}
+
+# "C:\Protel\RAImporter\RAImporter.exe" --service  ->  C:\...\RAImporter.exe
+function ExeYolunuAyikla([string]$komut) {
+    $k = ([string]$komut).Trim()
+    if (-not $k) { return "" }
+    if ($k.StartsWith([char]34)) {
+        $son = $k.IndexOf([char]34, 1)
+        if ($son -gt 1) { return $k.Substring(1, $son - 1) }
+        return ""
+    }
+    $i = $k.IndexOf(".exe", [StringComparison]::OrdinalIgnoreCase)
+    if ($i -gt 0) { return $k.Substring(0, $i + 4) }
+    return ($k -split ' ')[0]
+}
+
+# VAR OLAN kurulumu bulur. Yukseltme HER ZAMAN mevcut klasore gitmeli: yoksa
+# ikinci bir kurulum dogar, otel iki ayri surum ve iki zamanlayici kosturur
+# (10.09 ADBRI: ayni dosya iki kez islendi). Sira: servis kaydi (en guvenilir),
+# calisan program, sonra disk sirasindaki bilinen klasorler.
+function VarOlanKurulum {
+    $komut = ""
     try {
-        $d = New-Object IO.DriveInfo $harf
-        return ($d.IsReady -and $d.DriveType -eq [IO.DriveType]::Fixed)
-    } catch { return $false }
+        $kayit = Get-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Services\ProtelRAImporter" -ErrorAction Stop
+        $komut = [string]$kayit.ImagePath
+    } catch { }
+    if (-not $komut) {
+        try {
+            $svc = Get-CimInstance Win32_Service -Filter "Name='ProtelRAImporter'" -ErrorAction Stop
+            $komut = [string]$svc.PathName
+        } catch { }
+    }
+    $yol = ExeYolunuAyikla $komut
+    if ($yol -and [IO.File]::Exists($yol)) {
+        return @{ Yol = [IO.Path]::GetDirectoryName($yol); Sebep = "var olan kurulum, servis"; Kesin = $true }
+    }
+    try {
+        $pr = Get-Process -Name "RAImporter" -ErrorAction SilentlyContinue | Select-Object -First 1
+        if ($pr -and $pr.Path) {
+            return @{ Yol = [IO.Path]::GetDirectoryName($pr.Path); Sebep = "var olan kurulum, calisan program"; Kesin = $true }
+        }
+    } catch { }
+    foreach ($harf in (SurucuSirasi)) {
+        $aday = $harf + "\Protel\RAImporter"
+        if ([IO.File]::Exists([IO.Path]::Combine($aday, "RAImporter.exe"))) {
+            return @{ Yol = $aday; Sebep = "var olan kurulum, $harf"; Kesin = $true }
+        }
+    }
+    return $null
+}
+
+# Denenecek klasorler, sirayla. "Kesin" aday tutmazsa BASKA yere kurmayiz: var
+# olan kurulumun ya da -Dir'in yerine sessizce ikinci kurulum acmak, izin
+# sorununu duzeltmekten kotu bir sonuctur.
+function KurulumAdaylari {
+    $mevcut = VarOlanKurulum
+    if ($mevcut) { return @($mevcut) }
+    $liste = @()
+    # @(...) SART: tek diskli makinede PowerShell diziyi duz metne cevirir
+    # ve $sira[0] harf yerine ilk KARAKTERI verir ("C" -> C\Protel\...).
+    $sira = @(SurucuSirasi)
+    for ($i = 0; $i -lt $sira.Count; $i++) {
+        # Listenin SONUNCUSU her zaman sistem diskidir (SurucuSirasi); logda
+        # "veri diski C:" yazmamasi icin etiketi ayri.
+        $etiket = if ($i -eq $sira.Count - 1) { "sistem diski " + $sira[$i] } else { "veri diski " + $sira[$i] }
+        $liste += @{ Yol = ($sira[$i] + "\Protel\RAImporter"); Sebep = $etiket; Kesin = $false }
+    }
+    return $liste
 }
 
 # Klasoru olusturmayi VE icine yazmayi dener: kok dizinde klasor acabilip
@@ -164,50 +251,48 @@ if ($Service -and -not $yonetici) {
 }
 
 # --- hedef klasor -----------------------------------------------------------
-# Varsayilan D:\Protel ama D: her sunucuda yazilabilir bir veri diski degil.
-# 17.09 sahada: "New-Item : Access to the path 'Protel' is denied" -- ham .NET
-# hatasi ne sebebini ne de cikis yolunu soyluyordu. Artik once yazilabilirlik
-# denenir; KENDI sectigimiz yol tutmazsa sistem diskine geceriz, -Dir ile
-# verilen yolu ise sessizce DEGISTIRMEYIZ.
+# Uzman her sunucuda elle karar vermesin: dogru yeri betik bulur (bkz.
+# KurulumAdaylari). Denenen her aday gercekten olusturulur ve icine yazilir --
+# 17.09 sahada D: VARDI ama takili bir DVD idi, kurulum ham bir .NET hatasiyla
+# ("Access to the path 'Protel' is denied") ilk adimda bitiyordu.
 $dirVerildi = [bool]$Dir
+if ($dirVerildi) { $adaylar = @(@{ Yol = $Dir; Sebep = "-Dir ile verildi"; Kesin = $true }) }
+else             { $adaylar = KurulumAdaylari }
+
+$Dir = ""; $sebep = ""; $hata = ""; $sonAday = $null
+foreach ($aday in $adaylar) {
+    $sonAday = $aday
+    $h = KlasorDene $aday.Yol
+    if (-not $h) { $Dir = $aday.Yol; $sebep = $aday.Sebep; break }
+    $hata = $h
+    if ($aday.Kesin) { break }
+    Say ("{0} kullanilamadi ({1})" -f $aday.Yol, $h)
+}
+
 if (-not $Dir) {
-    $Dir = if (VeriDiskiMi "D:") { "D:\Protel\RAImporter" } else { "C:\Protel\RAImporter" }
-}
-$sistemDiski = "C:\Protel\RAImporter"
-$hata = KlasorDene $Dir
-# Join-Path / Test-Path olmayan surucude ($ErrorActionPreference = "Stop")
-# DriveNotFoundException atar; burada yol zaten SORUNLU oldugu icin saglayiciya
-# hic dokunmayan .NET cagrilarini kullaniyoruz.
-if ($hata -and -not $dirVerildi -and $Dir -ne $sistemDiski -and
-    -not [IO.File]::Exists([IO.Path]::Combine($Dir, "RAImporter.exe"))) {
-    # Orada zaten bir kurulum varsa gecmeyiz: ikinci bir kurulum yaratmak,
-    # yazilamayan klasoru duzeltmekten daha kotu bir sonuc.
-    Say "$Dir kullanilamadi ($hata)"
-    Say "Sistem diskine geciliyor: $sistemDiski"
-    $Dir = $sistemDiski
-    $hata = KlasorDene $Dir
-}
-if ($hata) {
-    Bad "Kurulum klasoru olusturulamadi: $Dir"
+    Bad "Kurulum klasoru olusturulamadi: $($sonAday.Yol)"
     Say "Sebep: $hata"
     $kok = ""
-    try { $kok = [IO.Path]::GetPathRoot($Dir) } catch { }
-    if ($kok -and -not (Test-Path $kok)) {
+    try { $kok = [IO.Path]::GetPathRoot($sonAday.Yol) } catch { }
+    if ($sonAday.Sebep -like "var olan kurulum*") {
+        Say "Kurulum zaten burada ($($sonAday.Sebep)) ama klasore yazilamiyor."
+        Say "Program acik olabilir; servisi durdurup tekrar deneyin:"
+        Say "  sc stop ProtelRAImporter"
+    } elseif ($kok -and -not (Test-Path $kok)) {
         Say "$kok surucusu bu makinede yok ya da hazir degil."
     } elseif (-not $yonetici) {
         Say "Bu PowerShell yonetici DEGIL. Baslat menusunde Windows PowerShell'e"
         Say "sag tiklayip 'Yonetici olarak calistir' deyin ve komutu tekrarlayin."
     } else {
-        Say "Oturum yonetici; o halde diskin kendisi yazmiyor: surucu salt-okunur,"
-        Say "DVD ya da ag surucusu olabilir, ya da guvenlik yazilimi (Trend Micro"
-        Say "vb.) kok dizini koruyordur."
+        Say "Oturum yonetici; o halde diskin kendisi yazmiyor: surucu salt-okunur"
+        Say "olabilir ya da guvenlik yazilimi (Trend Micro vb.) kok dizini koruyor."
     }
-    Say "Baska bir klasore kurmak icin -Dir verin, ornegin:"
-    Say "  -Dir C:\Protel\RAImporter"
+    Say "Kurulum yerini elle vermek icin -Dir kullanin, ornegin:"
+    Say ("  -Dir " + $env:SystemDrive + "\Protel\RAImporter")
     exit 1
 }
 $exe = Join-Path $Dir "RAImporter.exe"
-Ok "Klasor hazir: $Dir"
+Ok "Klasor hazir: $Dir ($sebep)"
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
