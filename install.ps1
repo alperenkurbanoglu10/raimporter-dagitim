@@ -22,7 +22,8 @@
                   "<Url>.sha256" adresi (GitHub release'teki kardes asset)
                   kullanilir. Talimattaki sablon metnini ("<...deger...>")
                   oldugu gibi yapistirmayin; betik bunu acikca reddeder.
-      -Dir        Kurulum klasoru (varsayilan D:\Protel\RAImporter, D: yoksa C:).
+      -Dir        Kurulum klasoru. Verilmezse D:\Protel\RAImporter (D: sabit bir
+                  veri diskiyse ve yazilabiliyorsa), yoksa C:\Protel\RAImporter.
       -UpdateUrl  surum.json adresi. Verilirse config'e yazilir: otel bir daha
                   elle guncellenmez, program gece penceresinde kendi gecer.
       -Service    Kurduktan sonra Windows servisi olarak kur ve baslat.
@@ -53,6 +54,30 @@ function Bad([string]$msg) { Write-Host "  [HATA] $msg" -ForegroundColor Red }
 # PS saglayicisini atlayan silme: bazi makinelerde yol kisa-ad ('~' iceren)
 # gelir ve Remove-Item PSArgumentException verir (sahada goruldu, 31.08).
 function TmpSil([string]$p) { try { [IO.File]::Delete($p) } catch { } }
+
+# Surucu gercekten yazilabilir bir veri diski mi? Test-Path "D:\" takili DVD
+# icin de, salt-okunur ag surucusu icin de True doner -- kurulum klasoru oraya
+# acilamaz (17.09 sahada: D: VAR ama "Access to the path 'Protel' is denied").
+# WMI/CIM kapali sunucularda da calissin diye IO.DriveInfo ile bakiyoruz.
+function VeriDiskiMi([string]$harf) {
+    try {
+        $d = New-Object IO.DriveInfo $harf
+        return ($d.IsReady -and $d.DriveType -eq [IO.DriveType]::Fixed)
+    } catch { return $false }
+}
+
+# Klasoru olusturmayi VE icine yazmayi dener: kok dizinde klasor acabilip
+# dosya yazamayan sunucular var, bunu kurulumun ortasinda degil basinda
+# ogrenmek isteriz. Basariliysa "" doner, olmadiysa hata metnini dondurur.
+function KlasorDene([string]$yol) {
+    try {
+        New-Item -ItemType Directory -Path $yol -Force -ErrorAction Stop | Out-Null
+        $deneme = Join-Path $yol ("yazma-denemesi-" + [guid]::NewGuid().ToString("N") + ".tmp")
+        [IO.File]::WriteAllText($deneme, "x")
+        [IO.File]::Delete($deneme)
+        return ""
+    } catch { return $_.Exception.Message }
+}
 
 # Tasima/kopyalama ilk denemede olmayabilir: yeni acilmis dosyalari antivirus
 # tariyorsa (Trend Micro vb.) klasor kisa sure kilitli kalir ve "Access to the
@@ -125,12 +150,63 @@ if ($Sha256 -and $Sha256 -notmatch '^[0-9A-Fa-f]{64}$') {
     exit 1
 }
 
+# --- yonetici hakki ---------------------------------------------------------
+# Servis kurulumu yonetici ister ve bu eskiden EN SONDA anlasiliyordu: paket
+# inip dosyalar degistikten sonra "yonetici hakki gerekiyor" deniyordu.
+$yonetici = ([Security.Principal.WindowsPrincipal] `
+             [Security.Principal.WindowsIdentity]::GetCurrent()
+            ).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+if ($Service -and -not $yonetici) {
+    Bad "-Service verildi ama bu PowerShell yonetici degil."
+    Say "Baslat menusunde Windows PowerShell'e sag tiklayip 'Yonetici olarak"
+    Say "calistir' deyin ve ayni komutu tekrarlayin."
+    exit 1
+}
+
 # --- hedef klasor -----------------------------------------------------------
+# Varsayilan D:\Protel ama D: her sunucuda yazilabilir bir veri diski degil.
+# 17.09 sahada: "New-Item : Access to the path 'Protel' is denied" -- ham .NET
+# hatasi ne sebebini ne de cikis yolunu soyluyordu. Artik once yazilabilirlik
+# denenir; KENDI sectigimiz yol tutmazsa sistem diskine geceriz, -Dir ile
+# verilen yolu ise sessizce DEGISTIRMEYIZ.
+$dirVerildi = [bool]$Dir
 if (-not $Dir) {
-    $Dir = if (Test-Path "D:\") { "D:\Protel\RAImporter" } else { "C:\Protel\RAImporter" }
+    $Dir = if (VeriDiskiMi "D:") { "D:\Protel\RAImporter" } else { "C:\Protel\RAImporter" }
+}
+$sistemDiski = "C:\Protel\RAImporter"
+$hata = KlasorDene $Dir
+# Join-Path / Test-Path olmayan surucude ($ErrorActionPreference = "Stop")
+# DriveNotFoundException atar; burada yol zaten SORUNLU oldugu icin saglayiciya
+# hic dokunmayan .NET cagrilarini kullaniyoruz.
+if ($hata -and -not $dirVerildi -and $Dir -ne $sistemDiski -and
+    -not [IO.File]::Exists([IO.Path]::Combine($Dir, "RAImporter.exe"))) {
+    # Orada zaten bir kurulum varsa gecmeyiz: ikinci bir kurulum yaratmak,
+    # yazilamayan klasoru duzeltmekten daha kotu bir sonuc.
+    Say "$Dir kullanilamadi ($hata)"
+    Say "Sistem diskine geciliyor: $sistemDiski"
+    $Dir = $sistemDiski
+    $hata = KlasorDene $Dir
+}
+if ($hata) {
+    Bad "Kurulum klasoru olusturulamadi: $Dir"
+    Say "Sebep: $hata"
+    $kok = ""
+    try { $kok = [IO.Path]::GetPathRoot($Dir) } catch { }
+    if ($kok -and -not (Test-Path $kok)) {
+        Say "$kok surucusu bu makinede yok ya da hazir degil."
+    } elseif (-not $yonetici) {
+        Say "Bu PowerShell yonetici DEGIL. Baslat menusunde Windows PowerShell'e"
+        Say "sag tiklayip 'Yonetici olarak calistir' deyin ve komutu tekrarlayin."
+    } else {
+        Say "Oturum yonetici; o halde diskin kendisi yazmiyor: surucu salt-okunur,"
+        Say "DVD ya da ag surucusu olabilir, ya da guvenlik yazilimi (Trend Micro"
+        Say "vb.) kok dizini koruyordur."
+    }
+    Say "Baska bir klasore kurmak icin -Dir verin, ornegin:"
+    Say "  -Dir C:\Protel\RAImporter"
+    exit 1
 }
 $exe = Join-Path $Dir "RAImporter.exe"
-New-Item -ItemType Directory -Path $Dir -Force | Out-Null
 Ok "Klasor hazir: $Dir"
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -392,10 +468,7 @@ if ($UpdateUrl) {
 
 # --- servis -----------------------------------------------------------------
 if ($Service) {
-    $admin = ([Security.Principal.WindowsPrincipal] `
-              [Security.Principal.WindowsIdentity]::GetCurrent()
-             ).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
-    if (-not $admin) {
+    if (-not $yonetici) {
         Bad "Servis kurulumu yonetici hakki gerektiriyor."
         Say "PowerShell'i 'Yonetici olarak calistir' ile acip tekrar deneyin."
     } else {
