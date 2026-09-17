@@ -1,9 +1,9 @@
 {
-  "version": "1.8.105",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.69/RAImporter.exe",
-  "sha256": "052CFCC3FAA56708343DAADE0BC2A8ACC0FEC5C6302326E5AE05387A33C76FA7",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.105/RAImporter-1.8.105-win64.zip",
-  "paket_sha256": "83939406A5502EE7DE2F390C27FCB7690333E851C139DDB9580A3D5F2D68DA9E",
-  "bicim": "onedir",
-  "notes": "Kimligi eksik misafirler tablosunda artik FATURA NO da var: tek tesiste yalin numara, birden cok tesiste tesis onekli, en fazla 5 numara + kalanin sayisi"
+    "version":  "1.8.106",
+    "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
+    "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.106/RAImporter-1.8.106-win64.zip",
+    "paket_sha256":  "969555D736AEA0403E0565AAE600B80B29DC2DA1F14CC0D82CD6976AC0AD5A56",
+    "bicim":  "onedir",
+    "notes":  "Ham hata metinleri bitti: indirme/kaynak klasoru kullanilamiyorsa sebep Turkce soyleniyor (takili DVD, hazir olmayan surucu, izin) ve R\u0026A girisinden once yakalaniyor; rapor tanimi hatasi kisaltiliyor ve ayni turda tesis basina bir kez deneniyor"
 }
