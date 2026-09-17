@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.107",
+    "version":  "1.8.108",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.107/RAImporter-1.8.107-win64.zip",
-    "paket_sha256":  "9E8228F2E15189E826ECB8D64321D38950C99E0953C2CBB1510A5D3B7CF7BAB1",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.108/RAImporter-1.8.108-win64.zip",
+    "paket_sha256":  "2217ABA12A627B4BB83B67ED65E3C3FC153AFE349995501A6A847FA01E8CC1E6",
     "bicim":  "onedir",
-    "notes":  "Export hata mesaji arayuzde artik KESILMIYOR (eskiden 60 karakterde kesiliyordu, sebep hep kesilen tarafta kaliyordu); sunucu bir parametreyi tanimazsa gonderilen adlar mesaja yazilir ve yalnizca dogrulanmis parametrelerle bir kez daha denenir (tarih parametreleri korunur)"
+    "notes":  "Sunucu parametre listesini veremezse (p_resort LOV sorgusu dusuyor) kosum durmuyor: son basarili liste saklanip kullaniliyor; tanim ve parametre hatasinin ikisi de mesajda; ozet geriye donuk gunleri TESIS degil GUN sayiyor"
 }
