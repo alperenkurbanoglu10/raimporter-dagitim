@@ -1,9 +1,9 @@
 {
-  "version": "1.8.103",
+  "version": "1.8.104",
   "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.69/RAImporter.exe",
   "sha256": "052CFCC3FAA56708343DAADE0BC2A8ACC0FEC5C6302326E5AE05387A33C76FA7",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.103/RAImporter-1.8.103-win64.zip",
-  "paket_sha256": "FBE3F67777911AA76A4824C4EA0955876E43BA08090945AB1446A07C5378D352",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.104/RAImporter-1.8.104-win64.zip",
+  "paket_sha256": "C3B3E08145AD6D6B9B90C3699494D99E56A077F7E4D3570745CEC6F1D6B4ED27",
   "bicim": "onedir",
-  "notes": "MR inceleme bulgulari: sifre hatasiyla bekleyen isin vadesi ilerliyor (bosuna tik yok, arayuzde dogru sonraki kosum); \"her calismada bildir\" secili iste tekrar eden hata artik susturulmuyor"
+  "notes": "Kayip/kimlik raporu artik \"kac denemedir, ne zamandan beri\" diyor: Durum kolonunda 6. deneme, ilk ve son tarih; hic denenmemis misafir \"henuz denenmedi\" olarak gorunuyor"
 }
