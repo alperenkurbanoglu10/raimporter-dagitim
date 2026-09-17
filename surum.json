@@ -1,9 +1,9 @@
 {
-  "version": "1.8.100",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
-  "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.100/RAImporter-1.8.100-win64.zip",
-  "paket_sha256": "7AEDCF3EFA0E4B3C95557F9EE453A0AAB4BF6E040D007444542E036CD6DAB6AD",
+  "version": "1.8.101",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.69/RAImporter.exe",
+  "sha256": "052CFCC3FAA56708343DAADE0BC2A8ACC0FEC5C6302326E5AE05387A33C76FA7",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.101/RAImporter-1.8.101-win64.zip",
+  "paket_sha256": "2BBEF75BD16027B3829007D3B604E90572A78B3D67F69648D68629E622746565",
   "bicim": "onedir",
-  "notes": "Bos sonuc artik basari sayilmiyor (ayni pencere yeniden denenir). Gecmis yukleme dugmesi: INIT + takvimdeki raporlar sirayla + aktarim. Veri tavanina takilan pencere kendiliginden bolunur. Hata metinleri asil sebebi gosteriyor. Trial Balance (P2020) kararsizligi giderildi."
+  "notes": "Acik hata defteri: tekrar eden ayni hata susturulur, esik asilinca \"HALA COZULMEDI\" uyarisi gelir, dosya aktarilinca [COZULDU] postasi gonderilir"
 }
