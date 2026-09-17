@@ -1,9 +1,9 @@
 {
-  "version": "1.8.104",
+  "version": "1.8.105",
   "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.69/RAImporter.exe",
   "sha256": "052CFCC3FAA56708343DAADE0BC2A8ACC0FEC5C6302326E5AE05387A33C76FA7",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.104/RAImporter-1.8.104-win64.zip",
-  "paket_sha256": "C3B3E08145AD6D6B9B90C3699494D99E56A077F7E4D3570745CEC6F1D6B4ED27",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.105/RAImporter-1.8.105-win64.zip",
+  "paket_sha256": "83939406A5502EE7DE2F390C27FCB7690333E851C139DDB9580A3D5F2D68DA9E",
   "bicim": "onedir",
-  "notes": "Kayip/kimlik raporu artik \"kac denemedir, ne zamandan beri\" diyor: Durum kolonunda 6. deneme, ilk ve son tarih; hic denenmemis misafir \"henuz denenmedi\" olarak gorunuyor"
+  "notes": "Kimligi eksik misafirler tablosunda artik FATURA NO da var: tek tesiste yalin numara, birden cok tesiste tesis onekli, en fazla 5 numara + kalanin sayisi"
 }
