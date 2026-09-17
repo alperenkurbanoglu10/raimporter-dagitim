@@ -13,19 +13,24 @@ Bu depo yalnızca **dağıtım** içindir. Kaynak kod ayrı ve özel bir depodad
 ## Kurulum
 
 Program paketi bu deponun **Releases** bölümündedir
-(`RAImporter-<sürüm>-win64.zip` + `.sha256`). Yönetici olarak açılmış
-PowerShell'de, sürümden bağımsız tek komut:
+(`RAImporter-<sürüm>-win64.zip` + `.sha256`). Komut istemini (`cmd`) ya da
+PowerShell'i **"Yönetici olarak çalıştır"** ile açın; aşağıdaki **tek satır**
+ikisinde de aynı şekilde çalışır ve sürümden bağımsızdır (satırı bölmeyin):
 
 ```powershell
-iwr -UseBasicParsing "https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/install.ps1" -OutFile install.ps1
-powershell -ExecutionPolicy Bypass -File install.ps1 `
-  -UpdateUrl "https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json" `
-  -Service
+powershell -NoProfile -ExecutionPolicy Bypass -Command "iwr -UseBasicParsing 'https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/install.ps1' -OutFile 'C:\Windows\Temp\install.ps1'; & 'C:\Windows\Temp\install.ps1' -UpdateUrl 'https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json' -Service"
 ```
 
 `-Url` vermek gerekmez: betik güncel paketi `surum.json`'daki `paket_url`
-adresinden indirir, SHA-256'yı yine oradaki `paket_sha256` ile doğrular ve
-`D:\Protel\RAImporter` altına açar (D: yoksa C:).
+adresinden indirir ve SHA-256'yı yine oradaki `paket_sha256` ile doğrular.
+
+**Kurulum klasörünü betik kendisi bulur:** önce var olan kurulum (servis
+kaydı, çalışan program, disklerdeki `…\Protel\RAImporter`) — yükseltme hep
+oraya gider; kurulum yoksa sistem diski dışındaki ilk yazılabilir sabit veri
+diski (gelenek `D:`, sonra en çok boş alanlı); o da yoksa
+`C:\Protel\RAImporter`. Takılı DVD, USB, ağ sürücüsü ve NTFS/ReFS dışı
+biçimler listeye girmez. Başka bir klasör için komuta
+`-Dir "E:\Protel\RAImporter"` ekleyin — verdiğiniz yol sessizce değişmez.
 
 > **Eski komut çalışmaz:** 08.09'dan (1.8.70) beri release'lerde `RAImporter.exe`
 > yok; `.../releases/latest/download/RAImporter.exe` adresi 404 döner. Eski
@@ -113,9 +118,13 @@ RAImporter.exe update          indir ve kur
 
 ### Tek bir sunucuda eski sürüme dönmek
 
-Güncelleme öncesi sürüm aynı klasörde `RAImporter.<sürüm>.old.exe` adıyla bir
-sonraki açılışa kadar saklanır. Programı kapatın, `RAImporter.exe` dosyasını
-silin, `.old.exe` dosyasının adını `RAImporter.exe` yapın.
+Güncelleme öncesi sürüm aynı klasörde bir sonraki açılışa kadar saklanır:
+`RAImporter.<sürüm>.old.exe` **ve** `_internal.old\` (tek klasör paketinde
+ikisi birlikte döner). Servisi durdurun (`sc stop ProtelRAImporter`),
+`RAImporter.exe` ile `_internal\` klasörünü silin, `.old.exe` dosyasının adını
+`RAImporter.exe`, `_internal.old\` klasörünün adını `_internal\` yapın, servisi
+başlatın. Yalnızca exe'yi geri almak yetmez — exe ile `_internal\` aynı sürümden
+olmalıdır.
 
 ---
 

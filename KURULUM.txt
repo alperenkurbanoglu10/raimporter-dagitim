@@ -11,25 +11,24 @@ Baska hicbir sey gerekmez: Python, .NET, Oracle Instant Client,
 tnsnames.ora -- hicbiri kurulmaz. PostgreSQL hedefi icin gereksinimleri
 de programin kendisi kurar (asagida).
 
+Ayrintili kilavuz (ekran gorselleri, ag gereksinimleri, kontrol listesi):
+KURULUM.html
 
-YOL 1 - Elle (tek sunucu icin)
+
+YOL 1 - Tek komutla (ONERILEN)
 ----------------------------------------------------------------------
-1. Releases'taki zip'i sunucuda bir klasore acin
-   (or. D:\Protel\RAImporter\ -- RAImporter.exe ile _internal\ yan yana)
-2. RAImporter.exe'ye cift tiklayin. Tarayicida http://127.0.0.1:8787/ acilir.
-3. Veritabani -> Kaynak -> Eslesmeler -> Kaydet -> Deneme calistir
-4. Kalici calismasi icin arayuzden "Servis olarak kur"
+Komut istemini (cmd) ya da PowerShell'i "Yonetici olarak calistir" ile
+acin. Asagidaki TEK SATIR ikisinde de ayni sekilde calisir; BOLMEYIN:
 
+  powershell -NoProfile -ExecutionPolicy Bypass -Command "iwr -UseBasicParsing 'https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/install.ps1' -OutFile 'C:\Windows\Temp\install.ps1'; & 'C:\Windows\Temp\install.ps1' -UpdateUrl 'https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json' -Service"
 
-YOL 2 - Tek komutla (cok sunucu icin - ONERILEN)
-----------------------------------------------------------------------
-Yonetici olarak acilmis PowerShell'de, HER sunucuda:
-
-  iwr -UseBasicParsing "https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/install.ps1" -OutFile install.ps1
-  powershell -ExecutionPolicy Bypass -File install.ps1 -UpdateUrl "https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json" -Service
+  Satiri iki parcaya bolmeyin: eski kilavuzdaki iki satirlik bicim satir
+  sonunda yalnizca PowerShell'in anladigi ` karakterini kullaniyordu ve
+  cmd penceresine yapistirilinca "'iwr' is not recognized" veriyordu.
 
   -Url VERMEYIN: betik guncel paketi surum.json'dan (paket_url) bulur ve
-  SHA-256'yi yine oradan (paket_sha256) dogrular. Komut surumden bagimsizdir.
+  SHA-256'yi yine oradan (paket_sha256) dogrular. Komut surumden
+  bagimsizdir.
 
   ESKI KOMUT CALISMAZ: 08.09'dan (1.8.70) beri release'te RAImporter.exe
   yok; ".../releases/latest/download/RAImporter.exe" 404 doner. Eski betik
@@ -40,16 +39,43 @@ Yonetici olarak acilmis PowerShell'de, HER sunucuda:
   degeri yazin ("...icindeki deger" gibi sablon metni DEGIL; betik
   sablon/bozuk ozeti kuruluma baslamadan reddeder).
 
+KURULUM KLASORUNU BETIK KENDISI BULUR (elle secmeniz gerekmez):
+  1. Once VAR OLAN kurulum: Windows servisinin kaydi, calisan program,
+     sonra disklerdeki ...\Protel\RAImporter. Yukseltme HER ZAMAN oraya
+     gider; o klasore yazilamiyorsa kurulum durur ve baska bir yere
+     ikinci kurulum ACMAZ.
+  2. Kurulum yoksa sistem diski disindaki ilk yazilabilir sabit veri
+     diski (gelenek D:, sonra en cok bos alanli).
+  3. O da yoksa sistem diski: C:\Protel\RAImporter
+  Takili DVD, USB, ag surucusu ve NTFS/ReFS disi bicimler listeye HIC
+  girmez. Secilen yol sebebiyle yazilir:
+     [OK] Klasor hazir: D:\Protel\RAImporter (var olan kurulum, servis)
+  Baska bir klasor icin komuta ekleyin:  -Dir "E:\Protel\RAImporter"
+  (verdiginiz yol sessizce degistirilmez)
+
 Betik ne yapar:
   * guncel paketi bulur ve indirir
   * SHA-256 dogrular (tutmazsa kurulumu durdurur)
   * calisan surumu ANCAK indirme + dogrulama bittikten sonra durdurur
-  * D:\Protel\RAImporter altina kurar (D: yoksa C:)
+  * yukaridaki sirayla bulunan klasore kurar
   * -Service verilirse Windows servisi olarak kurup baslatir; verilmezse
     kurulum icin durdurdugu servisi yeni surumle geri baslatir
   * masaustu kisayolu olusturur
   * -UpdateUrl verilirse program yeni surumleri gece 02:00-05:00
     arasinda kendisi alir (imza + SHA-256 + duman testi ile)
+
+
+YOL 2 - Elle (tek sunucu, hizli deneme)
+----------------------------------------------------------------------
+1. Releases'taki zip'i sunucuda bir klasore acin: veri diski varsa
+   D:\Protel\RAImporter\, yoksa C:\Protel\RAImporter\
+   (RAImporter.exe ile _internal\ yan yana kalmali). Masaustu /
+   Indirilenler gibi herkesin yazabildigi bir yola KURMAYIN.
+2. RAImporter.exe'ye cift tiklayin: servis yoksa Windows yonetici onayi
+   ister, servisi kurup baslatir; tarayicida servisin arayuzu
+   http://127.0.0.1:8787/ acilir. (Exe yalnizca servisin kumandasidir;
+   aktarimlar hep serviste calisir.)
+3. Veritabani -> Kaynak -> Eslesmeler -> Kaydet -> Deneme calistir
 
 
 ORACLE -> POSTGRESQL TASIMA
@@ -83,16 +109,40 @@ Surum ve guncelleme:
   RAImporter.exe update
 
 
+SIK GORULEN IKI KURULUM HATASI
+----------------------------------------------------------------------
+"New-Item : Access to the path 'Protel' is denied" (kurulumun ilk
+satirinda): eski betik klasoru dogrudan D: kokunde aciyordu; o sunucuda
+D: takili bir DVD/ISO surucusuydu (17.09 sahada). Pencere yonetici
+degilse de ayni hata gelir. Cozum: betigi yeniden cekin -- guncel
+install.ps1 klasoru kendisi secer, secemezse sebebi tek satirda yazar;
+pencerenin "Yonetici olarak calistir" ile acildigindan emin olun.
+
+"Paket yerine konamadi: Access to the path ... _internal ... is denied":
+antivirus paketten yeni acilan ~1500 dosyayi tararken klasoru kisa sure
+kilitliyor (16.09 sahada goruldu). Betik tasimayi 2 sn arayla 5 kez
+dener, olmazsa dosya dosya kopyalar; yine olmazsa ESKI SURUMU GERI ALIR
+ve kurulum calisir kalir. Komutu tekrar calistirin; surerse kurulum
+klasoru icin antivirus istisnasi isteyin.
+
+
 ANTIVIRUS
 ----------------------------------------------------------------------
-Kurulum "Paket yerine konamadi: Access to the path ... _internal ... is
-denied" derse: antivirus paketten yeni acilan ~1500 dosyayi tararken
-klasoru kisa sure kilitliyor (16.09 sahada goruldu). Betik tasimayi 2 sn
-arayla 5 kez dener, olmazsa dosya dosya kopyalar; yine olmazsa ESKI SURUMU
-GERI ALIR ve kurulum calisir kalir. Komutu tekrar calistirin; surerse
-kurulum klasoru icin antivirus istisnasi isteyin.
-
 Kurumsal antivirus imzasiz exe'lere takilabilir. Protel'in kod imzalama
 sertifikasi ile imzalanmasi bunu ortadan kaldirir:
 
   signtool sign /fd SHA256 /a /tr http://timestamp.digicert.com /td SHA256 RAImporter.exe
+
+Trend Micro Deep Security kullanan sunucularda kurulum klasoru icin
+DAVRANIS IZLEME (Behavior Monitoring) istisnasi ONCEDEN istenmelidir:
+istisnasiz kurulumda servis birkac dakikada bir sessizce oldurulebiliyor
+(07-08.09 sahada goruldu).
+
+
+UYGULAMA KLASOR IZINLERINI DARALTMAZ
+----------------------------------------------------------------------
+install.ps1 kurulum klasorunun izinlerini DEGISTIRMEZ; koruma, secilen
+yolun kendi varsayilan izinlerinden gelir (standart kullanici yazamaz).
+Sunucuda daha siki bir izin gerekiyorsa elle ayarlanmali. Veri dizini
+(%ProgramData%\Protel\RAImporter) ilk acilista yalnizca SYSTEM +
+Administrators + kurulum kullanicisina daraltilir.
