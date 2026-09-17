@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.106",
+    "version":  "1.8.107",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.106/RAImporter-1.8.106-win64.zip",
-    "paket_sha256":  "969555D736AEA0403E0565AAE600B80B29DC2DA1F14CC0D82CD6976AC0AD5A56",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.107/RAImporter-1.8.107-win64.zip",
+    "paket_sha256":  "9E8228F2E15189E826ECB8D64321D38950C99E0953C2CBB1510A5D3B7CF7BAB1",
     "bicim":  "onedir",
-    "notes":  "Ham hata metinleri bitti: indirme/kaynak klasoru kullanilamiyorsa sebep Turkce soyleniyor (takili DVD, hazir olmayan surucu, izin) ve R\u0026A girisinden once yakalaniyor; rapor tanimi hatasi kisaltiliyor ve ayni turda tesis basina bir kez deneniyor"
+    "notes":  "Export hata mesaji arayuzde artik KESILMIYOR (eskiden 60 karakterde kesiliyordu, sebep hep kesilen tarafta kaliyordu); sunucu bir parametreyi tanimazsa gonderilen adlar mesaja yazilir ve yalnizca dogrulanmis parametrelerle bir kez daha denenir (tarih parametreleri korunur)"
 }
