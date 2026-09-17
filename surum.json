@@ -1,9 +1,9 @@
 {
-  "version": "1.8.101",
+  "version": "1.8.102",
   "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.69/RAImporter.exe",
   "sha256": "052CFCC3FAA56708343DAADE0BC2A8ACC0FEC5C6302326E5AE05387A33C76FA7",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.101/RAImporter-1.8.101-win64.zip",
-  "paket_sha256": "2BBEF75BD16027B3829007D3B604E90572A78B3D67F69648D68629E622746565",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.102/RAImporter-1.8.102-win64.zip",
+  "paket_sha256": "FFDD058391414AF364A78BDED412C013A4235C87E30B7D5DBF8B9BD25986FADC",
   "bicim": "onedir",
-  "notes": "Acik hata defteri: tekrar eden ayni hata susturulur, esik asilinca \"HALA COZULMEDI\" uyarisi gelir, dosya aktarilinca [COZULDU] postasi gonderilir"
+  "notes": "Kosum hatasinin sebebi artik postada (konu + SEBEP bolumu); sifre denetimi: cozulemeyen parola teshis edilir, is bosuna kosmaz, RAImporter.exe sifre-denetimi komutu"
 }
