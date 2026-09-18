@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.110",
+    "version":  "1.8.111",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.110/RAImporter-1.8.110-win64.zip",
-    "paket_sha256":  "50CB0BE17E6EE9544A16B000A1F0645981A1C4DB13D84000C8E050AA8886CE9E",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.111/RAImporter-1.8.111-win64.zip",
+    "paket_sha256":  "74B0E4A4E5E3DE46EA4879F1891174EA79F7011C9586E9950E254A6577C9F067",
     "bicim":  "onedir",
-    "notes":  "Kontrol postalari duzenlendi (sutunlar icerige gore hizali, uzun aciklama satirin altinda, tutar/tarih bolunmuyor, kelime sinirinda kisaltma); okunamayan rapor 22:00e kadar denenir ve bu surede posta gitmez; ayni sonuc tekrar postalanmaz"
+    "notes":  "Mizan takip turlari bugun karsilastirilip tutan eski gunleri yeniden sorgulamiyor; okunmus tesis icin ne R\u0026A ne veritabani (surec yorulmuyor)"
 }
