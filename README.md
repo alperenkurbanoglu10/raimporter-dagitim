@@ -18,8 +18,13 @@ PowerShell'i **"Yönetici olarak çalıştır"** ile açın; aşağıdaki **tek 
 ikisinde de aynı şekilde çalışır ve sürümden bağımsızdır (satırı bölmeyin):
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -Command "iwr -UseBasicParsing 'https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/install.ps1' -OutFile 'C:\Windows\Temp\install.ps1'; & 'C:\Windows\Temp\install.ps1' -UpdateUrl 'https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json' -Service"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12; try { iwr -UseBasicParsing 'https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/install.ps1' -OutFile 'C:\Windows\Temp\install.ps1' -ErrorAction Stop; & 'C:\Windows\Temp\install.ps1' -UpdateUrl 'https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json' -Service } catch { throw }"
 ```
+
+Satırın başındaki `[Net.ServicePointManager]` kısmı **TLS 1.2**'yi açar: Windows
+Server 2016'daki PowerShell 5.1 varsayılan olarak TLS 1.0 kullanır ve GitHub onu
+reddeder — o kısım olmadan indirme "Could not create SSL/TLS secure channel" ile
+düşer. Yalnızca o PowerShell sürecini etkiler, sunucu ayarına dokunmaz.
 
 `-Url` vermek gerekmez: betik güncel paketi `surum.json`'daki `paket_url`
 adresinden indirir ve SHA-256'yı yine oradaki `paket_sha256` ile doğrular.

@@ -20,11 +20,18 @@ YOL 1 - Tek komutla (ONERILEN)
 Komut istemini (cmd) ya da PowerShell'i "Yonetici olarak calistir" ile
 acin. Asagidaki TEK SATIR ikisinde de ayni sekilde calisir; BOLMEYIN:
 
-  powershell -NoProfile -ExecutionPolicy Bypass -Command "iwr -UseBasicParsing 'https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/install.ps1' -OutFile 'C:\Windows\Temp\install.ps1'; & 'C:\Windows\Temp\install.ps1' -UpdateUrl 'https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json' -Service"
+  powershell -NoProfile -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12; try { iwr -UseBasicParsing 'https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/install.ps1' -OutFile 'C:\Windows\Temp\install.ps1' -ErrorAction Stop; & 'C:\Windows\Temp\install.ps1' -UpdateUrl 'https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json' -Service } catch { throw }"
 
   Satiri iki parcaya bolmeyin: eski kilavuzdaki iki satirlik bicim satir
   sonunda yalnizca PowerShell'in anladigi ` karakterini kullaniyordu ve
   cmd penceresine yapistirilinca "'iwr' is not recognized" veriyordu.
+
+  Satirin basindaki [Net.ServicePointManager] kismini SILMEYIN: Windows
+  Server 2016'daki PowerShell 5.1 HTTPS icin varsayilan olarak TLS 1.0
+  kullanir, GitHub ise yalnizca TLS 1.2+ kabul eder. O kisim olmadan
+  indirme "Could not create SSL/TLS secure channel" ile duser (18.09 The
+  Marmara'da goruldu). try/catch da indirme duserse yaniltici ikinci
+  hatayi ("install.ps1 is not recognized") onler; tek, gercek hata gorunur.
 
   -Url VERMEYIN: betik guncel paketi surum.json'dan (paket_url) bulur ve
   SHA-256'yi yine oradan (paket_sha256) dogrular. Komut surumden
@@ -109,8 +116,15 @@ Surum ve guncelleme:
   RAImporter.exe update
 
 
-SIK GORULEN IKI KURULUM HATASI
+SIK GORULEN KURULUM HATALARI
 ----------------------------------------------------------------------
+"iwr : The request was aborted: Could not create SSL/TLS secure channel"
+(arkasindan "install.ps1 is not recognized"): PowerShell 5.1 TLS 1.0 ile
+baglanmaya calisti, GitHub reddetti (18.09 The Marmara, Windows Server
+2016). Ag ya da guvenlik duvari sorunu DEGILDIR. Cozum: yukaridaki GUNCEL
+tek satiri kullanin -- basindaki [Net.ServicePointManager] kismi TLS 1.2'yi
+acar. Yalnizca bu PowerShell surecini etkiler; sunucu ayari degismez.
+
 "New-Item : Access to the path 'Protel' is denied" (kurulumun ilk
 satirinda): eski betik klasoru dogrudan D: kokunde aciyordu; o sunucuda
 D: takili bir DVD/ISO surucusuydu (17.09 sahada). Pencere yonetici

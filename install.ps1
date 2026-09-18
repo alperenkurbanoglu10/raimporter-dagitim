@@ -1,10 +1,12 @@
 <#
   Protel R&A Importer - tek satirlik sunucu kurulumu.
 
-  Onerilen kullanim (surumden bagimsiz; guncel paketi surum.json'dan bulur):
+  Onerilen kullanim -- TEK SATIR, cmd ve PowerShell'de ayni (surumden bagimsiz;
+  guncel paketi surum.json'dan bulur). Bastaki [Net.ServicePointManager] kismi
+  SART: Windows Server 2016'daki PowerShell 5.1 varsayilan TLS 1.0 kullanir,
+  GitHub reddeder ("Could not create SSL/TLS secure channel", 18.09 The Marmara):
 
-      iwr -UseBasicParsing "https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/install.ps1" -OutFile install.ps1
-      powershell -ExecutionPolicy Bypass -File install.ps1 -UpdateUrl "<SURUM_JSON_ADRESI>" -Service
+      powershell -NoProfile -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12; try { iwr -UseBasicParsing 'https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/install.ps1' -OutFile 'C:\Windows\Temp\install.ps1' -ErrorAction Stop; & 'C:\Windows\Temp\install.ps1' -UpdateUrl 'https://raw.githubusercontent.com/alperenkurbanoglu10/raimporter-dagitim/main/surum.json' -Service } catch { throw }"
 
   Dosyayi kendi yerinizden (Google Drive / dosya sunucusu / IIS) dagitiyorsaniz:
 
@@ -294,7 +296,8 @@ if (-not $Dir) {
 $exe = Join-Path $Dir "RAImporter.exe"
 Ok "Klasor hazir: $Dir ($sebep)"
 
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+# -bor: TLS 1.2'yi EKLER, digerlerini kapatmaz (isletim sistemi TLS 1.3 sunuyorsa o da kalir).
+[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 
 # --- ne kurulacak -----------------------------------------------------------
 # -Url verilmediyse guncel paket surum.json'dan bulunur; surumden bagimsiz tek
