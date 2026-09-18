@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.108",
+    "version":  "1.8.109",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.108/RAImporter-1.8.108-win64.zip",
-    "paket_sha256":  "2217ABA12A627B4BB83B67ED65E3C3FC153AFE349995501A6A847FA01E8CC1E6",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.109/RAImporter-1.8.109-win64.zip",
+    "paket_sha256":  "3B17865D9C08063A8D53FA2E9F82990DF1D5B8A4B2C92D0334CC2576E02E85A7",
     "bicim":  "onedir",
-    "notes":  "Sunucu parametre listesini veremezse (p_resort LOV sorgusu dusuyor) kosum durmuyor: son basarili liste saklanip kullaniliyor; tanim ve parametre hatasinin ikisi de mesajda; ozet geriye donuk gunleri TESIS degil GUN sayiyor"
+    "notes":  "Hazir listeler: Export takviminde PORTAL / QLIK / TMCDATA secici; satir basina katalog klasoru; zincir geneli satir ikinci iste PASIF; QLIK ilk kurulum (INIT) seti; sonu bosluklu katalog adlari bulunuyor; saat alaninda */15 (15 dakikada bir)"
 }
