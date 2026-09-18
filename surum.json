@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.113",
+    "version":  "1.8.114",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.113/RAImporter-1.8.113-win64.zip",
-    "paket_sha256":  "2D7A1C19E0CD44884EBC2DFE5E3A05441BFA3FDE48F914AAC24EF2D03E72B53F",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.114/RAImporter-1.8.114-win64.zip",
+    "paket_sha256":  "1572ED30324D897B89315167E4DEE8F947F3B785A9F32CF9EE74A826BBEACEB4",
     "bicim":  "onedir",
-    "notes":  "Bos raporlar artik gecici Invalid InputSource hatasiyla FAILED olmuyor (Wyndham PORTAL_ARACCOUNT): bos sonucu dogrulayan sorgu gecici hatayla duserse eldeki gecerli sonuc korunuyor; ilk cagridaki gecici hataya ek deneme; hep tekrarlaniyorsa anlasilir mesaj. Mizan/folyo/kasa kontrollerinde de ayni koruma"
+    "notes":  "Katalog yollari varsayilan /My Folders/RAImporter (rapor yazili klasorde yoksa oraya da bakilir); mizan kurumsal sabit haric listesi, haric tutulanlar sonucta ve postada gorunur, oneriler tek tikla eklenir; folyo kontrolu 15 gun ve otelin acik gunu hata sayilmaz (yalniz kapali gunler duzeltilir); kurumsal takvim 07:00dan 3 dakika arayla, FINANCIAL_BYBILL FINANCIAL_UPDATEten sonra"
 }
