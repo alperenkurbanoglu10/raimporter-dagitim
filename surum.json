@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.112",
+    "version":  "1.8.113",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.112/RAImporter-1.8.112-win64.zip",
-    "paket_sha256":  "18AF203534751DA456CFC4CB4E211AD4BE919436DEF5030DA4C26FBAEB0DCCC2",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.113/RAImporter-1.8.113-win64.zip",
+    "paket_sha256":  "2D7A1C19E0CD44884EBC2DFE5E3A05441BFA3FDE48F914AAC24EF2D03E72B53F",
     "bicim":  "onedir",
-    "notes":  "Ulke adi ISO koduna cevriliyor: COUNTRY sutununda UNITED KINGDOM gibi 2 karakterden uzun deger GB olarak yaziliyor (PortalPlus faturayi reddediyordu); taninmayana tahmin yok, bir kez bildiriliyor ve Gelismis sekmesinden eslestirilip mevcut kayitlar duzeltilebiliyor"
+    "notes":  "Bos raporlar artik gecici Invalid InputSource hatasiyla FAILED olmuyor (Wyndham PORTAL_ARACCOUNT): bos sonucu dogrulayan sorgu gecici hatayla duserse eldeki gecerli sonuc korunuyor; ilk cagridaki gecici hataya ek deneme; hep tekrarlaniyorsa anlasilir mesaj. Mizan/folyo/kasa kontrollerinde de ayni koruma"
 }
