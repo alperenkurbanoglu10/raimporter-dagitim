@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.109",
+    "version":  "1.8.110",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.109/RAImporter-1.8.109-win64.zip",
-    "paket_sha256":  "3B17865D9C08063A8D53FA2E9F82990DF1D5B8A4B2C92D0334CC2576E02E85A7",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.110/RAImporter-1.8.110-win64.zip",
+    "paket_sha256":  "50CB0BE17E6EE9544A16B000A1F0645981A1C4DB13D84000C8E050AA8886CE9E",
     "bicim":  "onedir",
-    "notes":  "Hazir listeler: Export takviminde PORTAL / QLIK / TMCDATA secici; satir basina katalog klasoru; zincir geneli satir ikinci iste PASIF; QLIK ilk kurulum (INIT) seti; sonu bosluklu katalog adlari bulunuyor; saat alaninda */15 (15 dakikada bir)"
+    "notes":  "Kontrol postalari duzenlendi (sutunlar icerige gore hizali, uzun aciklama satirin altinda, tutar/tarih bolunmuyor, kelime sinirinda kisaltma); okunamayan rapor 22:00e kadar denenir ve bu surede posta gitmez; ayni sonuc tekrar postalanmaz"
 }
