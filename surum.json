@@ -1,9 +1,9 @@
 {
-  "version": "1.8.117",
+  "version": "1.8.118",
   "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
   "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.117/RAImporter-1.8.117-win64.zip",
-  "paket_sha256": "ABE52A700BC549B134284772009A20C7F77E7BF5C6A2F61E5B23A3C0C7BEAA1D",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.118/RAImporter-1.8.118-win64.zip",
+  "paket_sha256": "45E1491EE481D6310BF08FDC4FF92FD944470166ED122A19EBE45A0EA05C4E78",
   "bicim": "onedir",
-  "notes": "Kontrol postalarinda kapanis: bildirilen sorun duzelince [COZULDU] postasi; folyo dengesinde duzeltme gonderilen gun dogrulama turu (duzeldi / hala dengesiz); folyo dengesi artik isin otel koduna gore tarar; posta tablolarinda tasan sutun duzeltildi."
+  "notes": "Folyo dengesinde arayuzden bilerek yazilan gun sayisi (90 dahil) artik korunuyor; eski varsayilan 90 yine 15e cevriliyor. Kod incelemesi notlari."
 }
