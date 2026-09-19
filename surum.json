@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.115",
-    "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
-    "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.115/RAImporter-1.8.115-win64.zip",
-    "paket_sha256":  "37F697A117605FF416508B6B09CD2FDF688C2336B14AFC0E4AF8BA22AB42E7CF",
-    "bicim":  "onedir",
-    "notes":  "Folyo dengesi: karsi kaydi baska pencerede/rezervasyonda kalan ya da bill_no bos satirli faturayi veritabaninda duzeltme secenegi (varsayilan KAPALI; kanitli, defterli, geri alinabilir). Kapaliyken ne tasinabilecegi raporlanir."
+  "version": "1.8.116",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
+  "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.116/RAImporter-1.8.116-win64.zip",
+  "paket_sha256": "5FA10F8CE69DA759D1CCFFFC706D4F67E40F0FEFB25FF91CCEF31DBD9DF7016E",
+  "bicim": "onedir",
+  "notes": "E-fatura senkronu: ORA-00942 duzeltildi (staging her turda dusuruluyordu; ayni veritabanina yazan isler artik sirayla), gereksiz [DIKKAT] e-fatura postalari kesildi, kontrol postasinda sikisan sutun duzeltildi."
 }
