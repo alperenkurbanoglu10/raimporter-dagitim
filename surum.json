@@ -1,9 +1,9 @@
 {
-  "version": "1.8.116",
+  "version": "1.8.117",
   "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
   "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.116/RAImporter-1.8.116-win64.zip",
-  "paket_sha256": "5FA10F8CE69DA759D1CCFFFC706D4F67E40F0FEFB25FF91CCEF31DBD9DF7016E",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.117/RAImporter-1.8.117-win64.zip",
+  "paket_sha256": "ABE52A700BC549B134284772009A20C7F77E7BF5C6A2F61E5B23A3C0C7BEAA1D",
   "bicim": "onedir",
-  "notes": "E-fatura senkronu: ORA-00942 duzeltildi (staging her turda dusuruluyordu; ayni veritabanina yazan isler artik sirayla), gereksiz [DIKKAT] e-fatura postalari kesildi, kontrol postasinda sikisan sutun duzeltildi."
+  "notes": "Kontrol postalarinda kapanis: bildirilen sorun duzelince [COZULDU] postasi; folyo dengesinde duzeltme gonderilen gun dogrulama turu (duzeldi / hala dengesiz); folyo dengesi artik isin otel koduna gore tarar; posta tablolarinda tasan sutun duzeltildi."
 }
