@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.119",
+    "version":  "1.8.120",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.119/RAImporter-1.8.119-win64.zip",
-    "paket_sha256":  "FCA3782A58CC860B4C1312EF4A8679610D762C4EA06E7E74BA33DBF263B4E643",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.120/RAImporter-1.8.120-win64.zip",
+    "paket_sha256":  "1C676E548B2779082380FCD440C5FD97AA1568B0AA113C97A857E8E2A8FD525C",
     "bicim":  "onedir",
-    "notes":  "Kapanis postalari: bekleyen duzeltme varken [COZULDU] denmez, hepsi sonuclaninca TEK posta gider; Onceki fark korunur; bekleyen duzeltme yeniden gonderildi diye sayilmaz. Veritabanina baglanamadigi icin dusen kosum, veritabani geri gelince dosya olmasa da [COZULDU] ile kapanir. Folyo: satirlari faturanin penceresine tasi secenegi artik varsayilan ACIK ve guncellemeyle butun kurulumlarda secili gelir (bilerek kapatilan kapali kalir)."
+    "notes":  "Kayip rezervasyon kontrolu: RESERVATION_NAME kaydi HIC olmayan rezervasyonlar artik sonucta (1.8.41den beri sorgunun son sarti bunlari dusuruyordu); faturanin kendi resv_name_id kimligi de taraniyor (kaynak FATURA); RESNAME gelince NAME ayni turda cekiliyor. Ilk gun kayip sayisi artabilir: bunlar eskiden beri duran kayitlardir, yeni bozulma degildir."
 }
