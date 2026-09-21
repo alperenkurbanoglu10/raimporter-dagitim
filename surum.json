@@ -1,9 +1,9 @@
 {
-  "version": "1.8.118",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
-  "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.118/RAImporter-1.8.118-win64.zip",
-  "paket_sha256": "45E1491EE481D6310BF08FDC4FF92FD944470166ED122A19EBE45A0EA05C4E78",
-  "bicim": "onedir",
-  "notes": "Folyo dengesinde arayuzden bilerek yazilan gun sayisi (90 dahil) artik korunuyor; eski varsayilan 90 yine 15e cevriliyor. Kod incelemesi notlari."
+    "version":  "1.8.119",
+    "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
+    "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.119/RAImporter-1.8.119-win64.zip",
+    "paket_sha256":  "FCA3782A58CC860B4C1312EF4A8679610D762C4EA06E7E74BA33DBF263B4E643",
+    "bicim":  "onedir",
+    "notes":  "Kapanis postalari: bekleyen duzeltme varken [COZULDU] denmez, hepsi sonuclaninca TEK posta gider; Onceki fark korunur; bekleyen duzeltme yeniden gonderildi diye sayilmaz. Veritabanina baglanamadigi icin dusen kosum, veritabani geri gelince dosya olmasa da [COZULDU] ile kapanir. Folyo: satirlari faturanin penceresine tasi secenegi artik varsayilan ACIK ve guncellemeyle butun kurulumlarda secili gelir (bilerek kapatilan kapali kalir)."
 }
