@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.120",
+    "version":  "1.8.121",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.120/RAImporter-1.8.120-win64.zip",
-    "paket_sha256":  "1C676E548B2779082380FCD440C5FD97AA1568B0AA113C97A857E8E2A8FD525C",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.121/RAImporter-1.8.121-win64.zip",
+    "paket_sha256":  "AF1D19B9BD9A282A0BE6E4BD82A33108FC5E4274174C3455FAD1B69B124766E7",
     "bicim":  "onedir",
-    "notes":  "Kayip rezervasyon kontrolu: RESERVATION_NAME kaydi HIC olmayan rezervasyonlar artik sonucta (1.8.41den beri sorgunun son sarti bunlari dusuruyordu); faturanin kendi resv_name_id kimligi de taraniyor (kaynak FATURA); RESNAME gelince NAME ayni turda cekiliyor. Ilk gun kayip sayisi artabilir: bunlar eskiden beri duran kayitlardir, yeni bozulma degildir."
+    "notes":  "Doviz kuru kontrolu (yeni, varsayilan acik): currency_exchange_rates tablosunda son 30 gunde bos ya da eksik kur gunu varsa kur exportu o gun icin yeniden tetiklenir, dolup dolmadigi dogrulanir ve bildirilir, dolan gun [COZULDU] ile kapanir; kur dosyasi her aktarildiginda kontrol hemen kosar. Mizan: tutan gunlerin Trial Balance raporu son 6 gun R\u0026A dan taze cekilip dogrulanir; eksik gorunen raporla karsilastirma yapilmaz; haric listesi Trial Balance da tutarla gorunen kalemi gizlemez."
 }
