@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.130",
+    "version":  "1.8.131",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.130/RAImporter-1.8.130-win64.zip",
-    "paket_sha256":  "1F7EA94360F5AABD430CB15D883DC2A898227B931ACB5A982A193CD3E41A8CA9",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.131/RAImporter-1.8.131-win64.zip",
+    "paket_sha256":  "3A3C3503565F72CDCE61EA1082666836A98093667E51DCD0DAB93ED2975BD0E3",
     "bicim":  "onedir",
-    "notes":  "Kontroller\u0027de klasor kutusu kaldirildi (Ortak ayarlar); tek seferlik cekim ve gecmis yuklemede raporlar listeden (coklu, sirali) secilir; Oracle islerine PPCLEANER kurumsal gorevi (06:00); pasif isin veritabani gorevleri artik zamaninda kosmaz; inceleme duzeltmeleri; kilavuz Belge 2.8."
+    "notes":  "Simdi kur: dizustu bilgisayar pildeyken de servis kendiliginden yeniden baslar (Gorev Zamanlayici pil kosulu kapatildi); servis eski surumde kalinca dogru kurulum komutu gosterilir."
 }
