@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.122",
+    "version":  "1.8.123",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.122/RAImporter-1.8.122-win64.zip",
-    "paket_sha256":  "A1BB9938D3E8E0B5E9D1CB5995FF40E6176EF56D3DDDC79FA00AFEEC35B4D1EE",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.123/RAImporter-1.8.123-win64.zip",
+    "paket_sha256":  "57F625386D1A4018D7A709D582E04E342F020BF6BE156703AF53C52141658385",
     "bicim":  "onedir",
-    "notes":  "Folyo dengesi tasima: her dengesiz fatura once yalnizca kendi paket zinciriyle denenir; genis kurallar ondan sonra calisir ve baska faturanin kendi zincirindeki satirlari almaz. Genis kuralla yapilmis yanlis bir tasima, satirlari kendi zincirindeki dengesiz faturayi dengeliyorsa geri alinir. Bir turda tasima yapildiysa o tesiste veri tam teshisli faturalar icin export gonderilmez (elle kosumda da); export tasinan satirlari eski yerine geri yaziyor, tasima her turda bozuluyordu."
+    "notes":  "DWH split kurali: bolunen islemin eski satiri DWH dan da silinir (yerel DELETE TRX_NO_SPLIT gorevinin karsiligi, varsayilan acik); Akra DWH cift sayim duzeltmesi."
 }
