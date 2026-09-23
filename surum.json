@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.127",
+    "version":  "1.8.128",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.127/RAImporter-1.8.127-win64.zip",
-    "paket_sha256":  "50DD4306F37662CCC5D73CD7FA0AD36384398735370053AC430E162BD9A2FDE9",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.128/RAImporter-1.8.128-win64.zip",
+    "paket_sha256":  "6A6C8854A00CFF82E034E51CFC6206DB7B455CB412F9A9D0CF52E2B7E5297932",
     "bicim":  "onedir",
-    "notes":  "R\u0026A baglantisi Kaynak \u003e Ortak ayarlar\u0027a tasindi; R\u0026A disi kaynakta da tek seferlik cekim ve gecmis yukleme calisir. \u0027Calisma gecmisinden indir\u0027 kaldirildi. Gecmis yukleme iki tarih arasi, raporlari kendini ayarlayan kucuk dilimlerle ceker. Kurulum kilavuzu Belge 2.6."
+    "notes":  "R\u0026A baglanti testi (Ortak ayarlar) rapor klasoru bosken de girisi dogruluyor; yanlis sifrede artik basarili demiyor."
 }
