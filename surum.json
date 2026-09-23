@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.123",
+    "version":  "1.8.124",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.123/RAImporter-1.8.123-win64.zip",
-    "paket_sha256":  "57F625386D1A4018D7A709D582E04E342F020BF6BE156703AF53C52141658385",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.124/RAImporter-1.8.124-win64.zip",
+    "paket_sha256":  "0089786E27B89AF32D84F0D6E3F72DE0ED5645C78BBFF70D68D8395F0E85F2EA",
     "bicim":  "onedir",
-    "notes":  "DWH split kurali: bolunen islemin eski satiri DWH dan da silinir (yerel DELETE TRX_NO_SPLIT gorevinin karsiligi, varsayilan acik); Akra DWH cift sayim duzeltmesi."
+    "notes":  "Cevrimdisi kurulum ve guncelleme: GitHub a erisemeyen sunucu icin RAImporter-\u003csurum\u003e-cevrimdisi.zip + install.ps1 -Paket; guncelleme adresi klasor olabilir (imza + SHA dogrulanir). Yeni iste kontroller, bildirim ve artakalan silme acik gelir."
 }

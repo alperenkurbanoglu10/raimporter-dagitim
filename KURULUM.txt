@@ -85,6 +85,29 @@ YOL 2 - Elle (tek sunucu, hizli deneme)
 3. Veritabani -> Kaynak -> Eslesmeler -> Kaydet -> Deneme calistir
 
 
+YOL 3 - GitHub'a erisemeyen sunucu (CEVRIMDISI paket)
+----------------------------------------------------------------------
+Tek satirlik komut "Surum bilgisi okunamadi" / "Indirme basarisiz" /
+"Unable to connect" ile duruyorsa sunucu GitHub'a cikamiyordur.
+
+1. Internete erisen bir bilgisayarda Releases'tan
+   RAImporter-<surum>-cevrimdisi.zip'i indirin.
+2. Sunucuya kopyalayin (RDP ile surukle-birak, ag paylasimi, USB) ve
+   sag tik > "Tumunu ayikla".
+3. Acilan klasorde YONETICI PowerShell:
+
+     powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1 -Paket . -Service
+
+   Betik internete cikmaz; SHA-256'yi paketteki surum.json'dan dogrular.
+   Ozet bulunamazsa kurmaz.
+4. Paket <kurulum klasoru>\paket\ altina konur ve guncelleme kaynagi o
+   klasor olur. Sonraki surum: yeni paketin surum.json, surum.json.sig ve
+   zip dosyalarini oraya kopyalayin -> Arayuz > Guncelleme > Simdi kur
+   (ya da program gece penceresinde kendisi kurar). Program klasordeki
+   surum.json'un IMZASINI dogrular.
+Ayrintisi: paketin icindeki KURULUM-CEVRIMDISI.txt.
+
+
 ORACLE -> POSTGRESQL TASIMA
 ----------------------------------------------------------------------
 Arayuzde "Tasima" sekmesi. Uzmanin SQL yazmasi gerekmez:

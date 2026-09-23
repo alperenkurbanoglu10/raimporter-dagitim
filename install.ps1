@@ -12,6 +12,13 @@
 
       powershell -ExecutionPolicy Bypass -File install.ps1 -Url "<INDIRME_LINKI>"
 
+  Sunucu GitHub'a ERISEMIYORSA (cevrimdisi kurulum, 23.09.2026): yayindaki
+  RAImporter-<surum>-cevrimdisi.zip'i internete erisen bir bilgisayarda indirip
+  sunucuya kopyalayin (RDP / ag paylasimi / USB), "Tumunu ayikla" deyin ve acilan
+  klasorde YONETICI PowerShell'de:
+
+      powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1 -Paket . -Service
+
   Parametreler:
       -Url        Istege bagli. Paketin (RAImporter-<surum>-win64.zip) ya da tek
                   dosya exe'nin DOGRUDAN indirme adresi. VERILMEZSE guncel paket
@@ -32,6 +39,14 @@
                   ag surucusu listeye hic girmez.
       -UpdateUrl  surum.json adresi. Verilirse config'e yazilir: otel bir daha
                   elle guncellenmez, program gece penceresinde kendi gecer.
+      -Paket      Cevrimdisi paket klasoru ya da RAImporter-<surum>-win64.zip'in
+                  yolu (yerel ya da \\sunucu\paylasim). Internete HIC cikilmaz.
+                  Beklenen ozet sirasiyla -Sha256, klasordeki surum.json, zip'in
+                  yanindaki .sha256'dan alinir; hicbiri yoksa kurulum YAPILMAZ.
+                  Paket <kurulum>\paket\ klasorune konur ve guncelleme kaynagi o
+                  klasor olur (-UpdateUrl verilmediyse): sonraki surum icin yeni
+                  paketin icindekileri oraya kopyalayip arayuzde Guncelleme >
+                  Simdi kur denir; program gece penceresinde de kendisi kurar.
       -Service    Kurduktan sonra Windows servisi olarak kur ve baslat.
       -Open       Kurulumdan sonra programi ac (servisi kurar/baslatir, arayuzu acar).
 
@@ -47,6 +62,7 @@ param(
     [string]$Sha256 = "",
     [string]$Dir = "",
     [string]$UpdateUrl = "",
+    [string]$Paket = "",
     [switch]$Service,
     [switch]$Open
 )
@@ -239,6 +255,67 @@ if ($Sha256 -and $Sha256 -notmatch '^[0-9A-Fa-f]{64}$') {
     exit 1
 }
 
+# --- cevrimdisi paket (-Paket) ----------------------------------------------
+# 23.09.2026 saha: bazi otel sunuculari GitHub'a erisemiyor; tek satirlik
+# kurulum "surum bilgisi okunamadi" ile duruyordu. Paket elle kopyalanir,
+# betik internete cikmaz. Ozet OLMADAN kurulmaz: dogrulanmamis bir zip'i
+# servis hesabiyla calistirmak, indirilen dosyada kabul etmedigimiz risktir.
+# Klasor, kurulum klasoru acilmadan ONCE denetlenir: yanlis yolda bos klasor kalmasin.
+$paketZip = ""; $paketKlasor = ""; $paketManifest = $null; $zipAd = ""
+function ManifestPaketAdi($m) {
+    try { return [IO.Path]::GetFileName(([uri][string]$m.paket_url).AbsolutePath) } catch { return "" }
+}
+if ($Paket) {
+    if ($Url) { Bad "-Paket ile -Url birlikte verilmez (biri yeter)."; exit 1 }
+    try { $Paket = (Resolve-Path -LiteralPath $Paket -ErrorAction Stop).ProviderPath }
+    catch { Bad "Paket yolu bulunamadi: $Paket"; exit 1 }
+    if (Test-Path -LiteralPath $Paket -PathType Container) { $paketKlasor = $Paket }
+    else { $paketZip = $Paket; $paketKlasor = [IO.Path]::GetDirectoryName($Paket) }
+    $mYol = Join-Path $paketKlasor "surum.json"
+    if (Test-Path -LiteralPath $mYol) {
+        try { $paketManifest = [IO.File]::ReadAllText($mYol) | ConvertFrom-Json }
+        catch { Bad "surum.json okunamadi: $mYol ($($_.Exception.Message))"; exit 1 }
+    }
+    if (-not $paketZip) {
+        $ad = if ($paketManifest) { ManifestPaketAdi $paketManifest } else { "" }
+        if ($ad -and (Test-Path -LiteralPath (Join-Path $paketKlasor $ad))) {
+            $paketZip = Join-Path $paketKlasor $ad
+        } else {
+            $zipler = @(Get-ChildItem -LiteralPath $paketKlasor -Filter "RAImporter-*-win64.zip" -File -ErrorAction SilentlyContinue)
+            if ($zipler.Count -eq 0) {
+                Bad "Klasorde RAImporter-<surum>-win64.zip yok: $paketKlasor"
+                Say "Cevrimdisi paketi (RAImporter-<surum>-cevrimdisi.zip) once 'Tumunu ayikla' ile acin"
+                Say "ve -Paket'e acilan klasoru verin."
+                exit 1
+            }
+            if ($zipler.Count -gt 1) {
+                Bad "Klasorde birden fazla paket var; kurulacak zip'i -Paket ile dogrudan gosterin:"
+                $zipler | ForEach-Object { Say ("  " + $_.FullName) }
+                exit 1
+            }
+            $paketZip = $zipler[0].FullName
+        }
+    }
+    $zipAd = [IO.Path]::GetFileName($paketZip)
+    $ozetKaynagi = "-Sha256"
+    if (-not $Sha256 -and $paketManifest -and (ManifestPaketAdi $paketManifest) -eq $zipAd -and
+        [string]$paketManifest.paket_sha256 -match '^[0-9A-Fa-f]{64}$') {
+        $Sha256 = [string]$paketManifest.paket_sha256
+        $ozetKaynagi = "surum.json, surum $($paketManifest.version)"
+    }
+    if (-not $Sha256 -and (Test-Path -LiteralPath "$paketZip.sha256")) {
+        $aday = (([IO.File]::ReadAllText("$paketZip.sha256")).Trim() -split '\s+')[0]
+        if ($aday -match '^[0-9A-Fa-f]{64}$') { $Sha256 = $aday; $ozetKaynagi = "$zipAd.sha256" }
+    }
+    if (-not $Sha256) {
+        Bad "Paketin beklenen ozeti bulunamadi; dogrulanmamis paket kurulmaz."
+        Say "Cevrimdisi paketin TAMAMINI kopyalayin (surum.json ve .sha256 dahil)"
+        Say "ya da ozeti -Sha256 ile verin."
+        exit 1
+    }
+    Ok "Cevrimdisi paket: $paketZip (ozet: $ozetKaynagi)"
+}
+
 # --- yonetici hakki ---------------------------------------------------------
 # Servis kurulumu yonetici ister ve bu eskiden EN SONDA anlasiliyordu: paket
 # inip dosyalar degistikten sonra "yonetici hakki gerekiyor" deniyordu.
@@ -304,7 +381,7 @@ Ok "Klasor hazir: $Dir ($sebep)"
 # komut budur. 08.09'dan beri release'te RAImporter.exe yok (tek klasor zip
 # paketi); talimatlardaki eski ".../releases/latest/download/RAImporter.exe"
 # adresi 404 donuyordu (14.09 sahada goruldu).
-if (-not $Url) {
+if (-not $Url -and -not $Paket) {
     $mAdres = if ($UpdateUrl) { $UpdateUrl } else { $VarsayilanManifest }
     try {
         $m = (WebAl $mAdres) | ConvertFrom-Json
@@ -343,6 +420,15 @@ if (-not $Sha256) {
 # duz addir ve ayni diskte kalindigi icin son tasima da kopyasiz olur.
 $tmp = Join-Path $Dir ("RAImporter-indirme-" + [guid]::NewGuid().ToString("N") + ".tmp")
 
+if ($Paket) {
+    Say "Kopyalaniyor: $paketZip"
+    if (-not (DosyaKopyala $paketZip $tmp)) {
+        TmpSil $tmp
+        Bad "Paket kurulum klasorune kopyalanamadi: $paketZip"
+        Say "Dosya okunabiliyor mu (ag paylasiminda izin, antivirus)?"
+        exit 1
+    }
+} else {
 Say "Indiriliyor: $Url"
 try {
     WebAl $Url $tmp
@@ -355,8 +441,10 @@ try {
         Say "En kolayi: -Url vermeyin; betik guncel paketi surum.json'dan bulur."
     } else {
         Say "Sunucudan bu adrese erisilebildiginden emin olun (proxy / guvenlik duvari)."
+        Say "Sunucu GitHub'a erisemiyorsa cevrimdisi paketle kurun: install.ps1 -Paket <klasor>"
     }
     exit 1
+}
 }
 
 $size = ([IO.FileInfo]$tmp).Length
@@ -382,7 +470,7 @@ if (-not $paketMi -and ($head[0] -ne 0x4D -or $head[1] -ne 0x5A)) {
     TmpSil $tmp
     exit 1
 }
-Ok ("Indirildi: $([math]::Round($size/1MB,1)) MB" + $(if ($paketMi) { " (tek klasor paketi)" } else { "" }))
+Ok ($(if ($Paket) { "Kopyalandi" } else { "Indirildi" }) + ": $([math]::Round($size/1MB,1)) MB" + $(if ($paketMi) { " (tek klasor paketi)" } else { "" }))
 
 # --- dogrulama --------------------------------------------------------------
 $hash = (Get-FileHash -LiteralPath $tmp -Algorithm SHA256).Hash.ToUpper()
@@ -520,6 +608,46 @@ try {
     if ($v) { Ok "Surum: $v" }
 } catch { }
 
+# --- cevrimdisi paket klasoru -----------------------------------------------
+# -Paket ile kurulan sunucu GitHub'a erisemiyor demektir: gece guncellemesi de
+# oradan olamaz. Paket <kurulum>\paket\ altina konur ve guncelleme kaynagi o
+# klasor yapilir (program 1.8.124'ten beri klasor kaynagini tanir; surum.json
+# IMZASINI ve paketin SHA-256'sini dogrular). Sonraki surum: yeni paketin
+# icindekileri bu klasore kopyala -> Guncelleme > Simdi kur (ya da gece).
+$paketHedef = ""
+$imzaliMi = ($paketKlasor -and (Test-Path -LiteralPath (Join-Path $paketKlasor "surum.json")) -and
+             (Test-Path -LiteralPath (Join-Path $paketKlasor "surum.json.sig")))
+if ($Paket -and -not $UpdateUrl -and -not $imzaliMi) {
+    Say "Pakette surum.json / surum.json.sig yok; guncelleme kaynagi degistirilmedi."
+}
+if ($Paket -and -not $UpdateUrl -and $imzaliMi) {
+    $paketHedef = Join-Path $Dir "paket"
+    try {
+        New-Item -ItemType Directory -Path $paketHedef -Force | Out-Null
+        $ayniKlasor = ([IO.Path]::GetFullPath($paketKlasor).TrimEnd('\') -ieq
+                       [IO.Path]::GetFullPath($paketHedef).TrimEnd('\'))
+        if (-not $ayniKlasor) {
+            # Eski surumlerin zip'leri birikmesin.
+            Get-ChildItem -LiteralPath $paketHedef -Filter "RAImporter-*-win64.zip*" -File -ErrorAction SilentlyContinue |
+                Where-Object { $_.Name -notlike "$zipAd*" } | Remove-Item -Force -ErrorAction SilentlyContinue
+            foreach ($f in @($zipAd, "$zipAd.sha256", "surum.json", "surum.json.sig")) {
+                $k = Join-Path $paketKlasor $f
+                if (Test-Path -LiteralPath $k) { Copy-Item -LiteralPath $k -Destination (Join-Path $paketHedef $f) -Force }
+            }
+        }
+        if ((Test-Path -LiteralPath (Join-Path $paketHedef "surum.json")) -and
+            (Test-Path -LiteralPath (Join-Path $paketHedef "surum.json.sig"))) {
+            $UpdateUrl = $paketHedef
+        } else {
+            Say "Pakette surum.json / surum.json.sig yok; guncelleme kaynagi degistirilmedi."
+            $paketHedef = ""
+        }
+    } catch {
+        Say "Paket klasoru hazirlanamadi (kurulumu engellemez): $($_.Exception.Message)"
+        $paketHedef = ""
+    }
+}
+
 # --- merkezi guncelleme adresi ----------------------------------------------
 # Bunu simdi yazarsak otele bir daha girmek gerekmez: yeni surumleri program
 # kendisi alir. Var olan ayarlara DOKUNMAZ, sadece update bolumunu yazar.
@@ -609,6 +737,13 @@ Say "  3. 'Deneme calistir' ile dogrulayin"
 Say ""
 Say "Kurulumu dogrulamak icin (gercek DB'ye karsi uctan uca test):"
 Say "  $exe selftest"
+if ($paketHedef) {
+    Say ""
+    Say "Sonraki surumler (GitHub'siz): yeni cevrimdisi paketin icindeki surum.json,"
+    Say "surum.json.sig ve RAImporter-<surum>-win64.zip dosyalarini su klasore kopyalayin:"
+    Say "  $paketHedef"
+    Say "sonra arayuzde Guncelleme > Simdi kur (ya da program gece 02:00-05:00'te kendisi kurar)."
+}
 Write-Host ""
 
 if ($Open) {
