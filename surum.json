@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.129",
+    "version":  "1.8.130",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.129/RAImporter-1.8.129-win64.zip",
-    "paket_sha256":  "6E85BDBC833E7181DD17AAF08313DCF88985E46C41506631EC3C40F5F9394F7B",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.130/RAImporter-1.8.130-win64.zip",
+    "paket_sha256":  "1F7EA94360F5AABD430CB15D883DC2A898227B931ACB5A982A193CD3E41A8CA9",
     "bicim":  "onedir",
-    "notes":  "Elle kurulum ortak Google Drive klasorunden (paket, KURULUM.html, R\u0026A kataloglari); kontrol rapor klasorleri Ortak ayarlar\u0027dan; DESTEK klasoru kendiliginden denenir; R\u0026A sekmesinde \u0027Raporlari denetle\u0027 (veri modeli baglantisi); kurulum kilavuzu sadelesti (Belge 2.7)."
+    "notes":  "Kontroller\u0027de klasor kutusu kaldirildi (Ortak ayarlar); tek seferlik cekim ve gecmis yuklemede raporlar listeden (coklu, sirali) secilir; Oracle islerine PPCLEANER kurumsal gorevi (06:00); pasif isin veritabani gorevleri artik zamaninda kosmaz; inceleme duzeltmeleri; kilavuz Belge 2.8."
 }
