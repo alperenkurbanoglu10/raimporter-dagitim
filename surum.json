@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.125",
+    "version":  "1.8.126",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.125/RAImporter-1.8.125-win64.zip",
-    "paket_sha256":  "D6AD1E4ADE4EBD1A092314C9625FD1305A38C7502897562FC89BCB233563E08F",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.126/RAImporter-1.8.126-win64.zip",
+    "paket_sha256":  "FA69B6EFB66AEA0AA98E605EE37342F59C5A4FAD88DC4595E96189C7531E2787",
     "bicim":  "onedir",
-    "notes":  "Arayuz sadelesti: sekmeler Kurulum / Kontroller / Izleme ve araclar gruplarinda; aciklama metinleri varsayilan gizli (ust cubukta Aciklamalari goster, sekmede ? Aciklama)."
+    "notes":  "PORTAL hazir listesine PORTAL_FINANCIAL eklendi (her gun 07:54, pencere -2..+1; mevcut takvim kaymaz). Kurulum kilavuzu yeni arayuzle guncellendi (Belge 2.5)."
 }
