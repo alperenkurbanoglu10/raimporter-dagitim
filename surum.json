@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.124",
+    "version":  "1.8.125",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.124/RAImporter-1.8.124-win64.zip",
-    "paket_sha256":  "0089786E27B89AF32D84F0D6E3F72DE0ED5645C78BBFF70D68D8395F0E85F2EA",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.125/RAImporter-1.8.125-win64.zip",
+    "paket_sha256":  "D6AD1E4ADE4EBD1A092314C9625FD1305A38C7502897562FC89BCB233563E08F",
     "bicim":  "onedir",
-    "notes":  "Cevrimdisi kurulum ve guncelleme: GitHub a erisemeyen sunucu icin RAImporter-\u003csurum\u003e-cevrimdisi.zip + install.ps1 -Paket; guncelleme adresi klasor olabilir (imza + SHA dogrulanir). Yeni iste kontroller, bildirim ve artakalan silme acik gelir."
+    "notes":  "Arayuz sadelesti: sekmeler Kurulum / Kontroller / Izleme ve araclar gruplarinda; aciklama metinleri varsayilan gizli (ust cubukta Aciklamalari goster, sekmede ? Aciklama)."
 }
