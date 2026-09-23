@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.121",
+    "version":  "1.8.122",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.121/RAImporter-1.8.121-win64.zip",
-    "paket_sha256":  "AF1D19B9BD9A282A0BE6E4BD82A33108FC5E4274174C3455FAD1B69B124766E7",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.122/RAImporter-1.8.122-win64.zip",
+    "paket_sha256":  "A1BB9938D3E8E0B5E9D1CB5995FF40E6176EF56D3DDDC79FA00AFEEC35B4D1EE",
     "bicim":  "onedir",
-    "notes":  "Doviz kuru kontrolu (yeni, varsayilan acik): currency_exchange_rates tablosunda son 30 gunde bos ya da eksik kur gunu varsa kur exportu o gun icin yeniden tetiklenir, dolup dolmadigi dogrulanir ve bildirilir, dolan gun [COZULDU] ile kapanir; kur dosyasi her aktarildiginda kontrol hemen kosar. Mizan: tutan gunlerin Trial Balance raporu son 6 gun R\u0026A dan taze cekilip dogrulanir; eksik gorunen raporla karsilastirma yapilmaz; haric listesi Trial Balance da tutarla gorunen kalemi gizlemez."
+    "notes":  "Folyo dengesi tasima: her dengesiz fatura once yalnizca kendi paket zinciriyle denenir; genis kurallar ondan sonra calisir ve baska faturanin kendi zincirindeki satirlari almaz. Genis kuralla yapilmis yanlis bir tasima, satirlari kendi zincirindeki dengesiz faturayi dengeliyorsa geri alinir. Bir turda tasima yapildiysa o tesiste veri tam teshisli faturalar icin export gonderilmez (elle kosumda da); export tasinan satirlari eski yerine geri yaziyor, tasima her turda bozuluyordu."
 }
