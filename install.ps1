@@ -12,7 +12,8 @@
 
       powershell -ExecutionPolicy Bypass -File install.ps1 -Url "<INDIRME_LINKI>"
 
-  Sunucu GitHub'a ERISEMIYORSA (cevrimdisi kurulum, 23.09.2026): yayindaki
+  Sunucu GitHub'a ERISEMIYORSA (cevrimdisi kurulum, 23.09.2026): ortak Google
+  Drive klasorundeki (https://drive.google.com/drive/folders/1S7JMDch_Dw1WPiMmCIZJsGet3QZn6oiO)
   RAImporter-<surum>-cevrimdisi.zip'i internete erisen bir bilgisayarda indirip
   sunucuya kopyalayin (RDP / ag paylasimi / USB), "Tumunu ayikla" deyin ve acilan
   klasorde YONETICI PowerShell'de:
@@ -255,6 +256,10 @@ if ($Sha256 -and $Sha256 -notmatch '^[0-9A-Fa-f]{64}$') {
     exit 1
 }
 
+# Elle (cevrimdisi) kurulum paketlerinin ortak Google Drive klasoru: her yayinda
+# yayinla.ps1 guncel paketi ve KURULUM.html'i buraya da koyar.
+$ElleKurulumAdresi = "https://drive.google.com/drive/folders/1S7JMDch_Dw1WPiMmCIZJsGet3QZn6oiO"
+
 # --- cevrimdisi paket (-Paket) ----------------------------------------------
 # 23.09.2026 saha: bazi otel sunuculari GitHub'a erisemiyor; tek satirlik
 # kurulum "surum bilgisi okunamadi" ile duruyordu. Paket elle kopyalanir,
@@ -389,6 +394,8 @@ if (-not $Url -and -not $Paket) {
         Bad "Surum bilgisi okunamadi: $($_.Exception.Message)"
         Say "Sunucudan bu adrese erisilebildiginden emin olun (proxy / guvenlik duvari)"
         Say "ya da -Url ile paketin indirme adresini verin."
+        Say "GitHub'a erisilemiyorsa elle kurulum paketi (RAImporter-<surum>-cevrimdisi.zip):"
+        Say "  $ElleKurulumAdresi"
         exit 1
     }
     if ($m.paket_url) { $Url = [string]$m.paket_url; $mOzet = [string]$m.paket_sha256 }
@@ -442,6 +449,7 @@ try {
     } else {
         Say "Sunucudan bu adrese erisilebildiginden emin olun (proxy / guvenlik duvari)."
         Say "Sunucu GitHub'a erisemiyorsa cevrimdisi paketle kurun: install.ps1 -Paket <klasor>"
+        Say "Paket (RAImporter-<surum>-cevrimdisi.zip): $ElleKurulumAdresi"
     }
     exit 1
 }

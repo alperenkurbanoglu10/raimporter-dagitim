@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.128",
+    "version":  "1.8.129",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.128/RAImporter-1.8.128-win64.zip",
-    "paket_sha256":  "6A6C8854A00CFF82E034E51CFC6206DB7B455CB412F9A9D0CF52E2B7E5297932",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.129/RAImporter-1.8.129-win64.zip",
+    "paket_sha256":  "6E85BDBC833E7181DD17AAF08313DCF88985E46C41506631EC3C40F5F9394F7B",
     "bicim":  "onedir",
-    "notes":  "R\u0026A baglanti testi (Ortak ayarlar) rapor klasoru bosken de girisi dogruluyor; yanlis sifrede artik basarili demiyor."
+    "notes":  "Elle kurulum ortak Google Drive klasorunden (paket, KURULUM.html, R\u0026A kataloglari); kontrol rapor klasorleri Ortak ayarlar\u0027dan; DESTEK klasoru kendiliginden denenir; R\u0026A sekmesinde \u0027Raporlari denetle\u0027 (veri modeli baglantisi); kurulum kilavuzu sadelesti (Belge 2.7)."
 }
