@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.135",
+    "version":  "1.8.136",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.135/RAImporter-1.8.135-win64.zip",
-    "paket_sha256":  "AD151D71DF6ECE7CAF1D76EBDC701290832882FA14343DDD31C64E7A7C969B64",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.136/RAImporter-1.8.136-win64.zip",
+    "paket_sha256":  "B33ECC868012A214E24B8909C29F0CC06C130DAC246A939609ED5FD9F208B400",
     "bicim":  "onedir",
-    "notes":  "Mizan: aciklamaya gore haric tutma kalkti (yalniz PORTAL parametre kodlari); parametre okunamazsa o tesiste duzeltme ve artakalan silme yapilmaz, sebep postada"
+    "notes":  "Kayip rezervasyon (DESTEK) raporlari once DESTEK rapor klasorunden cekilir; bosa R\u0026A cagrisi yok"
 }
