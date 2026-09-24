@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.133",
+    "version":  "1.8.134",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.133/RAImporter-1.8.133-win64.zip",
-    "paket_sha256":  "ABBD593103185A65AD254D393944D3088EAE9B447B8EA4665C0D2A6B9A6F9AD0",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.134/RAImporter-1.8.134-win64.zip",
+    "paket_sha256":  "24EF2DBA138695B6C7F620F47FD439ACC719FEA01F41EB329E23E59B961EB780",
     "bicim":  "onedir",
-    "notes":  "Doviz kuru kontrolu: Operada da olmayan kur bilgi olarak yazilir (uyari ve gunluk yeniden cekim yok); tesis basina tek export, pencere bir gun geriden; sonuc belli olmadan posta yok"
+    "notes":  "Mizan: kurumsal haric kodlar PORTAL parametrelerinden (PORTAL_APP_PARAMS_INIT, POS_ACCOUNTS haric) otomatik; elle giris kutulari kalkti"
 }
