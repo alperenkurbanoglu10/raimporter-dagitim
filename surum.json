@@ -1,9 +1,9 @@
 {
-  "version": "1.8.137",
+  "version": "1.8.138",
   "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
   "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.137/RAImporter-1.8.137-win64.zip",
-  "paket_sha256": "011EDC9BF103C81A0A464B79E739372FA4F943CFDCDDCDE989D91B85618EF519",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.138/RAImporter-1.8.138-win64.zip",
+  "paket_sha256": "A90BC1676D43B871FAB27050A71C0B46C778DA8A71458C596FADDBE86D153B9A",
   "bicim": "onedir",
-  "notes": "Mizani simdi kontrol et geriye donuk gunlere de duzeltme gonderir; ozet dunu ve eski gunleri ayri sayar"
+  "notes": "Baglantilari onar: RAImporter ve DESTEK klasorlerindeki raporlar kendi klasorundeki veri modeline tek dugmeyle baglanir"
 }
