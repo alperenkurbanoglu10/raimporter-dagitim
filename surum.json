@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.142",
-    "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
-    "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.142/RAImporter-1.8.142-win64.zip",
-    "paket_sha256":  "73D46BA1CED0B948FC9688848D6559284F266CA24872FC2A5CC729D39170F4E7",
-    "bicim":  "onedir",
-    "notes":  "Acik is gunu kurali: kuyruktaki eski businessdate dosyasi DWH\u0027daki yeni acik gunu geri almaz (409 ux_businessdate_resort_open); 409 veri cakismasi alarmi; reddedilen dosya kuyrukta kaldikca alarm kapanmaz"
+  "version": "1.8.143",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
+  "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.143/RAImporter-1.8.143-win64.zip",
+  "paket_sha256": "A92241A48943AA84B3F5E0E717946A32F863CC107B1D92290089E3E91E51CD62",
+  "bicim": "onedir",
+  "notes": "OperaSetup merkezi R&A sifre esitlemesi; kurulum bazinda API anahtari; yeni baglanti ekrani ve imzali platform guncellemeleri"
 }
