@@ -68,8 +68,8 @@ Betik ne yapar:
   * -Service verilirse Windows servisi olarak kurup baslatir; verilmezse
     kurulum icin durdurdugu servisi yeni surumle geri baslatir
   * masaustu kisayolu olusturur
-  * -UpdateUrl verilirse program yeni surumleri gece 02:00-05:00
-    arasinda kendisi alir (imza + SHA-256 + duman testi ile)
+  * -UpdateUrl verilirse program yeni surumu 30 dakikada bir sorar ve
+    bostayken kendisi kurar (imza + SHA-256 + duman testi ile)
 
 
 YOL 2 - Elle (tek sunucu, hizli deneme)
@@ -103,7 +103,7 @@ Tek satirlik komut "Surum bilgisi okunamadi" / "Indirme basarisiz" /
 4. Paket <kurulum klasoru>\paket\ altina konur ve guncelleme kaynagi o
    klasor olur. Sonraki surum: yeni paketin surum.json, surum.json.sig ve
    zip dosyalarini oraya kopyalayin -> Arayuz > Guncelleme > Simdi kur
-   (ya da program gece penceresinde kendisi kurar). Program klasordeki
+   (ya da program bostayken kendisi kurar). Program klasordeki
    surum.json'un IMZASINI dogrular.
 Ayrintisi: paketin icindeki KURULUM-CEVRIMDISI.txt.
 

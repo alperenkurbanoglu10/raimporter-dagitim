@@ -39,7 +39,7 @@
                   en cok bos alanli); o da yoksa sistem diski. Takili DVD, USB ve
                   ag surucusu listeye hic girmez.
       -UpdateUrl  surum.json adresi. Verilirse config'e yazilir: otel bir daha
-                  elle guncellenmez, program gece penceresinde kendi gecer.
+                  elle guncellenmez, program yeni surumu bostayken kendi kurar.
       -Paket      Cevrimdisi paket klasoru ya da RAImporter-<surum>-win64.zip'in
                   yolu (yerel ya da \\sunucu\paylasim). Internete HIC cikilmaz.
                   Beklenen ozet sirasiyla -Sha256, klasordeki surum.json, zip'in
@@ -47,7 +47,7 @@
                   Paket <kurulum>\paket\ klasorune konur ve guncelleme kaynagi o
                   klasor olur (-UpdateUrl verilmediyse): sonraki surum icin yeni
                   paketin icindekileri oraya kopyalayip arayuzde Guncelleme >
-                  Simdi kur denir; program gece penceresinde de kendisi kurar.
+                  Simdi kur denir; program bostayken de kendisi kurar.
       -Service    Kurduktan sonra Windows servisi olarak kur ve baslat.
       -Open       Kurulumdan sonra programi ac (servisi kurar/baslatir, arayuzu acar).
 
@@ -670,11 +670,12 @@ if ($UpdateUrl) {
         } else {
             $cfg = [pscustomobject]@{}
         }
+        # 28.09.2026 (1.8.140): gece penceresi yok; yeni surum 30 dakikada bir
+        # sorulur ve program BOSTAYKEN kurulur (calisan is yokken).
         $upd = [pscustomobject]@{
-            enabled      = $true
-            manifest_url = $UpdateUrl
-            window_start = "02:00"
-            window_end   = "05:00"
+            enabled          = $true
+            manifest_url     = $UpdateUrl
+            interval_minutes = 30
         }
         if ($cfg.PSObject.Properties.Name -contains "update") { $cfg.update = $upd }
         else { $cfg | Add-Member -NotePropertyName update -NotePropertyValue $upd }
@@ -683,7 +684,7 @@ if ($UpdateUrl) {
         $json = $cfg | ConvertTo-Json -Depth 12
         [IO.File]::WriteAllText($cfgPath, $json, (New-Object Text.UTF8Encoding($false)))
         Ok "Guncelleme adresi yazildi: $UpdateUrl"
-        Say "  Pencere: 02:00-05:00, aktarim calisirken guncelleme yapilmaz."
+        Say "  Yeni surum 30 dakikada bir sorulur; program bostayken (calisan is yokken) kurar."
     } catch {
         Bad "Guncelleme adresi yazilamadi: $($_.Exception.Message)"
         Say "Arayuz > Guncelleme bolumunden elle girebilirsiniz."
@@ -750,7 +751,7 @@ if ($paketHedef) {
     Say "Sonraki surumler (GitHub'siz): yeni cevrimdisi paketin icindeki surum.json,"
     Say "surum.json.sig ve RAImporter-<surum>-win64.zip dosyalarini su klasore kopyalayin:"
     Say "  $paketHedef"
-    Say "sonra arayuzde Guncelleme > Simdi kur (ya da program gece 02:00-05:00'te kendisi kurar)."
+    Say "sonra arayuzde Guncelleme > Simdi kur (ya da program bostayken kendisi kurar)."
 }
 Write-Host ""
 
