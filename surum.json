@@ -1,9 +1,9 @@
 {
-  "version": "1.8.144",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
-  "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.144/RAImporter-1.8.144-win64.zip",
-  "paket_sha256": "F13DFE94F18D886B6820AF55BE1AAD7BC710B9E58A92FD12601172A9B00E3955",
-  "bicim": "onedir",
-  "notes": "Basarili R&A baglanti testinden sonra hatali raporlari yeniden cek; OperaSetup kurulum kilavuzu guncellendi."
+    "version":  "1.8.145",
+    "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
+    "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.145/RAImporter-1.8.145-win64.zip",
+    "paket_sha256":  "CC52B62F5EFA84D0AA2BD2D263E2F2EAE4F85BE59AACED301FA78CAC581D6930",
+    "bicim":  "onedir",
+    "notes":  "Merkezi esitleme hatasinda sebep gosterilir (401, DNS, TLS, zaman asimi, yerel hata); P2030 \u0027IO Exception\u0027 hatasinda islem gunlugu bir kez daha denenir."
 }
