@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.146",
+    "version":  "1.8.147",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.146/RAImporter-1.8.146-win64.zip",
-    "paket_sha256":  "808F65272055832B6F2A6150D1E6AB35C4EE3CC66428074DE674C3EC3AA3FC78",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.147/RAImporter-1.8.147-win64.zip",
+    "paket_sha256":  "39C3BBA858A3E078DF8D3167CD3E336347619FCF2A140B437A37CB19E37F11FC",
     "bicim":  "onedir",
-    "notes":  "Merkezden gelen yeni R\u0026A sifresi tek bir girisle dogrulanir ve sonuc OperaSetup\u0027a bildirilir; P2030 islem gunlugu once sablonsuz ham veriden okunur."
+    "notes":  "OperaSetup ve guncelleme baglantilarinda TLS dogrulamasi Windows kok deposuna ek olarak paketlenmis sertifika demetini de kullanir (eksik kok sertifikali sunucularda \u0027TLS sertifikasi dogrulanamadi\u0027 hatasi)."
 }
