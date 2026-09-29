@@ -1,9 +1,9 @@
 {
-  "version": "1.8.143",
+  "version": "1.8.144",
   "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
   "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.143/RAImporter-1.8.143-win64.zip",
-  "paket_sha256": "A92241A48943AA84B3F5E0E717946A32F863CC107B1D92290089E3E91E51CD62",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.144/RAImporter-1.8.144-win64.zip",
+  "paket_sha256": "F13DFE94F18D886B6820AF55BE1AAD7BC710B9E58A92FD12601172A9B00E3955",
   "bicim": "onedir",
-  "notes": "OperaSetup merkezi R&A sifre esitlemesi; kurulum bazinda API anahtari; yeni baglanti ekrani ve imzali platform guncellemeleri"
+  "notes": "Basarili R&A baglanti testinden sonra hatali raporlari yeniden cek; OperaSetup kurulum kilavuzu guncellendi."
 }
