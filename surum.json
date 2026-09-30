@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.152",
+    "version":  "1.8.153",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.152/RAImporter-1.8.152-win64.zip",
-    "paket_sha256":  "FE7C1F62487EDC3664F10BA39256DB8A39B0FD90653D633B66BB57AC0A7753D6",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.153/RAImporter-1.8.153-win64.zip",
+    "paket_sha256":  "8EB01712053961A741B502BA635D0AAE53C0B92F97FC0AF5157C126249748259",
     "bicim":  "onedir",
-    "notes":  "Proxy parolasi tum baglantilarda ayni kodlamayla gider (ASCII disi karakterde OperaSetup/guncelleme 407 aliyordu); Proxyyi test et iki yolu da dener; SSLEOFError mesaji; proxy karti genis alanda."
+    "notes":  "SQL konsolunda PL/SQL icin onay penceresi (kutu kalkti); proxy freni adres bazli, mesaj ve gunlukte reddedilen adres; Proxyyi test et OperaSetup adresini de dener."
 }
