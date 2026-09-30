@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.153",
+    "version":  "1.8.154",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.153/RAImporter-1.8.153-win64.zip",
-    "paket_sha256":  "8EB01712053961A741B502BA635D0AAE53C0B92F97FC0AF5157C126249748259",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.154/RAImporter-1.8.154-win64.zip",
+    "paket_sha256":  "C2B8828CC1013F601A36B80E4CC13D47BD16E9569E1363528E7B3376AC30A6C8",
     "bicim":  "onedir",
-    "notes":  "SQL konsolunda PL/SQL icin onay penceresi (kutu kalkti); proxy freni adres bazli, mesaj ve gunlukte reddedilen adres; Proxyyi test et OperaSetup adresini de dener."
+    "notes":  "Ekranlar sadelesti: sekme grubu renkleri, belirgin basliklar, koyu arka plan; OperaSetup ve Proxy ayri sekmelerde; R\u0026A kurulum adimi, bos iste tamam isareti yok."
 }
