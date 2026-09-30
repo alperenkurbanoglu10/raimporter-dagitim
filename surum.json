@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.150",
+    "version":  "1.8.151",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.150/RAImporter-1.8.150-win64.zip",
-    "paket_sha256":  "31C5BFA553DF73ECDE989AE961EF151DD0A7DB396155CB1309FE82EE2A315E8A",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.151/RAImporter-1.8.151-win64.zip",
+    "paket_sha256":  "7140403F8C6779D2FD0E7104D339E446E993E21FB4C10BE72D70EE1043F08426",
     "bicim":  "onedir",
-    "notes":  "Simdi kur: is calisirken kurulum ertelenirse mesaj bunu soyler ve is bitince bostayken kendiliginden kurulur (eskiden \"sayfayi yenileyin\" deyip sessizce erteliyordu)."
+    "notes":  "Kayip rezervasyon kontrolu yeni iste kapali gelir (yalniz offline aktarim otelleri); ekran metinleri uzmanin anlayacagi terimlerle (tablo adlari, rapor numaralari)."
 }
