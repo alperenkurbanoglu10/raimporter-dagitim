@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.149",
+    "version":  "1.8.150",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.149/RAImporter-1.8.149-win64.zip",
-    "paket_sha256":  "39CF1FC78DA1A9B6E43204C717E020F5E7645F94B05E14BD56CA223F749D31A4",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.150/RAImporter-1.8.150-win64.zip",
+    "paket_sha256":  "31C5BFA553DF73ECDE989AE961EF151DD0A7DB396155CB1309FE82EE2A315E8A",
     "bicim":  "onedir",
-    "notes":  "SQL konsolunda PL/SQL: CREATE PROCEDURE/FUNCTION/PACKAGE/TRIGGER/TYPE ve BEGIN...END; bloklari tek ifade; ayri onay, derleme hatalari ve DBMS_OUTPUT gosterilir."
+    "notes":  "Simdi kur: is calisirken kurulum ertelenirse mesaj bunu soyler ve is bitince bostayken kendiliginden kurulur (eskiden \"sayfayi yenileyin\" deyip sessizce erteliyordu)."
 }
