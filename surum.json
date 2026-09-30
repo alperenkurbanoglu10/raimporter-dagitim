@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.148",
+    "version":  "1.8.149",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.148/RAImporter-1.8.148-win64.zip",
-    "paket_sha256":  "6C2A456B389354655041E054A594338A68252BC272C8A3D5DEB90E3C085EDA73",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.149/RAImporter-1.8.149-win64.zip",
+    "paket_sha256":  "39CF1FC78DA1A9B6E43204C717E020F5E7645F94B05E14BD56CA223F749D31A4",
     "bicim":  "onedir",
-    "notes":  "Kurumsal proxy destegi: R\u0026A, DWH, guncelleme ve OperaSetup istekleri kimlikli (Basic) proxy uzerinden; 407 reddinde ayni parolayla yeniden deneme yok (hesap kilitlenmesin)."
+    "notes":  "SQL konsolunda PL/SQL: CREATE PROCEDURE/FUNCTION/PACKAGE/TRIGGER/TYPE ve BEGIN...END; bloklari tek ifade; ayri onay, derleme hatalari ve DBMS_OUTPUT gosterilir."
 }
