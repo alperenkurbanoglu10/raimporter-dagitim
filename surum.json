@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.147",
+    "version":  "1.8.148",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.147/RAImporter-1.8.147-win64.zip",
-    "paket_sha256":  "39C3BBA858A3E078DF8D3167CD3E336347619FCF2A140B437A37CB19E37F11FC",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.148/RAImporter-1.8.148-win64.zip",
+    "paket_sha256":  "6C2A456B389354655041E054A594338A68252BC272C8A3D5DEB90E3C085EDA73",
     "bicim":  "onedir",
-    "notes":  "OperaSetup ve guncelleme baglantilarinda TLS dogrulamasi Windows kok deposuna ek olarak paketlenmis sertifika demetini de kullanir (eksik kok sertifikali sunucularda \u0027TLS sertifikasi dogrulanamadi\u0027 hatasi)."
+    "notes":  "Kurumsal proxy destegi: R\u0026A, DWH, guncelleme ve OperaSetup istekleri kimlikli (Basic) proxy uzerinden; 407 reddinde ayni parolayla yeniden deneme yok (hesap kilitlenmesin)."
 }
