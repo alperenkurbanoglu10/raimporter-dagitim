@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.151",
+    "version":  "1.8.152",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.151/RAImporter-1.8.151-win64.zip",
-    "paket_sha256":  "7140403F8C6779D2FD0E7104D339E446E993E21FB4C10BE72D70EE1043F08426",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.152/RAImporter-1.8.152-win64.zip",
+    "paket_sha256":  "FE7C1F62487EDC3664F10BA39256DB8A39B0FD90653D633B66BB57AC0A7753D6",
     "bicim":  "onedir",
-    "notes":  "Kayip rezervasyon kontrolu yeni iste kapali gelir (yalniz offline aktarim otelleri); ekran metinleri uzmanin anlayacagi terimlerle (tablo adlari, rapor numaralari)."
+    "notes":  "Proxy parolasi tum baglantilarda ayni kodlamayla gider (ASCII disi karakterde OperaSetup/guncelleme 407 aliyordu); Proxyyi test et iki yolu da dener; SSLEOFError mesaji; proxy karti genis alanda."
 }
