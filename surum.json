@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.157",
+    "version":  "1.8.158",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.157/RAImporter-1.8.157-win64.zip",
-    "paket_sha256":  "97FB70830209A0441D701DBF0E20FFD2EFCE411F6FC1F73BF7A8A13A00AD2AAE",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.158/RAImporter-1.8.158-win64.zip",
+    "paket_sha256":  "7EA64406F83CB4D5EA330FBD349147D48F8D96D763E8F6C54B23B6BC7EF1F79B",
     "bicim":  "onedir",
-    "notes":  "Mizan artakalan silme: ayni tutarda dogru satir (fis/oda), belirsizde silme yok, silinip geri gelen kayit silinmez"
+    "notes":  "Mizan: duzeltmenin getiremeyecegi farkta (rapor tekrari / Opera hareketlerinde de yok) Financial Update gonderilmez (Rixos H8028)"
 }
