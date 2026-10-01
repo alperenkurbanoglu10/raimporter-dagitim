@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.156",
+    "version":  "1.8.157",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.156/RAImporter-1.8.156-win64.zip",
-    "paket_sha256":  "61336E41770DCEB271B9CE53FB278C50D405D1FE1C13DC11C158F5B6005D3B7E",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.157/RAImporter-1.8.157-win64.zip",
+    "paket_sha256":  "97FB70830209A0441D701DBF0E20FFD2EFCE411F6FC1F73BF7A8A13A00AD2AAE",
     "bicim":  "onedir",
-    "notes":  "PORTAL hazir listesine PORTAL_FINANCIAL_DEPOSIT_PAYMENT (08:00, depozito odemeleri); standart RAImporter.catalog guncellendi"
+    "notes":  "Mizan artakalan silme: ayni tutarda dogru satir (fis/oda), belirsizde silme yok, silinip geri gelen kayit silinmez"
 }
