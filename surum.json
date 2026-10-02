@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.159",
+    "version":  "1.8.160",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.159/RAImporter-1.8.159-win64.zip",
-    "paket_sha256":  "019CCEB640B535724C3C44774DD235F4C2B2F89F26B0D562FAAA633440BAEF05",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.160/RAImporter-1.8.160-win64.zip",
+    "paket_sha256":  "4BA9A33115BEBFC51572D8877171BD2AE4F76C8F09B0A5E1A5DE65090A2049F1",
     "bicim":  "onedir",
-    "notes":  "Mizan duzeltmesi PORTAL_FINANCIAL ile (islem gunu); rapor yoksa FINANCIAL_UPDATE"
+    "notes":  "Tasima sihirbazi: PostgreSQL kurulumu servisten + ekranda ilerleme, tek dugme tasima, PostgreSQL e gecis/geri alma"
 }
