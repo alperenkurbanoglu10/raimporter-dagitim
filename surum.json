@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.158",
+    "version":  "1.8.159",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.158/RAImporter-1.8.158-win64.zip",
-    "paket_sha256":  "7EA64406F83CB4D5EA330FBD349147D48F8D96D763E8F6C54B23B6BC7EF1F79B",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.159/RAImporter-1.8.159-win64.zip",
+    "paket_sha256":  "019CCEB640B535724C3C44774DD235F4C2B2F89F26B0D562FAAA633440BAEF05",
     "bicim":  "onedir",
-    "notes":  "Mizan: duzeltmenin getiremeyecegi farkta (rapor tekrari / Opera hareketlerinde de yok) Financial Update gonderilmez (Rixos H8028)"
+    "notes":  "Mizan duzeltmesi PORTAL_FINANCIAL ile (islem gunu); rapor yoksa FINANCIAL_UPDATE"
 }
