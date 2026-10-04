@@ -1,9 +1,9 @@
 {
-  "version": "1.8.161",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
-  "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.161/RAImporter-1.8.161-win64.zip",
-  "paket_sha256": "89023CDE96922A907BBD92AABC9056131C8EE525AB2377C5F6E488E785CDEDA2",
-  "bicim": "onedir",
-  "notes": "Mizan: ayni tutarda belirsiz kalan artakalan kayit gunun Financial dosyasiyla ayrilir ve silinir; dosyada olan kayit korunur"
+    "version":  "1.8.162",
+    "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
+    "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.162/RAImporter-1.8.162-win64.zip",
+    "paket_sha256":  "88CF4BEA186C26574335978083EF2E5F0B87B6A6A213972134EF7715EE41EBCA",
+    "bicim":  "onedir",
+    "notes":  "Kontrol duzeltme dosyalari veritabani yazma sirasinda one gecer; duzeltme iner inmez yazilir (ayni veritabanina yazan cok otelli kurulumlar)"
 }
