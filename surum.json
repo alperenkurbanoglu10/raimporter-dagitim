@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.170",
+    "version":  "1.8.171",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.170/RAImporter-1.8.170-win64.zip",
-    "paket_sha256":  "B7B1F876C3D8D76FC5399235214650FE5E39B81605FEA07F5DF527F1BE647FAC",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.171/RAImporter-1.8.171-win64.zip",
+    "paket_sha256":  "A77677424577B18B7AD408D9DDC68AA823D0095ACCC3A0AD81B990EF87336146",
     "bicim":  "onedir",
-    "notes":  "OPR-331 Faz B: saglik bildiriminde tablo tazeligi (tables/stale), R\u0026A export kaynak sorunlari, disk uyarisi, DWH sekmesinde merkeze son bildirim; servis devraldiysa kapanis bildirimi gitmez"
+    "notes":  "OPR-311: dwh-olcum komutu -- Opera DWH FINANCIAL_TRANSACTIONS ile R\u0026A P2020 + PORTAL_FINANCIAL karsilastirmasi (salt okuma, tek komut, JSON + HTML rapor)"
 }
