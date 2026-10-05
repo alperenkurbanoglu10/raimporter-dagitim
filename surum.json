@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.162",
+    "version":  "1.8.163",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.162/RAImporter-1.8.162-win64.zip",
-    "paket_sha256":  "88CF4BEA186C26574335978083EF2E5F0B87B6A6A213972134EF7715EE41EBCA",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.163/RAImporter-1.8.163-win64.zip",
+    "paket_sha256":  "0978E073F9F8399E5A228EA25214E547F1E249DF301A124C7FFE8BD57A8470FD",
     "bicim":  "onedir",
-    "notes":  "Kontrol duzeltme dosyalari veritabani yazma sirasinda one gecer; duzeltme iner inmez yazilir (ayni veritabanina yazan cok otelli kurulumlar)"
+    "notes":  "Aktarim veritabaninda zaten ayni olan satiri yeniden yazmaz (yalniz degisen satir guncellenir); ozet ayni kalanlari ayrica soyler"
 }
