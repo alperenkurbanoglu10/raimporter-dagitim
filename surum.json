@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.172",
+    "version":  "1.8.173",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.172/RAImporter-1.8.172-win64.zip",
-    "paket_sha256":  "4C2DA401027E32076475DE9E83BB08CB079E499A67D66CDB1C9BBA61630F4BA7",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.173/RAImporter-1.8.173-win64.zip",
+    "paket_sha256":  "A86747801F3554B8B53E8024F0DC8E2E8E1AE2CAB85EEAB0E1830EEB80C10ACF",
     "bicim":  "onedir",
-    "notes":  "dwh-olcum guvenlik duzeltmesi: izole ayar kopyasi (secret.key) ve indirilen dosyalar her durumda silinir (MR !59)"
+    "notes":  "OPR-314 Faz 1: yalniz Opera DWH is turu (yerel veritabani yok) -- dosya dogrudan DWH kuyruguna; DB kontrolleri kapali"
 }
