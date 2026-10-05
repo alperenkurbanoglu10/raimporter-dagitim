@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.168",
+    "version":  "1.8.169",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.168/RAImporter-1.8.168-win64.zip",
-    "paket_sha256":  "65B061C33D235225A34431C6E5575F20CEAC9F08A7D6C59625B206FCD8C4EBA5",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.169/RAImporter-1.8.169-win64.zip",
+    "paket_sha256":  "413BC60CB3EB21FF753B8C656029D28B73AC89F8CC252E982DD31E58F64B7C3E",
     "bicim":  "onedir",
-    "notes":  "DWH: split orijinalinin depozito olup olmadigi okunamazsa satir silinmez (fail-safe; MR !56 bulgusu)"
+    "notes":  "OPR-331 Faz A: merkeze saglik bildirimi (heartbeat) + kurulum kimligi basligi; DWH 404 yalniz record_not_found kayit yok"
 }
