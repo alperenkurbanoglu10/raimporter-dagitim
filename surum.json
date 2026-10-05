@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.173",
-    "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
-    "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.173/RAImporter-1.8.173-win64.zip",
-    "paket_sha256":  "A86747801F3554B8B53E8024F0DC8E2E8E1AE2CAB85EEAB0E1830EEB80C10ACF",
-    "bicim":  "onedir",
-    "notes":  "OPR-314 Faz 1: yalniz Opera DWH is turu (yerel veritabani yok) -- dosya dogrudan DWH kuyruguna; DB kontrolleri kapali"
+  "version": "1.8.174",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
+  "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.174/RAImporter-1.8.174-win64.zip",
+  "paket_sha256": "024935E4000FEFD568677C74FC42C3C52203E5691AD33EF3EF311E6FEBA62CBA",
+  "bicim": "onedir",
+  "notes": "OPR-314 Faz 2: gecmis yuklemede kaldigi yerden devam (kalici defter, servis acilisinda kendiliginden) + sabit yukleme sirasi"
 }
