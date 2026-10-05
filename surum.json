@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.164",
+    "version":  "1.8.165",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.164/RAImporter-1.8.164-win64.zip",
-    "paket_sha256":  "33B4BC399E21ABCE7BBD84C8ED6A921AD2D735318B9773ED7C6A05638E49E0C3",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.165/RAImporter-1.8.165-win64.zip",
+    "paket_sha256":  "34E863FD8D27D4959604045776B44656082CC943A5AC6681A6DA9CB7B2221896",
     "bicim":  "onedir",
-    "notes":  "Tasima gunlugu (ekranda ve log dosyasinda); PostgreSQL ilk kurulumda Opera tablolarini bos kurma; bos kaynak sema uyarisi; PostgreSQL yetki hatalari anlasilir, sema yetkisi ve bosluklu sema adi duzeltmeleri"
+    "notes":  "Mizan: PORTAL parametreleri her gun PORTAL_APP_PARAMS_INIT exportuyla karsilastirilir; fark varsa veritabani guncellenir, posta atilir ve son 7 gunun mizani yeniden kontrol edilir"
 }
