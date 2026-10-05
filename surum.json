@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.165",
+    "version":  "1.8.166",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.165/RAImporter-1.8.165-win64.zip",
-    "paket_sha256":  "34E863FD8D27D4959604045776B44656082CC943A5AC6681A6DA9CB7B2221896",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.166/RAImporter-1.8.166-win64.zip",
+    "paket_sha256":  "3F82546240B8773B92046039E12B95BCD8261C4E1EF406A6F9A46E2D7272DBF0",
     "bicim":  "onedir",
-    "notes":  "Mizan: PORTAL parametreleri her gun PORTAL_APP_PARAMS_INIT exportuyla karsilastirilir; fark varsa veritabani guncellenir, posta atilir ve son 7 gunun mizani yeniden kontrol edilir"
+    "notes":  "Kayip rezervasyon: bos donen NAME_ENCRYPTED_bynameid raporu 60 gun yeniden istenmez, bos dosya silinir ve aktarima girmez"
 }
