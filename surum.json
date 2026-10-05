@@ -1,9 +1,9 @@
 {
-  "version": "1.8.174",
+  "version": "1.8.175",
   "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
   "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.174/RAImporter-1.8.174-win64.zip",
-  "paket_sha256": "024935E4000FEFD568677C74FC42C3C52203E5691AD33EF3EF311E6FEBA62CBA",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.175/RAImporter-1.8.175-win64.zip",
+  "paket_sha256": "413568F3D7E16CB0883D7E9BD1147D4EFE07840AF111439956D6AC60698BBB34",
   "bicim": "onedir",
-  "notes": "OPR-314 Faz 2: gecmis yuklemede kaldigi yerden devam (kalici defter, servis acilisinda kendiliginden) + sabit yukleme sirasi"
+  "notes": "Gecmis yukleme: alinamayan gunler devamda yeniden denenir; alinamayan gunu kalan yukleme eksik olarak gorunur (MR !61 bulgusu)"
 }
