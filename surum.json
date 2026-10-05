@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.167",
+    "version":  "1.8.168",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.167/RAImporter-1.8.167-win64.zip",
-    "paket_sha256":  "2DAE5E8509190DAFC52FA7C446AC6B840235F3AAA820E9881FF4286301DBCD18",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.168/RAImporter-1.8.168-win64.zip",
+    "paket_sha256":  "65B061C33D235225A34431C6E5575F20CEAC9F08A7D6C59625B206FCD8C4EBA5",
     "bicim":  "onedir",
-    "notes":  "Depozito islemlerinde split orijinali silinmez (depozito defteri ya da Deposit Transfer kodu); yerel DELETE TRX_NO_SPLIT gorevi ve DWH"
+    "notes":  "DWH: split orijinalinin depozito olup olmadigi okunamazsa satir silinmez (fail-safe; MR !56 bulgusu)"
 }
