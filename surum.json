@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.177",
+    "version":  "1.8.178",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.177/RAImporter-1.8.177-win64.zip",
-    "paket_sha256":  "372FDF3BDED56ABB75BF2E8B31D2FE4EE34EA025F5AB7E006F6947A8AFCD1623",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.178/RAImporter-1.8.178-win64.zip",
+    "paket_sha256":  "6DB8D25B23DEDCBEF84C3EAC17EB3FE8E22BF07575454DA93F88DB6C31F97AE4",
     "bicim":  "onedir",
-    "notes":  "Rapor tarih bicimi sunucunun dateFormatString bilgisinden alinir (ayin 1-12. gunlerinde GUN-AY raporlar pencereyi ters okuyordu); anahtarsiz satirlar dosyayi KISMI HATA yapmaz, posta uretmez"
+    "notes":  "Arayuz: onay penceresi tarayici diyalog engelinden etkilenmez; kaydedilmemis degisiklik uyarisi; tasima sihirbazi ve kurulum listesi klavyeyle kullanilabilir; mesajlar ekran okuyucuya duyurulur"
 }
