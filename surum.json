@@ -1,9 +1,9 @@
 {
-  "version": "1.8.175",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
-  "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.175/RAImporter-1.8.175-win64.zip",
-  "paket_sha256": "413568F3D7E16CB0883D7E9BD1147D4EFE07840AF111439956D6AC60698BBB34",
-  "bicim": "onedir",
-  "notes": "Gecmis yukleme: alinamayan gunler devamda yeniden denenir; alinamayan gunu kalan yukleme eksik olarak gorunur (MR !61 bulgusu)"
+    "version":  "1.8.176",
+    "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
+    "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.176/RAImporter-1.8.176-win64.zip",
+    "paket_sha256":  "EB0323DC5EEE42A10D7A35AE0AB7811BA63471D19DB2FF11115895520E7D69DB",
+    "bicim":  "onedir",
+    "notes":  "Hedefte zorunlu anahtar kolonu bos satirlar ayrilir (dosya PARTIAL gecer, ORA-01400 ile dusmez); ayni hatayla 5 kez dusen dosya 30 dakikada bir denenir (06.10 TUI DB1 ORA-00257)"
 }
