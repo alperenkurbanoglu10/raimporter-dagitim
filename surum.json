@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.181",
+    "version":  "1.8.182",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.181/RAImporter-1.8.181-win64.zip",
-    "paket_sha256":  "27C571438E8FB2229DF5BD2DE24BA298B3FCE66A393DF4FB8685A0F8B5B340B8",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.182/RAImporter-1.8.182-win64.zip",
+    "paket_sha256":  "4E01901DF11E2BCCDF4A7D675BC0697586C377BFD2B8F9A4650EA47DDC3C73D9",
     "bicim":  "onedir",
-    "notes":  "Arayuz: ust cubukta tema secici (Sistem / Acik / Koyu); secim bu tarayicida hatirlanir"
+    "notes":  "Bildirim freni: kontrol postalari yalniz yeni bulguda, kapanista ya da haftalik hatirlatmada gider, ayni gun ayni kontrol icin tek posta; cakisan satir KISMI HATA yapmaz"
 }
