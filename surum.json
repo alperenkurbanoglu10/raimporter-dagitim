@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.182",
+    "version":  "1.8.183",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.182/RAImporter-1.8.182-win64.zip",
-    "paket_sha256":  "4E01901DF11E2BCCDF4A7D675BC0697586C377BFD2B8F9A4650EA47DDC3C73D9",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.183/RAImporter-1.8.183-win64.zip",
+    "paket_sha256":  "CC3412B48305945B71122F7E9E9649CA44BB3C2D2A8607CB95D6C5DF9CF8B4BA",
     "bicim":  "onedir",
-    "notes":  "Bildirim freni: kontrol postalari yalniz yeni bulguda, kapanista ya da haftalik hatirlatmada gider, ayni gun ayni kontrol icin tek posta; cakisan satir KISMI HATA yapmaz"
+    "notes":  "Baglantilari onar: My Folders altindaki PT / Hyperion / TMCDATA klasorleri de (07.10 VOYAGE)"
 }
