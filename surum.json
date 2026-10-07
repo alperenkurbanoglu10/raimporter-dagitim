@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.180",
+    "version":  "1.8.181",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.180/RAImporter-1.8.180-win64.zip",
-    "paket_sha256":  "28B83EF37822F7B6CC9C96F6DA99969CC38B42BF2AE0B5EA511877D3DA71C72A",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.181/RAImporter-1.8.181-win64.zip",
+    "paket_sha256":  "27C571438E8FB2229DF5BD2DE24BA298B3FCE66A393DF4FB8685A0F8B5B340B8",
     "bicim":  "onedir",
-    "notes":  "R\u0026A export cekimini durdurma dugmesi ve cekim sirasinda ilerleme (sure + o anki adim)."
+    "notes":  "Arayuz: ust cubukta tema secici (Sistem / Acik / Koyu); secim bu tarayicida hatirlanir"
 }
