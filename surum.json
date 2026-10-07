@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.183",
+    "version":  "1.8.184",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.183/RAImporter-1.8.183-win64.zip",
-    "paket_sha256":  "CC3412B48305945B71122F7E9E9649CA44BB3C2D2A8607CB95D6C5DF9CF8B4BA",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.184/RAImporter-1.8.184-win64.zip",
+    "paket_sha256":  "5B4CA181C9D3D76ED5378A7D7C2CBDBAD9C27FC364ED20B1E6E8C851034999E3",
     "bicim":  "onedir",
-    "notes":  "Baglantilari onar: My Folders altindaki PT / Hyperion / TMCDATA klasorleri de (07.10 VOYAGE)"
+    "notes":  "Tanim satirindaki bolunmez bosluk ORA-00911 vermiyor; Excel kilit dosyasi (~$) gercek dosyanin kopyasini bozmuyor"
 }
