@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.186",
+    "version":  "1.8.187",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.186/RAImporter-1.8.186-win64.zip",
-    "paket_sha256":  "8F7D67CCA62BEA94D00784E8624A1DD45149A02A3807100C2E1F561C27BE589A",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.187/RAImporter-1.8.187-win64.zip",
+    "paket_sha256":  "A5BA185D4168EC3086E9FAB236B65AB4490DBAA10BB13AC6E3F5780F56AC1A22",
     "bicim":  "onedir",
-    "notes":  "R\u0026A takvimi ekrana sigar; Excel sonundaki toplam satiri atlanir; yanlis veri tasiyan rapor tabloya yabanci kolon ekleyemez"
+    "notes":  "R\u0026A takvimi: durum ve dugmeler ayni sabit sutunda (cekiliyor / durdur her ekranda gorunur)"
 }
