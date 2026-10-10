@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.195",
+    "version":  "1.8.196",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.195/RAImporter-1.8.195-win64.zip",
-    "paket_sha256":  "C2BC73DEBAE00EA22E20BF25533AEA89EC6B732870E44BFD0EA76A543480B161",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.196/RAImporter-1.8.196-win64.zip",
+    "paket_sha256":  "D09C8B0192880094431E9E5303650A32B6B4CE04A11B4BC7C7991F26FE5F2485",
     "bicim":  "onedir",
-    "notes":  "Klavye kisayollari (Ctrl+S kaydet, F1 liste); WHERE siz tazeleme = tam tazeleme; saklama suresi Gelismis sekmesinde"
+    "notes":  "R\u0026A bos sablon satiri FAILED yapmaz; kucuk kolon eksiginde kolon ekleme serbest"
 }
