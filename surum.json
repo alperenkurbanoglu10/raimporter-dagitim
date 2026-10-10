@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.198",
+    "version":  "1.8.199",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.198/RAImporter-1.8.198-win64.zip",
-    "paket_sha256":  "B0464A4AACB706A67809C815157E66C3ADCD7A601D53C0D33DD5DB49D5D60007",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.199/RAImporter-1.8.199-win64.zip",
+    "paket_sha256":  "7C69E3BDC2EE1F93DE414D5E495078CF51753C354D8D9F09C72A060C9989FAFA",
     "bicim":  "onedir",
-    "notes":  "Oracle arsiv alani (FRA) erken uyarisi: %80 ya da 3 gunden kisa surede dolma -\u003e posta"
+    "notes":  "FRA uyarisi ancak posta gidince isaretlenir (SMTP dusse uyari kaybolmaz)"
 }
