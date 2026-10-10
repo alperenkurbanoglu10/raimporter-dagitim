@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.190",
+    "version":  "1.8.191",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.190/RAImporter-1.8.190-win64.zip",
-    "paket_sha256":  "28093310E590BD82204636278CD84085784AE84A181ECCE88F9EAB0DCAC3B704",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.191/RAImporter-1.8.191-win64.zip",
+    "paket_sha256":  "AA462AC3A65F9F296E25DBF5E1FC7EDA36861E83FDD20ABDB8C19A0183B13523",
     "bicim":  "onedir",
-    "notes":  "dwh-olcum: satir karsilastirmasi yapilamazsa ekranda ve cikis kodunda gorunur; --rapor-klasor secenegi"
+    "notes":  "dwh-olcum: FOLIO$_TAX ve RDE/RDEN karsilastirmasi (--tablolar ft,foliotax,rde)"
 }
