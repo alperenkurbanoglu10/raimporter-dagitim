@@ -1,9 +1,9 @@
 {
-  "version": "1.8.203",
+  "version": "1.8.204",
   "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
   "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.203/RAImporter-1.8.203-win64.zip",
-  "paket_sha256": "F769E5E3D1372C7EC2ED5C58D68AFF448494A237977F9C4D50D5DD9F7DB77C81",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.204/RAImporter-1.8.204-win64.zip",
+  "paket_sha256": "5EA3CE856ED9D1CF3F07F34B37DEB442090231B15663F7748611D114406BF7A7",
   "bicim": "onedir",
-  "notes": "TAM tazelemede birebir yazim (PK'siz tablo: tekrarlar ve anahtari bos satirlar dahil); tum kolonlari anahtar MERGE mutabakati"
+  "notes": "Anahtarsiz dosyalari ekle (ise ozel secenek); staging kolon uzunlugu hedefle karsilastirilir"
 }
