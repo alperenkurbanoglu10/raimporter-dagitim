@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.197",
+    "version":  "1.8.198",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.197/RAImporter-1.8.197-win64.zip",
-    "paket_sha256":  "5A13BC1F0E7CD2F71060ABB6426073C3B55EFD9B06B5F63FD3F1CD108A666597",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.198/RAImporter-1.8.198-win64.zip",
+    "paket_sha256":  "B0464A4AACB706A67809C815157E66C3ADCD7A601D53C0D33DD5DB49D5D60007",
     "bicim":  "onedir",
-    "notes":  "Fark tazelemesi: yalniz dosyada artik olmayan satirlar silinir, degisenler guncellenir (arsiv hacmi duser)"
+    "notes":  "Oracle arsiv alani (FRA) erken uyarisi: %80 ya da 3 gunden kisa surede dolma -\u003e posta"
 }
