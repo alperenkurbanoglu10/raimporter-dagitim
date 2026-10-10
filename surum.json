@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.193",
+    "version":  "1.8.194",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.193/RAImporter-1.8.193-win64.zip",
-    "paket_sha256":  "39FC9798B9B58C2F13A1A7FDB4DD6F4CA4F69BAEECAD00A778C7EDAC49DD905F",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.194/RAImporter-1.8.194-win64.zip",
+    "paket_sha256":  "95CEA1AB5BCCEF37DBB1FA6DFF94185CCACB07F06BDD69D3EA4F50CC36B73199",
     "bicim":  "onedir",
-    "notes":  "DWH kuyrugu: kopyasiz kuyruk kaydi DWH reddi sayilmaz (sahte alarm); kayit once guvenli silinir"
+    "notes":  "QLIK (R\u0026A klasoru PT) islerinde Kontroller kapali"
 }
