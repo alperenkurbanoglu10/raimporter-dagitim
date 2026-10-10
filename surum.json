@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.200",
+    "version":  "1.8.201",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.200/RAImporter-1.8.200-win64.zip",
-    "paket_sha256":  "A025E8BFD594F4A03816B02B8CC32F024D7906B6C41A363DD00CD977B7024BFB",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.201/RAImporter-1.8.201-win64.zip",
+    "paket_sha256":  "168B6AF9CB0313A7AF9A899C0BC0830C94B064170C7BB52842EC2EC4C03CFB37",
     "bicim":  "onedir",
-    "notes":  "Bildirim konusu is adindan otomatik: \u003cis adi\u003e AKTARIM"
+    "notes":  "Yeni kolon turu: rakamlar NUMBER (FOLIO_TAX PKID); staging tur farkinda yeniden kurulur; SQL konsolunda ALTER MODIFY/ADD; R\u0026A katalogu kendiliginden"
 }
