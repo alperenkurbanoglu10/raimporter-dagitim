@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.191",
+    "version":  "1.8.192",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.191/RAImporter-1.8.191-win64.zip",
-    "paket_sha256":  "AA462AC3A65F9F296E25DBF5E1FC7EDA36861E83FDD20ABDB8C19A0183B13523",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.192/RAImporter-1.8.192-win64.zip",
+    "paket_sha256":  "AB8EF4FA5B63035E6B7E42368D51C4762E903F6DB1BB08D39C6EAD881D12669E",
     "bicim":  "onedir",
-    "notes":  "dwh-olcum: FOLIO$_TAX ve RDE/RDEN karsilastirmasi (--tablolar ft,foliotax,rde)"
+    "notes":  "Islenmis indirme dosyalari 7 gun sonra silinir (is basina ayar)"
 }
