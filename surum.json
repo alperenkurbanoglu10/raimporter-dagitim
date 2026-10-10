@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.199",
+    "version":  "1.8.200",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.199/RAImporter-1.8.199-win64.zip",
-    "paket_sha256":  "7C69E3BDC2EE1F93DE414D5E495078CF51753C354D8D9F09C72A060C9989FAFA",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.200/RAImporter-1.8.200-win64.zip",
+    "paket_sha256":  "A025E8BFD594F4A03816B02B8CC32F024D7906B6C41A363DD00CD977B7024BFB",
     "bicim":  "onedir",
-    "notes":  "FRA uyarisi ancak posta gidince isaretlenir (SMTP dusse uyari kaybolmaz)"
+    "notes":  "Bildirim konusu is adindan otomatik: \u003cis adi\u003e AKTARIM"
 }
