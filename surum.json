@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.194",
+    "version":  "1.8.195",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.194/RAImporter-1.8.194-win64.zip",
-    "paket_sha256":  "95CEA1AB5BCCEF37DBB1FA6DFF94185CCACB07F06BDD69D3EA4F50CC36B73199",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.195/RAImporter-1.8.195-win64.zip",
+    "paket_sha256":  "C2BC73DEBAE00EA22E20BF25533AEA89EC6B732870E44BFD0EA76A543480B161",
     "bicim":  "onedir",
-    "notes":  "QLIK (R\u0026A klasoru PT) islerinde Kontroller kapali"
+    "notes":  "Klavye kisayollari (Ctrl+S kaydet, F1 liste); WHERE siz tazeleme = tam tazeleme; saklama suresi Gelismis sekmesinde"
 }
