@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.207",
+    "version":  "1.8.208",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.207/RAImporter-1.8.207-win64.zip",
-    "paket_sha256":  "37216B22FFC63E7CDE2EBECE98E6DF0013E3F47E89FE1EFACA1BBFE2920DCA90",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.208/RAImporter-1.8.208-win64.zip",
+    "paket_sha256":  "6041E65FEFD863B46CC1EFD7CCAD2F4978C2C02E2DEF9494739693B0E3B626B7",
     "bicim":  "onedir",
-    "notes":  "Tek gunluk dilimde veri tavani yeniden denenir; gonderilemeyen parametre + bos rapor varsayilanla yeniden sorulur, yine bossa BASARISIZ"
+    "notes":  "Kayip rezervasyon kontrolu duzelttigi faturalari PortalPlus ta yeniden cekilecek diye listeler (posta + arayuz)"
 }
