@@ -1,9 +1,9 @@
 {
-  "version": "1.8.206",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
-  "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.206/RAImporter-1.8.206-win64.zip",
-  "paket_sha256": "19AB0C1DD2005DB80E2CCEEA081DD5B2DD33AAC9CB46530CD53B417BD6DC31FB",
-  "bicim": "onedir",
-  "notes": "Hedefte yinelenen anahtar MERGE oncesi teke indirilir (PK'siz tablo, yalniz dosyadaki anahtarlar)"
+    "version":  "1.8.207",
+    "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
+    "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.207/RAImporter-1.8.207-win64.zip",
+    "paket_sha256":  "37216B22FFC63E7CDE2EBECE98E6DF0013E3F47E89FE1EFACA1BBFE2920DCA90",
+    "bicim":  "onedir",
+    "notes":  "Tek gunluk dilimde veri tavani yeniden denenir; gonderilemeyen parametre + bos rapor varsayilanla yeniden sorulur, yine bossa BASARISIZ"
 }
