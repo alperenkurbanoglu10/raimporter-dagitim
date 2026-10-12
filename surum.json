@@ -1,9 +1,9 @@
 {
-  "version": "1.8.210",
-  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
-  "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.210/RAImporter-1.8.210-win64.zip",
-  "paket_sha256": "DF85E9734F8FFB4D1691210288BF3264B8EF39D80ACA22E452DB6E4263849311",
-  "bicim": "onedir",
-  "notes": "Index kontrolu: yeniden adlandirilacak index'in semadaki mevcut adi gorunur (OPR-320)"
+    "version":  "1.8.211",
+    "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
+    "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.211/RAImporter-1.8.211-win64.zip",
+    "paket_sha256":  "144F79288EEC395A773B8F4020461DA841321171273E3FEE57CDE93A3ED639C4",
+    "bicim":  "onedir",
+    "notes":  "Kayip rezervasyon kontrolu sabah uc kez (08:00, 10:00, 11:30); tek saatlik kayitlar kendiliginden tasinir"
 }
