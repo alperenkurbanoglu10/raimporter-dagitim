@@ -1,9 +1,9 @@
 {
-  "version": "1.8.213",
+  "version": "1.8.214",
   "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
   "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.213/RAImporter-1.8.213-win64.zip",
-  "paket_sha256": "0EFF3FA24F88427A4B02B785EBB1BCF95D9544CDB74930BA762D13F5FE7A0E7F",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.214/RAImporter-1.8.214-win64.zip",
+  "paket_sha256": "399B44ADB92F4BA156EA9C228721732EFAD8596B325E6D72CF9FB3D0CD40A9DF",
   "bicim": "onedir",
-  "notes": "Index duzeltmesi PK/UK'yi engelleyen mukerrer ve anahtari bos satirlari yedekleyip siler (OPR-320)"
+  "notes": "Index duzeltmesi: ayni veritabaninda tek is, rapor besleme islerinde kapali, eszamanli duzeltmede geri alma yok (OPR-320)"
 }
