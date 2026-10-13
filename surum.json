@@ -1,9 +1,9 @@
 {
-  "version": "1.8.214",
+  "version": "1.8.215",
   "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
   "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.214/RAImporter-1.8.214-win64.zip",
-  "paket_sha256": "399B44ADB92F4BA156EA9C228721732EFAD8596B325E6D72CF9FB3D0CD40A9DF",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.215/RAImporter-1.8.215-win64.zip",
+  "paket_sha256": "71546EF5015C39CC21C12560AB8488B5E6D2DC7FC76323F9574FCE32CF330D38",
   "bicim": "onedir",
-  "notes": "Index duzeltmesi: ayni veritabaninda tek is, rapor besleme islerinde kapali, eszamanli duzeltmede geri alma yok (OPR-320)"
+  "notes": "Kapanista DWH saglik bildirimi sahte failed/internal_error gondermez (OPR-328)"
 }
