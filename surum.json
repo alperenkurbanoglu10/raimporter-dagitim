@@ -1,9 +1,9 @@
 {
-  "version": "1.8.216",
+  "version": "1.8.217",
   "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
   "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.216/RAImporter-1.8.216-win64.zip",
-  "paket_sha256": "1505DAE4E6A9731D9DCC1777DA00B3700F361B492FF18554636302321C616388",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.217/RAImporter-1.8.217-win64.zip",
+  "paket_sha256": "C6F80EE240B32CB4E616A6B061C0A87E8419C50A7578DC6C8D26A1134E772049",
   "bicim": "onedir",
-  "notes": "Veritabani baglanti hatasi postasi CONNECTION_ID yuzunden dakikada bir tekrarlaniyordu; artik is basina tek posta + kapanis"
+  "notes": "Ayni veritabanindaki islerin baglanti hatasi tek postada (HATA / HALA COZULMEDI / COZULDU)"
 }
