@@ -1,9 +1,9 @@
 {
-  "version": "1.8.215",
+  "version": "1.8.216",
   "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
   "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.215/RAImporter-1.8.215-win64.zip",
-  "paket_sha256": "71546EF5015C39CC21C12560AB8488B5E6D2DC7FC76323F9574FCE32CF330D38",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.216/RAImporter-1.8.216-win64.zip",
+  "paket_sha256": "1505DAE4E6A9731D9DCC1777DA00B3700F361B492FF18554636302321C616388",
   "bicim": "onedir",
-  "notes": "Kapanista DWH saglik bildirimi sahte failed/internal_error gondermez (OPR-328)"
+  "notes": "Veritabani baglanti hatasi postasi CONNECTION_ID yuzunden dakikada bir tekrarlaniyordu; artik is basina tek posta + kapanis"
 }
