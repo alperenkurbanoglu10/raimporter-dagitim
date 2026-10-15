@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.219",
+    "version":  "1.8.220",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.219/RAImporter-1.8.219-win64.zip",
-    "paket_sha256":  "0DCFEC9CA6F844113B6A3EE26E4A91E63ACAAD5F0EC2E622ACC74EC9C70DD79C",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.220/RAImporter-1.8.220-win64.zip",
+    "paket_sha256":  "5528574A93FC56C8F63FFB5CDC59ED8389CE3F66FA352EF2794424D2594DBBD4",
     "bicim":  "onedir",
-    "notes":  "OperaSetup \"Tum zincir\" baglanti anahtari (scope=chain) otel kodu dolu islerde kabul edilir."
+    "notes":  "Kayip kontrolu faturanin odeyen (payee) profilini de kontrol eder; eksikse NAME_bynameid ile ceker."
 }
