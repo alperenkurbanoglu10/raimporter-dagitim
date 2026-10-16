@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.230",
+    "version":  "1.8.231",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.230/RAImporter-1.8.230-win64.zip",
-    "paket_sha256":  "3E960C357BA2ED29F169163C5DCFD4E534BB78B25BFE3BCAD515113C8695CF7E",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.231/RAImporter-1.8.231-win64.zip",
+    "paket_sha256":  "569B8634B302D8EA0E509E9833509945AFACF4433547B23C86121F8EB8217EDF",
     "bicim":  "onedir",
-    "notes":  "Folyo dengesi: PRF yuvarlama kaynakli fark teshisi (Opera misafir hesabi dengede + satir bazinda yuvarlanmis gelir esik alti -\u003e export/tasima yok, postada ayri bolum)"
+    "notes":  "Index kontrolu: FOLIO$_TAX SEQ_NO bos satir uyarisi (DWH/PG anahtari resort, seq_no); DWH gonderiminde anahtari bos satirlar uyari olarak gosteriliyor."
 }
