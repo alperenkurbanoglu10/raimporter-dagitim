@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.221",
+    "version":  "1.8.222",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.221/RAImporter-1.8.221-win64.zip",
-    "paket_sha256":  "ADADA643B2130596656C1BFFF23F9B0649995C68321714E6A107384C91C1B0D0",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.222/RAImporter-1.8.222-win64.zip",
+    "paket_sha256":  "22C39D67AC50737C48C3CA6E5C5C77413E320405F4130581BEA907131B87A2ED",
     "bicim":  "onedir",
-    "notes":  "Tablolar sekmesi: tabloyu gez, ara, hucreyi prova + onayla yerinde duzelt; Isler paneli solda sabit, ac/kapa."
+    "notes":  "PostgreSQL kurulumu: EDB kurulum argumanlari tirnaklaniyor (bosluklu yol/locale bolunuyordu, exit 1); basarisiz kurulumda EDB kaydinin sonu Tasima ekraninda"
 }
