@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.229",
+    "version":  "1.8.230",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.229/RAImporter-1.8.229-win64.zip",
-    "paket_sha256":  "A8FF9FF368F3893294DE39CEFAFC1DA7819A8C88A144B1851197B8EB5553E168",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.230/RAImporter-1.8.230-win64.zip",
+    "paket_sha256":  "3E960C357BA2ED29F169163C5DCFD4E534BB78B25BFE3BCAD515113C8695CF7E",
     "bicim":  "onedir",
-    "notes":  "INIT: P2001/P2020/P2030 mizan/kasa raporlari bir-defalik listeden cikarildi"
+    "notes":  "Folyo dengesi: PRF yuvarlama kaynakli fark teshisi (Opera misafir hesabi dengede + satir bazinda yuvarlanmis gelir esik alti -\u003e export/tasima yok, postada ayri bolum)"
 }
