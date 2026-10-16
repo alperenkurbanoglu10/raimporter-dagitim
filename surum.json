@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.222",
+    "version":  "1.8.223",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.222/RAImporter-1.8.222-win64.zip",
-    "paket_sha256":  "22C39D67AC50737C48C3CA6E5C5C77413E320405F4130581BEA907131B87A2ED",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.223/RAImporter-1.8.223-win64.zip",
+    "paket_sha256":  "86F1552FFDF087CB9DEEE462911E161FE2B8D176C4692B196DBC09852CE8EF81",
     "bicim":  "onedir",
-    "notes":  "PostgreSQL kurulumu: EDB kurulum argumanlari tirnaklaniyor (bosluklu yol/locale bolunuyordu, exit 1); basarisiz kurulumda EDB kaydinin sonu Tasima ekraninda"
+    "notes":  "PostgreSQL kurulumu: EDB ye --locale verilmiyor (guncel Windows Turkiye adi yuzunden Locale specified is not supported); EDB hata izi Tasima ekraninda"
 }
