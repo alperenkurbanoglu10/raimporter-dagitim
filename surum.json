@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.225",
+    "version":  "1.8.226",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.225/RAImporter-1.8.225-win64.zip",
-    "paket_sha256":  "1A485A6D82CD1AE4AACF9FABCB9CF04AEAECB6AB433E386163C9541A0078C8DE",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.226/RAImporter-1.8.226-win64.zip",
+    "paket_sha256":  "786BDBFDCCDCD0B80B29F0494F9B18897B965291E6384FDF8E51D3A54FBDF3C3",
     "bicim":  "onedir",
-    "notes":  "PostgreSQL kurulum standardi: bos portal semasi (Portal kendi tablolari icin) + pgAdmin 4 kuruluyor"
+    "notes":  "OHIP hibrit DWH kipi + OHIP_EK ek exportlari"
 }
