@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.231",
+    "version":  "1.8.232",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.231/RAImporter-1.8.231-win64.zip",
-    "paket_sha256":  "569B8634B302D8EA0E509E9833509945AFACF4433547B23C86121F8EB8217EDF",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.232/RAImporter-1.8.232-win64.zip",
+    "paket_sha256":  "7C83FDF29EB863CF5C32D1A162D31A98BBBB8B3F87264A3499A0EC286BEEB81D",
     "bicim":  "onedir",
-    "notes":  "Index kontrolu: FOLIO$_TAX SEQ_NO bos satir uyarisi (DWH/PG anahtari resort, seq_no); DWH gonderiminde anahtari bos satirlar uyari olarak gosteriliyor."
+    "notes":  "Folyo dengesi: yuvarlama farki teshisi artik Opera fatura basligini (FOLIO$_TAX net + vergiler \u003c\u003e brut) ve muhasebeyi gosteriyor, PRF degil; basliktaki net/vergi/brut kanit olarak eklendi"
 }
