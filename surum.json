@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.232",
+    "version":  "1.8.233",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.232/RAImporter-1.8.232-win64.zip",
-    "paket_sha256":  "7C83FDF29EB863CF5C32D1A162D31A98BBBB8B3F87264A3499A0EC286BEEB81D",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.233/RAImporter-1.8.233-win64.zip",
+    "paket_sha256":  "CA64A9940220D2F6D39055A3E3BB9D267D09EEC044A33D7B16840DC56C51161F",
     "bicim":  "onedir",
-    "notes":  "Folyo dengesi: yuvarlama farki teshisi artik Opera fatura basligini (FOLIO$_TAX net + vergiler \u003c\u003e brut) ve muhasebeyi gosteriyor, PRF degil; basliktaki net/vergi/brut kanit olarak eklendi"
+    "notes":  "Folyo dengesi kontrolu PostgreSQL hedefte calisiyor (tarih penceresi interval ile; Oracle SQL ayni)"
 }
