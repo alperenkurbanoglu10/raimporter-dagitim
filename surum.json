@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.234",
+    "version":  "1.8.235",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.234/RAImporter-1.8.234-win64.zip",
-    "paket_sha256":  "421A34C44A3B92A4E908EE7BE718DA92A0AF6981F15F7B625DFCB4B4BAE769F1",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.235/RAImporter-1.8.235-win64.zip",
+    "paket_sha256":  "3ACF97D6E70A9996916B13E263965192D13F057270409310341B4D5E43269673",
     "bicim":  "onedir",
-    "notes":  "Kayip rezervasyon kontrolu PostgreSQL hedefte calisiyor; kimlik kaynagi secenegi (NAME_ENCRYPTED / NAME), yeni islerde NAME"
+    "notes":  "PostgreSQL: Tasima \u003e PostgreSQL hazirla adimi pg_hba.conf a otel agi (samenet) icin protel satirini ekler; Portal i kendi PC sinden kullananlar baglanabilir."
 }
