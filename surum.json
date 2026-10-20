@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.236",
+    "version":  "1.8.237",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.236/RAImporter-1.8.236-win64.zip",
-    "paket_sha256":  "43BAE359855DD0A2D80EFB2835997E14B8BE61DC90B21354BE126A66D0D952C2",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.237/RAImporter-1.8.237-win64.zip",
+    "paket_sha256":  "EF89344AD9726A29F1ED68E2F5D1449AEFA7A75BCC9085347B2217EACF517AC0",
     "bicim":  "onedir",
-    "notes":  "Folyo dengesi: Opera fatura basligi yuvarlama farki (paket kalemleri) veritabaninda kapatilir; gun basina bir satirin NET_AMOUNT una kayit artigi eklenir, defterli ve geri alinabilir, mizan bilir."
+    "notes":  "Folyo duzeltmeleri (tasima, yuvarlama) yazmadan once satirlari NOWAIT ile kilitler; satir baska oturumda commit edilmemis degisiklikle kilitliyse beklemeden vazgecer ve sebebini soyler."
 }
