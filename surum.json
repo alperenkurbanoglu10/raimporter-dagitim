@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.235",
+    "version":  "1.8.236",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.235/RAImporter-1.8.235-win64.zip",
-    "paket_sha256":  "3ACF97D6E70A9996916B13E263965192D13F057270409310341B4D5E43269673",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.236/RAImporter-1.8.236-win64.zip",
+    "paket_sha256":  "43BAE359855DD0A2D80EFB2835997E14B8BE61DC90B21354BE126A66D0D952C2",
     "bicim":  "onedir",
-    "notes":  "PostgreSQL: Tasima \u003e PostgreSQL hazirla adimi pg_hba.conf a otel agi (samenet) icin protel satirini ekler; Portal i kendi PC sinden kullananlar baglanabilir."
+    "notes":  "Folyo dengesi: Opera fatura basligi yuvarlama farki (paket kalemleri) veritabaninda kapatilir; gun basina bir satirin NET_AMOUNT una kayit artigi eklenir, defterli ve geri alinabilir, mizan bilir."
 }
