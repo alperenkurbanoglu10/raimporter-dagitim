@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.240",
+    "version":  "1.8.241",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.240/RAImporter-1.8.240-win64.zip",
-    "paket_sha256":  "1D9E36080DFC76E7AB86A3268F1451D67E8898A594DEC27D0BF366C29CEE9CDC",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.241/RAImporter-1.8.241-win64.zip",
+    "paket_sha256":  "F9A185957682419F6A000D1BEF790C36F2932C58D061B65DED2E5FF2E5B73495",
     "bicim":  "onedir",
-    "notes":  "OperaSetup prod gecisine hazirlik: guncelleme ve merkez baglantisi opera-setup.protel.com.tr acildiginda kendiliginden oraya gecer, GitHub yedek kalir"
+    "notes":  "Bos PORTAL_APP_PARAMS_INIT tek yeniden sorgu; mizan R\u0026A da tanimli olmayan parametreyi acikca yazar"
 }
