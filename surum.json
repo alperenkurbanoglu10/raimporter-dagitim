@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.239",
+    "version":  "1.8.240",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.239/RAImporter-1.8.239-win64.zip",
-    "paket_sha256":  "1348248389723578EF64ADCCE2E901B820DD0D671A58E940D839C3E82AD357C1",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.240/RAImporter-1.8.240-win64.zip",
+    "paket_sha256":  "1D9E36080DFC76E7AB86A3268F1451D67E8898A594DEC27D0BF366C29CEE9CDC",
     "bicim":  "onedir",
-    "notes":  "Acil: 1.8.238 benzersiz indeks kontrolu Oracle da ORA-00960 veriyordu (RESERVATION_NAME, ROOM_CATEGORY); ORDER BY sira numarasiyla"
+    "notes":  "OperaSetup prod gecisine hazirlik: guncelleme ve merkez baglantisi opera-setup.protel.com.tr acildiginda kendiliginden oraya gecer, GitHub yedek kalir"
 }
