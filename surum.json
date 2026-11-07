@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.242",
+    "version":  "1.8.243",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.242/RAImporter-1.8.242-win64.zip",
-    "paket_sha256":  "3C8EE62B0E0222FE0E17F5582F1A5FE0B8BD6FA14A07D8BDFB4BDFCCBDE78FFD",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.243/RAImporter-1.8.243-win64.zip",
+    "paket_sha256":  "E8810DDD556D14A73F0AF5A289276FD655A315B821401C153228AB5C8264F333",
     "bicim":  "onedir",
-    "notes":  "Acil: Accor R\u0026A tenant yeni adrese tasindi; eski adres kayitlarda yenisine cevriliyor, proxy haric listesine yeni sunucu ekleniyor"
+    "notes":  "PortalPlus (SQL Server): adlandirilmis ornek teshisi + eski surucu TLS geri dususu; e-fatura kesfi formdaki ayarla"
 }
