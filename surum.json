@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.243",
+    "version":  "1.8.244",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.243/RAImporter-1.8.243-win64.zip",
-    "paket_sha256":  "E8810DDD556D14A73F0AF5A289276FD655A315B821401C153228AB5C8264F333",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.244/RAImporter-1.8.244-win64.zip",
+    "paket_sha256":  "9D246A6A437263BA09468BC3DAB813CAC684982B3FC8498D3453708C08C8F836",
     "bicim":  "onedir",
-    "notes":  "PortalPlus (SQL Server): adlandirilmis ornek teshisi + eski surucu TLS geri dususu; e-fatura kesfi formdaki ayarla"
+    "notes":  "Kilit bekcisi: baska oturumun kilidine takilan aktarim artik sessizce beklemiyor; unutulmus SQL Developer/Toad oturumu kapatilir, aksi halde 30 dk sonra dosya hatayla birakilir (ISG)."
 }
