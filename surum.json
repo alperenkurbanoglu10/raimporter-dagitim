@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.244",
-    "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
-    "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.244/RAImporter-1.8.244-win64.zip",
-    "paket_sha256":  "9D246A6A437263BA09468BC3DAB813CAC684982B3FC8498D3453708C08C8F836",
-    "bicim":  "onedir",
-    "notes":  "Kilit bekcisi: baska oturumun kilidine takilan aktarim artik sessizce beklemiyor; unutulmus SQL Developer/Toad oturumu kapatilir, aksi halde 30 dk sonra dosya hatayla birakilir (ISG)."
+  "version": "1.8.245",
+  "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
+  "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.245/RAImporter-1.8.245-win64.zip",
+  "paket_sha256": "D08311BFEFA4327A7A93AD63BE733FDA6B1B226A3DE13E3299296E46724AC5CE",
+  "bicim": "onedir",
+  "notes": "Folyo kontrolu: basligi FOLIO$_TAX ta olmayan fatura bulunur, FOLIOTAX + FTAXRESPONSE yeniden cekilir, gelisi dogrulanir."
 }
