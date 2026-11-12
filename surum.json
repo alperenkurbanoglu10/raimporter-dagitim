@@ -1,9 +1,9 @@
 {
-  "version": "1.8.245",
+  "version": "1.8.246",
   "url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
   "sha256": "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.245/RAImporter-1.8.245-win64.zip",
-  "paket_sha256": "D08311BFEFA4327A7A93AD63BE733FDA6B1B226A3DE13E3299296E46724AC5CE",
+  "paket_url": "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.246/RAImporter-1.8.246-win64.zip",
+  "paket_sha256": "811D38E5AC21BF0069A000926119CA6E23AC7FFA1FB9EA6609083872683240B9",
   "bicim": "onedir",
-  "notes": "Folyo kontrolu: basligi FOLIO$_TAX ta olmayan fatura bulunur, FOLIOTAX + FTAXRESPONSE yeniden cekilir, gelisi dogrulanir."
+  "notes": "R&A katalog bakimi: kurumsal katalog programda; eksik rapor ve veri modelleri R&A klasorune kendiliginden eklenir, veri modeli baglantilari onarilir."
 }
