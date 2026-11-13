@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.249",
+    "version":  "1.8.252",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.249/RAImporter-1.8.249-win64.zip",
-    "paket_sha256":  "75BEB38C45E85F9552EC1AFB742753CF319A41D61034767B8053948A35BAE93A",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.252/RAImporter-1.8.252-win64.zip",
+    "paket_sha256":  "FAB4146DB2FB5C11A64874096DB1CC73A8D872C961033878F85CC1255918D053",
     "bicim":  "onedir",
-    "notes":  "Tema secici tek dugme: gunduz/gece ikonu (Ek 288)"
+    "notes":  "PortalPlus ta REJECTED (durum 7, numarasiz) faturalar folyoda da REJECTED; numarali kayit varsa numara kazanir (Akra). 1.8.250 dahil."
 }
