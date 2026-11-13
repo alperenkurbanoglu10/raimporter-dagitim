@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.252",
+    "version":  "1.8.253",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.252/RAImporter-1.8.252-win64.zip",
-    "paket_sha256":  "FAB4146DB2FB5C11A64874096DB1CC73A8D872C961033878F85CC1255918D053",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.253/RAImporter-1.8.253-win64.zip",
+    "paket_sha256":  "B644A2CAEEE5BEBC9CD8FBAFF64E6E60C99B676626C526786C6E8AC75AA27B11",
     "bicim":  "onedir",
-    "notes":  "PortalPlus ta REJECTED (durum 7, numarasiz) faturalar folyoda da REJECTED; numarali kayit varsa numara kazanir (Akra). 1.8.250 dahil."
+    "notes":  "PortalPlus ta iptal edilen (durum 5) e-faturalar folyoda REJECTED; iptal numarasi folyoya ve dogrulamaya girmez (Akra)"
 }
