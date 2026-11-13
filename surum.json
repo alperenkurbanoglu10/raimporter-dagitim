@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.248",
+    "version":  "1.8.249",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.248/RAImporter-1.8.248-win64.zip",
-    "paket_sha256":  "5BCF1E4159A6BD920E85D40278CCE785EB5ABA1DE8903428691E0128D88BA481",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.249/RAImporter-1.8.249-win64.zip",
+    "paket_sha256":  "75BEB38C45E85F9552EC1AFB742753CF319A41D61034767B8053948A35BAE93A",
     "bicim":  "onedir",
-    "notes":  "E-fatura numarasi FOLIOTAX aktariminda ezilmez; senkron silinen numarayi onarir; karsilastirma bos numarayi fark sayar (Akra)"
+    "notes":  "Tema secici tek dugme: gunduz/gece ikonu (Ek 288)"
 }
