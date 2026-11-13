@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.247",
+    "version":  "1.8.248",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.247/RAImporter-1.8.247-win64.zip",
-    "paket_sha256":  "78B57C7E594591F6C0378C9CE07B87F5D70D427EA357975A39EFEABFC7571BFF",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.248/RAImporter-1.8.248-win64.zip",
+    "paket_sha256":  "5BCF1E4159A6BD920E85D40278CCE785EB5ABA1DE8903428691E0128D88BA481",
     "bicim":  "onedir",
-    "notes":  "Oracle arsiv temizligi: FRA siz XE de veritabani ayni makinedeyse eski arsiv dosyalari silinir (RMAN arsiv yedegi, standby, FRA varsa dokunulmaz); FRA yoksa arsiv diski icin erken uyari."
+    "notes":  "E-fatura numarasi FOLIOTAX aktariminda ezilmez; senkron silinen numarayi onarir; karsilastirma bos numarayi fark sayar (Akra)"
 }
