@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.255",
+    "version":  "1.8.256",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.255/RAImporter-1.8.255-win64.zip",
-    "paket_sha256":  "121CE3EFC19814AC2B4A37EFF45CC282C2E1D5CDAB9ABF1AD1A253FB5167AC6A",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.256/RAImporter-1.8.256-win64.zip",
+    "paket_sha256":  "92887645C27F3032E5A8F3D1BD6C1CE967E943470A1249AAA473C5D23708B926",
     "bicim":  "onedir",
-    "notes":  "Proxy haric listesi tam adresi anlar, noktasiz alan adi alt alan adlarini kapsar (Ek 293)"
+    "notes":  "FT ARRANGEMENT_ID bos gelince ezilmez; tur sonunda islem kodundan otomatik doldurma (Ek 294)"
 }
