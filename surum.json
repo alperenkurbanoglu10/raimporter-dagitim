@@ -1,9 +1,9 @@
 {
-    "version":  "1.8.256",
+    "version":  "1.8.257",
     "url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.68/RAImporter.exe",
     "sha256":  "E8029B424120AEBF482437C90814D30623C9534A4D55702F167D638103E5BF09",
-    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.256/RAImporter-1.8.256-win64.zip",
-    "paket_sha256":  "92887645C27F3032E5A8F3D1BD6C1CE967E943470A1249AAA473C5D23708B926",
+    "paket_url":  "https://github.com/alperenkurbanoglu10/raimporter-dagitim/releases/download/v1.8.257/RAImporter-1.8.257-win64.zip",
+    "paket_sha256":  "B5BE08C27BCF30E6A3AF9B941D23E7FBCA4C732BE7E1AF4A42E329E0427FBAEC",
     "bicim":  "onedir",
-    "notes":  "FT ARRANGEMENT_ID bos gelince ezilmez; tur sonunda islem kodundan otomatik doldurma (Ek 294)"
+    "notes":  "TLS baglaminda TLS 1.2 alt siniri ve dogrulama acik (SonarQube S4423/S4830); IMAP/POP3 ayni baglam"
 }
